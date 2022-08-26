@@ -2289,7 +2289,7 @@ input, textarea {
   }
 }
 .p-index__column__title {
-  display: block;
+  /* display: block; */
   font-size: 16px;
   font-weight: 600;
   line-height: 28px;
