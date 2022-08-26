@@ -2127,6 +2127,9 @@ input, textarea {
     display: block;
   }
 }
+.p-index__column__slider-sp .p-index__column__title {
+  font-size: 12px !important;
+}
 .p-index__column__slider-sp .p-index__column__col {
   padding-left: 12.5px;
   padding-right: 12.5px;
