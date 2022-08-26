@@ -2296,6 +2296,9 @@ input, textarea {
   margin-bottom: -2px;
 }
 @media (max-width: 599px) {
+  .p-index__column__slider-sp .p-index__column__title{
+    display: flex;
+  }
   .p-index__column__title {
     font-size: 12px;
     line-height: 18px;
