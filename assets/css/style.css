@@ -334,6 +334,7 @@ input, textarea {
 }
 .l-header + section {
   margin-top: 100.5px;
+  overflow-x: hidden;
 }
 @media (max-width: 959px) {
   .l-header + section {
