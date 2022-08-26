@@ -6,6 +6,11 @@
   font-family: "honoka-shin-mincho";
   src: url("../font/Honoka_Shin_Mincho_L.otf");
 }
+html {
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
 body {
   font-family: "Open Sans", sans-serif;
   background-color: #fff;
@@ -15,7 +20,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
   font-weight: 400;
   color: #1F1F1F;
-  overflow-x: hidden;
 }
 
 * {
