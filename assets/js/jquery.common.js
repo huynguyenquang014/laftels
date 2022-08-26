@@ -59,9 +59,10 @@ function anchorLink(element, spaceToTop){
 }
 
 $(document).ready(function() {
-    setTimeout(() => {
+	$(window).on("scroll", function () {
 		AOS.init({
 			duration: 1000
 		});
-	}, 1500);
+	});
 });
+
