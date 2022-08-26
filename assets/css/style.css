@@ -1288,6 +1288,7 @@ input, textarea {
     line-height: 26px;
     min-width: auto;
     bottom: -10px;
+    letter-spacing: -3px;
   }
 }
 .p-index__intro__col-right__inner ul li .value::after {
