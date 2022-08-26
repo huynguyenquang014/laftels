@@ -2132,6 +2132,11 @@ input, textarea {
   padding-right: 12.5px;
   margin-bottom: 0;
 }
+@media (max-width: 599px) {
+  .p-index__column__slider-sp .p-index__column__title {
+    font-size: 12px !important;
+  }
+}
 .p-index__column__slider-sp .slick-list {
   overflow: visible;
   margin-left: -12.5px;
