@@ -1,0 +1,101 @@
+.c-btn-round{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 15px;
+    color: #fff;
+    background: $textColor;
+    border-radius: 22px;
+    width: 146px;
+    height: 43px;
+}
+
+.c-btn-effect{
+    font-size: 20px;
+    line-height: 27px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    max-width: 100%;
+    height: 70px;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 600;
+    border: 1px solid $textColor;
+    position: relative;
+    overflow: hidden;
+    @include brSpPortrait{
+        background-color: $textColor;
+        color: #fff;
+        width: 200px;
+        height: 52px;
+        font-size: 16px;
+        line-height: 22px;
+        svg{
+            path{
+                stroke: #fff;
+            }
+        }
+    }
+    span{
+        position: relative;
+        z-index: 2;
+    }
+    svg{
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 2;
+        @include brSpPortrait{
+            right: 13px;
+        }
+    }
+    &:hover{
+        color: #fff;
+        svg{
+            path{
+                stroke: #fff;
+            }
+        }
+        &::before, &::after{
+            width: 0;
+            height: 0;
+        }
+        &::before{
+            right: -300px;
+            border-right: 300px solid transparent;
+            border-bottom: 70px solid #1f1f1f;
+        }
+        &::after{
+            left: -300px;
+            border-left: 300px solid transparent;
+            border-top: 70px solid #1f1f1f;
+        }
+    }
+    &::before, &::after{
+        content: "";
+        width: 100%;
+        position: absolute;
+        z-index: 0;
+        -webkit-transition: .3s;
+        transition: .3s;
+        z-index: 1;
+    }
+    &::before{
+        right: -32px;
+        border-right: 16px solid transparent;
+        border-bottom: 16px solid #1f1f1f;
+        -webkit-transform: translateX(-100%);
+        transform: translateX(-100%);
+        bottom: 0;
+    }
+    &::after{
+        left: -32px;
+        border-left: 16px solid transparent;
+        border-top: 16px solid #1f1f1f;
+        -webkit-transform: translateX(100%);
+        transform: translateX(100%);
+        top: 0;
+    }
+}

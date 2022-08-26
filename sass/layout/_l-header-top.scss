@@ -1,0 +1,153 @@
+@charset "utf-8";
+
+.l-header-top {
+    padding: 35px 0 22.5px;
+    @include brTablet{
+        display: none;
+    }
+    .l-row{
+        align-items: center;
+    }
+    .l-container-fluid{
+        @include brSmallPc{
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+    }
+    &__logo{
+        margin-left: 41px;
+        position: relative;
+        bottom: 7px;
+        @media (max-width: 1367px){
+            margin-left: 0;
+        }
+    }
+    &__col-right{
+        display: flex;
+        justify-content: flex-end;
+    }
+	&__menu{
+        display: flex;
+        justify-content: flex-end;
+        padding-top: 15px;
+        ul{
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            li{
+                text-align: center;
+                min-width: 110.5px;
+                @media (max-width: 1367px){
+                    min-width: 89.5px;
+                }
+                @include brSmallPc{
+                    min-width: 76.5px;
+                }
+                a{
+                    position: relative;
+                    font-weight: 600;
+                    line-height: 22px;
+                    font-size: 16px;
+                    width: 100%;
+                    @include brSmallPc{
+                        font-size: 14px;
+                    }
+                    &:hover{
+                        &::before{
+                            height: 46px;
+                        }
+                        .ja{
+                            opacity: 0;
+                        }
+                        .en{
+                            opacity: 1;
+                        }
+                    }
+                    &::before{
+                        content: "";
+                        width: 1px;
+                        height: 16px;
+                        background: #1f1f1f;
+                        position: absolute;
+                        bottom: 30px;
+                        left: 50%;
+                        -webkit-transition: .4s;
+                        transition: .4s;
+                    }
+                    span{
+                        transition: .4s all;
+                    }
+                    .ja{
+                        font-family: "Yu Gothic", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "メイリオ", Meiryo, sans-serif;
+                        font-weight: 700;
+                        -webkit-font-feature-settings: "palt";
+                        font-feature-settings: "palt";
+                        line-height: 22px;
+                        letter-spacing: 0;
+                    }
+                    .en{
+                        opacity: 0;
+                        position: absolute;
+                        left: 0;
+                        right: 0;
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+    &__info{
+        display: flex;
+        align-items: center;
+    }
+    &__contact{
+        margin-left: 25px;
+        a{
+            position: relative;
+            text-align: center;
+            &:hover{
+                .ja{
+                    opacity: 0;
+                }
+                .en{
+                    opacity: 1;
+                }
+            }
+            span{
+                transition: .4s;
+            }
+            .ja{
+                font-family: "Yu Gothic", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "メイリオ", Meiryo, sans-serif;
+                font-weight: 700;
+                -webkit-font-feature-settings: "palt";
+                font-feature-settings: "palt";
+                line-height: 22px;
+                letter-spacing: -1.5px;
+            }
+            .en{
+                font-weight: 600;
+                opacity: 0;
+                position: absolute;
+                left: 0;
+                right: 0;
+                width: 100%;
+            }
+        }
+    }
+    &__social-link{
+        margin-left: 30px;
+        padding-top: 4px;
+        @include brSmallPc{
+            display: none;
+        }
+        a{
+            &:hover{
+                opacity: .7;;
+            }
+            + a{
+                margin-left: 17px;
+            }
+        }
+    }
+}
+

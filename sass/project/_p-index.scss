@@ -1,0 +1,1363 @@
+@charset "utf-8";
+
+.p-index {
+    margin-bottom: 100px;
+    @include brSpLandscape{
+        margin-bottom: 60px;
+    }
+	&__top-mv{
+        background: url("../img/index/bg_top-mv.jpg") no-repeat center;
+        background-size: cover;
+        padding: 302px 0 353px;
+        position: relative;
+        @include brSpLandscape{
+            background-image: url("../img/index/bg_top-mv_sp.jpg");
+            padding: 258px 0 264px;
+        }
+        &::before{
+            content: "";
+            width: 100%;
+            height: 100%;
+            background: rgba(21, 0, 0, 0.21);
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+        }
+        &__content{
+            
+            position: relative;
+            z-index: 2;
+            @include brSpLandscape{
+                text-align: center;
+            }
+            h2{
+                color: #fff;
+                font-size: 48px;
+                line-height: 64px;
+                font-family: "honoka-shin-mincho";
+                font-weight: 300;
+                margin-bottom: 26px;
+                margin-left: -30px;
+                @include brSpLandscape{
+                    font-size: 30px;
+                    line-height: 51px;
+                    margin-bottom: 14px;
+                }
+            }
+            p{
+                color: #fff;
+                font-size: 20px;
+                line-height: 27px;
+                letter-spacing: 0;
+                font-family: YuGothic, "Yu Gothic", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "メイリオ", Meiryo, sans-serif;
+                @include brSpLandscape{
+                    font-size: 14px;
+                    line-height: 19px;
+                }   
+            }
+        }
+    }
+    &__intro{
+        padding: 110px 0 96px;
+        background: url("../img/index/bg_intro.jpg") no-repeat center;
+        background-size: cover;
+        position: relative;
+        @include brSpLandscape{
+            text-align: center;
+            padding-top: 76px;
+            padding-bottom: 86px;
+            background-image: url("../img/index/bg_intro_sp.jpg");
+            &::after{
+                content: url("../img/index/fig_intro-section_sp.png");
+                position: absolute;
+                bottom: -5px;
+                right: 0;
+                z-index: 1;
+            }
+        }
+        .l-container{
+            position: relative;
+            z-index: 2;
+        }
+        &__col-left{
+            flex: 0 0 60%;
+            max-width: 60%;
+            @include brTablet{
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
+            h3{
+                font-family: "游明朝", YuMincho, "Yu Mincho", "Noto Serif JP", serif;
+                font-weight: bold;
+                font-size: 40px;
+                line-height: 64px;
+                margin-bottom: 37px;
+                @include brSpLandscape{
+                    display: none;
+                }
+                b{
+                    font-size: 60px;
+                    line-height: 96px;
+                    color: $cAccent;
+                    margin: 0 15px;
+                    position: relative;
+                    bottom: 2px;
+                }
+            }
+            h4{
+                font-family: "游明朝", YuMincho, "Yu Mincho", "Noto Serif JP", serif;
+                font-weight: bold;
+                font-size: 34px;
+                line-height: 54px;
+                margin-bottom: -8px;
+                @include brSpLandscape{
+                    display: none;   
+                }
+            }
+            h5{
+                display: none;
+                font-family: "游明朝", YuMincho, "Yu Mincho", "Noto Serif JP", serif;
+                font-weight: bold;
+                font-size: 20px;
+                line-height: 30px;
+                font-weight: 600;
+                margin-bottom: -9px;
+                @include brSpLandscape{
+                    display: block;
+                }
+            }
+            span{
+                font-family: "游明朝", YuMincho, "Yu Mincho", "Noto Serif JP", serif;
+                font-size: 12px;
+                line-height: 20px;
+                @include brSpLandscape{
+                    display: none;
+                }
+            }
+            p{
+                font-size: 20px;
+                line-height: 45px;
+                margin-top: 21px;
+                &.desktop{
+                    @include brSpLandscape{
+                        display: none;
+                    }
+                }
+                &.sp{
+                    display: none;
+                    @include brSpLandscape{
+                        display: block;
+                    }
+                }
+                @include brSpLandscape{
+                    font-size: 12px;
+                    line-height: 26px;   
+                }
+            }
+        }
+        &__col-right{
+            flex: 0 0 40%;
+            max-width: 40%;
+            margin-top: 80px;
+            @include brTablet{
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
+            @include brSpLandscape{
+                margin-top: 24px;
+            }
+            &__inner{
+                ul{
+                    &.sp{
+                        display: none;
+                        @include brSpLandscape{
+                            display: flex;
+                            flex-wrap: wrap;
+                            margin-left: -8px;
+                            margin-right: -8px;
+                            padding: 0 15px;
+                        }
+                    }
+                    &.desktop{
+                        @include brSpLandscape{
+                            display: none;
+                        }
+                    }
+                    li{
+                        display: flex;
+                        justify-content: flex-end;
+                        @include brTablet{
+                            justify-content: flex-start;
+                        }
+                        @include brSpLandscape{
+                            flex: 33.3333%;
+                            max-width: 33.3333%;
+                            flex-direction: column;
+                            padding-left: 8px;
+                            padding-right: 8px;
+                        }
+                        + li{
+                            margin-top: 50px;
+                            @include brSpLandscape{
+                                margin-top: 34px;
+                            }
+                        }
+                        &:nth-child(1){
+                            flex: 100%;
+                            max-width: 100%;
+                            flex-direction: row;
+                            justify-content: center;
+                            align-items: center;
+                            .name{
+                                font-size: 31px;
+                                @include brSpLandscape{
+                                    font-size: 18px;
+                                    line-height: 40px;
+                                    margin-right: 20px;
+                                }
+                            }
+                            .value{
+                                font-size: 143px;
+                                color: $cAccent;
+                                line-height: 57px;
+                                font-weight: 300;
+                                letter-spacing: -5px;
+                                @include brSpLandscape{
+                                    font-size: 80px;
+                                    line-height: 40px;
+                                    bottom: -18px;
+                                }
+                                &::after{
+                                    opacity: 0;
+                                }
+                                span{
+                                    font-size: 72px;
+                                    line-height: 58px;
+                                    color: $textColor;
+                                    @include brSpLandscape{
+                                        font-size: 35px;
+                                        line-height: 40px;
+                                        margin-left: 10px;
+                                    }
+                                }
+                            }
+                        }
+                        .name{
+                            font-family: YuMincho, "Yu Mincho", "Noto Serif JP", serif;
+                            font-size: 22px;
+                            line-height: 56px;
+                            font-weight: 500;
+                            min-width: 160px;
+                            text-align: right;
+                            margin-right: 28px;
+                            @include brSpLandscape{
+                                font-size: 12px;
+                                line-height: 14px;
+                                margin-right: 0;
+                                text-align: center;
+                                min-width: auto;
+                                height: 28px;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                            }
+                        }
+                        .value{
+                            font-family: "honoka-shin-mincho";
+                            font-size: 65px;
+                            line-height: 35px;
+                            min-width: 240px;
+                            position: relative;
+                            letter-spacing: -5px;
+                            bottom: -17px;
+                            @include brSpLandscape{
+                                font-size: 39px;
+                                line-height: 26px;
+                                min-width: auto; 
+                                bottom: -10px;
+                            }
+                            &::after{
+                                content: "";
+                                width: calc(100% + 20px);
+                                height: 1px;
+                                background-color: $cAccent;
+                                position: absolute;
+                                bottom: 0;
+                                left: 50%;
+                                transform: translateX(-50%);
+                                @include brSpLandscape{
+                                    width: 100%;
+                                    bottom: -7px;
+                                }
+                            }
+                            span{
+                                font-size: 30px;
+                                line-height: 34px;
+                                font-weight: 300;
+                                @include brSpLandscape{
+                                    font-size: 16px;
+                                    line-height: 26px;
+                                    margin-left: 5px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &__business{
+        width: 1600px;
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 100px;
+        @include brSpLandscape{
+            margin-top: 50px;
+        }
+        .c-title-left{
+            position: relative;
+            @include brSpLandscape{
+                padding-left: 20px;
+            }
+            &::before{
+                content: "";
+                position: absolute;
+                right: calc(100% + 49px);
+                width: 1000%;
+                height: 2px;
+                background-color: $textColor;
+                top: calc(50% - 2px);
+                transform: translateY(-50%);
+                @include brSpLandscape{
+                    right: calc(100% - 8px);
+                }
+            }
+        }
+        &__list{
+            margin-top: 54px;
+            @include brSpLandscape{
+                margin-top: 23px;       
+            }
+        }
+        &__item{
+            position: relative;
+            display: flex;
+            + div{
+                margin-top: 80px;
+                @include brSpLandscape{
+                    margin-top: 54px;
+                }
+            }
+            &:nth-child(4){
+                @include brSpLandscape{
+                    display: none;
+                }
+                .p-index__business__label{
+                    margin-bottom: 15px;
+                }
+                .p-index__business__info{
+                    bottom: 47px;
+                    padding: 40px 40px 39px;
+                    @include brSpLandscape{
+                        left: 15px;
+                        padding: 16px 20px 22px;
+                        bottom: -34px;
+                    }
+                }
+            }
+            &:nth-child(even){
+                img{
+                    margin-left: auto;
+                    padding-right: 0;
+                    padding-left: 100px;
+                    @include brSpLandscape{
+                        padding-left: 0;
+                    }
+                }
+                .p-index__business__info{
+                    left: 0;
+                    right: auto;
+                    @include brSpLandscape{
+                        left: 15px;
+                    }
+                }
+            }
+            img{
+                width: 1400px;
+                padding-right: 100px;
+                max-width: 100%;
+                @include brSpLandscape{
+                    padding-right: 0;
+                    height: 180px;
+                    object-fit: cover;
+                }
+            }
+        }
+        &__info{
+            display: flex;
+            align-items: center;
+            position: absolute;
+            right: 0;
+            bottom: 60px;
+            width: 634px;
+            padding: 28px 40px 35px;
+            background-color: #fff;
+            @include brSpLandscape{
+                width: calc(100% - 30px);
+                left: 15px;
+                padding: 16px 20px 22px;
+                bottom: -34px;
+            }
+        }
+        &__label{
+            text-align: center;
+            margin-right: 50px;
+            @include brSpLandscape{
+                margin-right: 20px;
+            }
+            p{
+                font-size: 20px;
+                font-weight: 600;
+                line-height: 27px;
+                margin-bottom: -4px;
+                @include brSpLandscape{
+                    font-size: 12px;
+                    line-height: 17px;
+                }
+            }
+        }
+        &__number{
+            font-size: 45px;
+            font-weight: 600;
+            line-height: 61px;
+            margin-bottom: -7px;
+            @include brSpLandscape{
+                font-size: 26px;
+                line-height: 36px;
+            }
+            span{
+                + span{
+                    color: $cAccent;
+                    margin-left: -11px;
+                    @include brSpLandscape{
+                        margin-left: -7px;
+                    }
+                }
+            }
+        }
+        &__text{
+            font-size: 20px;
+            font-weight: 600;
+            line-height: 27px;
+            @include brSpLandscape{
+                font-size: 13px;
+                line-height: 20px;
+                padding-right: 25px;
+                position: relative;
+                top: 3px;
+                p{
+                    br{
+                        display: none;
+                    }
+                }
+            }
+            a{
+                display: inline-flex;
+                flex-direction: column;
+                font-size: 16px;
+                font-weight: 600;
+                line-height: 22px;
+                color: #0D0D0D;
+                margin-top: 24px;
+                &:hover{
+                    color: $cAccent;
+                    path{
+                        stroke: $cAccent;
+                    }
+                }
+                svg{
+                    margin-top: -6px;
+                }
+            }
+        }
+    }
+    &__about-service{
+        margin-top: 100px;
+        padding: 97px 0;
+        background: url("../img/index/bg_about-service.jpg") no-repeat center;
+        background-size: cover;
+        text-align: center;
+        @include brSpLandscape{
+            margin-top: 77px;
+            padding: 40px 0;
+        }
+        .c-title-center{
+            p{
+                display: none;
+            }
+        }
+        &__inner{
+            background-color: #fff;
+            padding: 0 33px;
+            @include brSpLandscape{
+                padding: 0;
+            }
+        }
+        &__box{
+            padding: 70px 20px 67px;
+            @include brSpLandscape{
+                padding: 40px 20px;
+            }
+        }
+        &__col{
+            flex: 0 0 50%;
+            max-width: 50%;
+            padding-left: 15px;
+            padding-right: 15px;
+            position: relative;
+            @include brSpLandscape{
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
+            &:nth-child(2){
+                &::before{
+                    content: "";
+                    width: 1px;
+                    height: 314px;
+                    background-color: #454545;
+                    position: absolute;
+                    left: 0;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    @include brSpLandscape{
+                        width: calc(100% - 91px);
+                        height: 1px;
+                        top: 0;
+                        left: 50%;
+                        transform: translateX(-50%);
+                    }
+                }
+            }
+        }
+        &__desc{
+            font-size: 18px;
+            font-weight: 600;
+            line-height: 33px;
+            margin-top: 21px;
+            margin-bottom: 27px;
+            @include brSpLandscape{
+                font-size: 13px;
+                line-height: 25px;
+                margin-top: 12px;
+                margin-bottom: 19px;
+            }
+        }
+        .c-btn-effect{
+            margin: 0 auto;
+        }
+    }
+    &__case{
+        margin-top: 100px;
+        position: relative;
+        @include brSpLandscape{
+            margin-top: 41px;
+        }
+        .l-container{
+            @include brSpLandscape{
+                padding-left: 25px;
+                padding-right: 25px;
+            }
+        }
+        .c-title-left{
+            @include brSpLandscape{
+                text-align: center;
+            }
+        }
+        &__inner{
+            width: 1020px;
+            max-width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            position: relative;
+            &::before{
+                content: "";
+                width: 1000%;
+                height: 404px;
+                position: absolute;
+                left: 116px;
+                bottom: 33px;
+                background-color: #F8F8F8;
+                border-radius: 0 0 0 104px;
+                @include brSpLandscape{
+                    bottom: 26px;
+                }
+            }
+        }
+        &__slider{
+            margin-top: 27px;
+            margin-bottom: 32px;
+            @include brSpLandscape{
+                margin-top: 13px;
+                margin-bottom: 10px;
+            }
+            .slick-list{
+                margin-left: -15px;
+                margin-right: -15px;
+                overflow: visible;
+                &::before{
+                    content: "";
+                    width: 1000%;
+                    height: 100%;
+                    position: absolute;
+                    right: 100%;
+                    background-color: #fff;
+                    top: 0;
+                    z-index: 10;
+                }
+            }
+            .slick-arrow{
+                width: 39.5px;
+                height: 39.5px;
+                border: 1px solid $textColor;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: transparent;
+                transition: .4s;
+                position: absolute;
+                top: -69px;
+                z-index: 5;
+                @include brSpLandscape{
+                    width: 35px;
+                    height: 35px;
+                    background-color: $textColor;
+                    top: calc(35%);
+                    transform: translateY(-50%);
+                    svg{
+                        width: 7px;
+                        path{
+                            stroke: #fff;
+                        }
+                    }
+                }
+                &.slick-prev{
+                    left: 124px;
+                    @include brSpLandscape{
+                        left: -15px;
+                    }
+                    svg{
+                        transform: rotate(180deg);
+                    }
+                }
+                &.slick-next{
+                    left: 184px;
+                    @include brSpLandscape{
+                        left: auto;
+                        right: -15px;
+                    }
+                }
+                &:hover{
+                    background-color: $textColor;
+                    path{
+                        stroke: #fff;
+                    }
+                }
+                img{
+                    width: auto;
+                }
+            }
+            .slick-dots{
+                text-align: right;
+                position: relative;
+                bottom: 5px;
+                li{
+                    display: inline-flex;
+                    margin-left: 5px;
+                    &.slick-active{
+                        button{
+                            background-color: $textColor;
+                        }
+                    }
+                    button{
+                        width: 10px;
+                        height: 10px;
+                        border: 1px solid $textColor;
+                        border-radius: 50%;
+                        font-size: 0;
+                        background-color: transparent;
+                    }
+                }
+            }
+        }
+        &__item{
+            padding: 0 15px;
+        }
+        &__image{
+            a{
+                display: block;
+                overflow: hidden;
+                &:hover{
+                    img{
+                        transform: scale(1.1);
+                    }
+                }
+                img{
+                    transition: .4s all;
+                    @include brSpLandscape{
+                        height: 327px;
+                        object-fit: cover;
+                    }
+                }
+            }
+        }
+        &__info{
+            margin-top: 18px;
+            position: relative;
+        }
+        &__category{
+            font-size: 12px;
+            font-weight: 700;
+            line-height: 17px;
+            color: $cAccent;
+            margin-bottom: 6px;
+        }
+        &__title{
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 24px;
+            margin-bottom: 16px;
+        }
+        &__tag{
+            a{
+                background-color: $textColor;
+                border-radius: 16px;
+                color: #fff;
+                font-size: 12px;
+                font-weight: 600;
+                line-height: 17px;
+                padding: 6px 20px;
+                margin-right: 4px;
+                margin-bottom: 8px;
+            }
+        }
+        &__link{
+            position: absolute;
+            right: 18px;
+            bottom: 28px;
+            width: 30.11px;
+            height: 30.11px;
+            border: 1px solid $textColor;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            &:hover{
+                background-color: $textColor;
+                path{
+                    stroke: #fff;
+                }
+            }
+        }
+        &__progress {
+            margin-bottom: 40px;
+            position: relative;
+            z-index: 10;
+            @include brSpLandscape{
+                display: none;
+            }
+            &-bar{
+                display: block;
+                width: 0;
+                height: 8px;
+                border-radius: 10px;
+                transition: .4s;
+                background-color: #D3D3D3;
+            }
+        }
+        .c-btn-effect{
+            @include brSpLandscape{
+                margin: 0 auto;
+            }
+        }
+    }
+    &__seminar{
+        margin-top: 91px;
+        @include brSpLandscape{
+            margin-top: 60px;
+        }
+        .l-container{
+            @include brSpLandscape{
+                padding-left: 25px;
+                padding-right: 25px;
+            }
+        }
+        .c-title-center{
+            margin-bottom: 37px;
+            @include brSpLandscape{
+                margin-bottom: 10px;
+            }
+            p{
+                &.desktop{
+                    @include brSpLandscape{
+                        display: none;
+                    }
+                }
+                &.sp{
+                    display: none;
+                    @include brSpLandscape{
+                        display: block;
+                    }
+                }
+            }
+        }
+        &__inner{
+            position: relative;
+            &::before{
+                content: "";
+                width: 1000%;
+                height: 350px;
+                position: absolute;
+                right: 198px;
+                bottom: 35px;
+                background-color: #F8F8F8;
+                border-radius: 0 0 104px 0;
+                z-index: -1;
+                @include brSpLandscape{
+                    bottom: 26px;
+                }
+            }
+        }
+        &__col{
+            flex: 33.3333%;
+            max-width: 33.3333%;
+            padding-left: 15px;
+            padding-right: 15px;
+            margin-bottom: 30px;
+            @include brSpLandscape{
+                flex: 100%;
+                max-width: 100%;
+                margin-bottom: 20px;
+            }
+        }
+        &__box{
+            background-color: #fff;
+            box-shadow: 0 3px 20px rgba(154, 154, 154, 0.16);
+        }
+        &__image{
+            display: block;
+            overflow: hidden;
+            &:hover{
+                img{
+                    transform: scale(1.1);
+                }
+            }
+            img{
+                width: 100%;
+                transition: .4s;
+            }
+        }
+        &__info{
+            margin-top: 18px;
+            position: relative;
+            padding: 0 20px 7px 20px;
+            @include brSpLandscape{
+                margin-top: 13px;
+                padding: 0 16px 9px 16px;
+            }
+        }
+        &__category{
+            font-size: 12px;
+            font-weight: 700;
+            line-height: 17px;
+            color: $cAccent;
+            margin-bottom: 5px;
+        }
+        &__title{
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 28px;
+            margin-bottom: 14px;
+            @include brSpLandscape{
+                font-size: 14px;
+                line-height: 23px;
+                margin-bottom: 8px;
+            }
+            span{
+                margin-left: -8px;
+            }
+        }
+        &__date{
+            font-size: 14px;
+            font-weight: 600;
+            line-height: 35px;
+            color: #BFBFBF;
+            @include brSpLandscape{
+                font-size: 12px;
+                line-height: 28px;
+            }
+        }
+        .c-btn-effect{
+            margin-top: 9px;
+            margin-left: auto;
+            margin-right: auto;
+            @include brSpLandscape{
+                margin-top: 6px;
+            }
+        }
+    }
+    &__column{
+        margin-top: 100px;
+        @include brSpLandscape{
+            margin-top: 60px;
+        }
+        .c-title-left{
+            margin-bottom: 27px;
+            @include brSpLandscape{
+                text-align: center;
+                margin-bottom: 13px;
+            }
+        }
+        .l-container{
+            padding-left: 25px;
+            padding-right: 25px;
+        }
+        &__inner{
+            position: relative;
+            &::before{
+                content: "";
+                width: 1000%;
+                height: 350px;
+                position: absolute;
+                right: 198px;
+                bottom: 35px;
+                background-color: #F8F8F8;
+                border-radius: 0 0 104px 0;
+                z-index: -1;
+            }
+        }
+        .l-row{
+            @include brSpLandscape{
+                display: none;
+            }
+            .p-index__column__col{
+                &:nth-child(1){
+                    flex: 100%;
+                    max-width: 100%;
+                    margin-bottom: 40px;
+                    .p-index__column__box{
+                        background-color: transparent;
+                        display: flex;
+                        align-items: center;
+                        box-shadow: none;
+                        .p-index__column__image{
+                            flex: 48.6666%;
+                            max-width: 48.6666%;
+                        }
+                        .p-index__column__info{
+                            flex: 51.3334%;
+                            max-width: 51.3334%;
+                            margin-top: 0;
+                            padding: 0 0 0 32px;
+                        }
+                        .p-index__column__category{
+                            font-size: 16px;
+                            line-height: 22px;
+                            margin-bottom: 11px;
+                        }
+                        .p-index__column__title{
+                            font-size: 20px;
+                            line-height: 32px;
+                            margin-bottom: 11px;
+                            span{
+                                margin-left: -10px;
+                            }
+                        }
+                        .p-index__column__date{
+                            font-size: 16px;
+                            line-height: 35px;
+                            margin-bottom: 14px;
+                        }
+                        .p-index__column__tag{
+                            width: 415px;
+                            max-width: 100%;
+                            a{
+                                padding: 7px 24px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &__slider-sp{
+            display: none;
+            @include brSpLandscape{
+                display: block;
+            }
+            .p-index__column__col{
+                padding-left: 12.5px;
+                padding-right: 12.5px;
+                margin-bottom: 0;
+            }
+            .p-index__column__box{
+                
+            }
+            .slick-list{
+                overflow: visible;
+                margin-left: -12.5px;
+                margin-right: -12.5px;
+            }
+            .slick-arrow{
+                width: 39.5px;
+                height: 39.5px;
+                border: 1px solid $textColor;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: transparent;
+                transition: .4s;
+                position: absolute;
+                top: -69px;
+                z-index: 5;
+                @include brSpLandscape{
+                    width: 35px;
+                    height: 35px;
+                    background-color: $textColor;
+                    top: calc(47.5%);
+                    transform: translateY(-50%);
+                    svg{
+                        width: 7px;
+                        path{
+                            stroke: #fff;
+                        }
+                    }
+                }
+                &.slick-prev{
+                    left: 124px;
+                    @include brSpLandscape{
+                        left: -15px;
+                    }
+                    svg{
+                        transform: rotate(180deg);
+                    }
+                }
+                &.slick-next{
+                    left: 184px;
+                    @include brSpLandscape{
+                        left: auto;
+                        right: -15px;
+                    }
+                }
+                &:hover{
+                    background-color: $textColor;
+                    path{
+                        stroke: #fff;
+                    }
+                }
+                img{
+                    width: auto;
+                }
+            }
+            .slick-dots{
+                text-align: center;
+                position: relative;
+                bottom: -3px;
+                li{
+                    display: inline-flex;
+                    margin-left: 2.5px;
+                    margin-right: 2.5px;
+                    &.slick-active{
+                        button{
+                            background-color: $textColor;
+                        }
+                    }
+                    button{
+                        width: 10px;
+                        height: 10px;
+                        border: 1px solid $textColor;
+                        border-radius: 50%;
+                        font-size: 0;
+                        background-color: transparent;
+                    }
+                }
+            }
+        }
+        &__col{
+            flex: 33.3333%;
+            max-width: 33.3333%;
+            padding-left: 15px;
+            padding-right: 15px;
+            margin-bottom: 30px;
+            
+        }
+        &__box{
+            background-color: #fff;
+            box-shadow: 0 3px 20px rgba(154, 154, 154, 0.16);
+        }
+        &__image{
+            display: block;
+            overflow: hidden;
+            &:hover{
+                img{
+                    transform: scale(1.1);
+                }
+            }
+            img{
+                width: 100%;
+                transition: .4s;
+                @include brSpLandscape{
+                    height: 213px;
+                    object-fit: cover;
+                }
+            }
+        }
+        &__info{
+            margin-top: 16px;
+            position: relative;
+            padding: 0 20px 22px 20px;
+            @include brSpLandscape{
+                margin-top: 13px;
+                padding: 0 10px 13px;   
+            }
+        }
+        &__category{
+            font-size: 12px;
+            font-weight: 700;
+            line-height: 17px;
+            color: $cAccent;
+            margin-bottom: 5px;
+            @include brSpLandscape{
+                font-size: 10px;
+                line-height: 14px;
+            }
+        }
+        &__title{
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 28px;
+            margin-bottom: -2px;
+            @include brSpLandscape{
+                font-size: 12px;
+                line-height: 18px;
+                margin-bottom: 3px;
+                br + br{
+                    display: none;
+                }
+            }
+            span{
+                margin-left: -10px;
+            }
+        }
+        &__date{
+            font-size: 14px;
+            font-weight: 600;
+            line-height: 35px;
+            color: #BFBFBF;
+            margin-bottom: 7px;
+            @include brSpLandscape{
+                font-size: 10px;
+                line-height: 20px;   
+            }
+        }
+        &__tag{
+            a{
+                background-color: #F4F4F4;
+                border-radius: 16px;
+                color: #454545;
+                font-size: 12px;
+                font-weight: 600;
+                line-height: 17px;
+                padding: 6px 20px;
+                margin-right: 4px;
+                margin-bottom: 8px;
+                @include brSpLandscape{
+                    font-size: 10px;
+                    line-height: 14px;
+                    padding: 7px 24px;
+                    margin-bottom: 6px;
+                    margin-right: 1px;
+                }
+                &:hover{
+                    background-color: $textColor;
+                    color: #fff;
+                }
+            }
+        }
+        .c-btn-effect{
+            margin-top: 10px;
+            margin-left: auto;
+            margin-right: auto;
+            @include brSpLandscape{
+                margin-top: 18px;
+            }
+        }
+    }
+    &__news{
+        margin-top: 100px;
+        @include brSpLandscape{
+            margin-top: 60px;
+        }
+        .l-container{
+            @include brSpLandscape{
+                padding-left: 25px;
+                padding-right: 25px;
+            }
+        }
+        &__inner{
+            width: 1180px;
+            max-width: 100%;
+            margin: 0 auto;
+            .c-title-center{
+                margin-bottom: 27px;
+                @include brSpLandscape{
+                    margin-bottom: 13px;
+                }
+                p{
+                    font-size: 16px;
+                    @include brSpLandscape{
+                        font-size: 11px;
+                    }
+                }
+            }
+        }
+        .l-row{
+            margin-left: -30px;
+            margin-right: -30px;
+        }
+        &__col{
+            flex: 50%;
+            max-width: 50%;
+            padding-left: 30px;
+            padding-right: 30px;
+            position: relative;
+            @include brSpLandscape{
+                flex: 100%;
+                max-width: 100%;
+                + .p-index__news__col{
+                    display: none;
+                }
+            }
+            &::before{
+                content: "";
+                width: calc(100% - 150px);
+                right: 30px;
+                height: 100%;
+                border-radius: 10px;
+                background-color: #F4F4F4;
+                display: block;
+                position: absolute;
+                z-index: -1;
+                @include brSpLandscape{
+                    width: calc(100% - 118px);
+                }
+            }
+        }
+        &__title{
+            @include brSpLandscape{
+                display: none;
+            }
+            a{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                border-bottom: 1px solid $textColor;
+                padding: 22px 50px 16px 10px;
+                &:hover{
+                    opacity: .7;
+                }
+                h4{
+                    font-size: 22px;
+                    font-weight: 700;
+                    color: #313131;
+                    line-height: 20px;
+                    font-family: "Yu Gothic";
+                }
+                svg{
+
+                }
+            }
+        }
+        &__list{
+            li{
+                display: flex;
+                align-items: center;
+                padding: 16px 0 14px;
+                transition: .4s;
+                &:nth-child(3) ~ li{
+                    display: none;
+                }
+                @include brSpLandscape{
+                    display: block;
+                }
+                &:hover{
+                    opacity: .7;
+                }
+                + li{
+                    border-top: 1px solid #D5D5D5;
+                }
+            }
+        }
+        &__time{
+            width: 85px;
+            min-width: 85px;
+            margin-right: 38px;
+            text-align: center;
+            padding: 0 15px;
+            @include brSpLandscape{
+                display: flex;
+                flex-direction: row-reverse;
+                justify-content: flex-end;
+                width: 100%;
+                padding: 0;
+                margin-bottom: 8px;
+            }
+        }
+        &__label{
+            font-size: 12px;
+            font-weight: 700;
+            color: #000000;
+            line-height: 20px;
+            font-family: "Yu Gothic";
+            margin-bottom: -1px;
+        }
+        &__date{
+            font-size: 12px;
+            font-weight: 700;
+            color: #ADADAD;
+            line-height: 20px;
+            font-family: "Yu Gothic";
+            position: relative;
+            @include brSpLandscape{
+                color: #000;
+                margin-right: 15px;
+                &::after{
+                    content: "";
+                    width: 1px;
+                    height: 12.5px;
+                    background-color: $textColor;
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    right: -9px;
+                }
+            }
+        }
+        &__news-title{
+            font-size: 14px;
+            font-weight: 500;
+            color: #000000;
+            line-height: 24px;
+            font-family: "Yu Gothic";
+            padding-right: 36px;
+        }
+        .c-btn-effect{
+            margin: 40px auto 0;
+            @include brSpLandscape{
+                margin-top: 27px;
+            }
+        }
+    }
+}
