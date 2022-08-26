@@ -2135,6 +2135,7 @@ input, textarea {
 @media (max-width: 599px) {
   .p-index__column__slider-sp .slick-current .p-index__column__title {
     font-size: 12px !important;
+    display: block;
   }
 }
 .p-index__column__slider-sp .slick-list {
