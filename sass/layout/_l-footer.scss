@@ -102,11 +102,13 @@
             z-index: 2;
         }
         .c-title-center{
-            margin-bottom: 15px;
+            margin-bottom: 12px;
             @include brSpLandscape{
                 margin-bottom: 13px;
             }
             h3{
+                font-size: 32px;
+                line-height: 43px;
                 color: #fff;
                 @include brSpLandscape{
                     font-size: 20px;
@@ -264,6 +266,7 @@
             }
         }
         .c-btn-round{
+            font-weight: 600;
             @include brSpLandscape{
                 display: inline-flex;
             }
@@ -368,7 +371,7 @@
         }
         &__category-child{
             font-size: 14px;
-            font-weight: 600;
+            font-weight: 400;
             line-height: 19px;
             color: #535353;
             position: relative;

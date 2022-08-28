@@ -5,15 +5,59 @@
     @include brSpLandscape{
         margin-bottom: 60px;
     }
-	&__top-mv{
-        background: url("../img/index/bg_top-mv.jpg") no-repeat center;
-        background-size: cover;
-        padding: 302px 0 353px;
+	// &__top-mv{
+    //     background: url("../img/index/bg_top-mv.jpg") no-repeat center;
+    //     background-size: cover;
+    //     padding: 302px 0 353px;
+    //     position: relative;
+    //     @include brSpLandscape{
+    //         background-image: url("../img/index/bg_top-mv_sp.jpg");
+    //         padding: 258px 0 264px;
+    //     }
+    //     &::before{
+    //         content: "";
+    //         width: 100%;
+    //         height: 100%;
+    //         background: rgba(21, 0, 0, 0.21);
+    //         position: absolute;
+    //         top: 0;
+    //         left: 0;
+    //         z-index: 1;
+    //     }
+    //     &__content{
+    //         position: relative;
+    //         z-index: 2;
+    //         @include brSpLandscape{
+    //             text-align: center;
+    //         }
+    //         h2{
+    //             color: #fff;
+    //             font-size: 48px;
+    //             line-height: 64px;
+    //             font-family: "honoka-shin-mincho";
+    //             font-weight: 300;
+    //             margin-bottom: 26px;
+    //             margin-left: -50px;
+    //             @include brSpLandscape{
+    //                 font-size: 30px;
+    //                 line-height: 51px;
+    //                 margin-bottom: 14px;
+    //             }
+    //         }
+    //         p{
+    //             color: #fff;
+    //             font-size: 20px;
+    //             line-height: 27px;
+    //             letter-spacing: 0;
+    //             @include brSpLandscape{
+    //                 font-size: 14px;
+    //                 line-height: 19px;
+    //             }   
+    //         }
+    //     }
+    // }
+    &__top-mv{
         position: relative;
-        @include brSpLandscape{
-            background-image: url("../img/index/bg_top-mv_sp.jpg");
-            padding: 258px 0 264px;
-        }
         &::before{
             content: "";
             width: 100%;
@@ -24,12 +68,31 @@
             left: 0;
             z-index: 1;
         }
-        &__content{
-            
-            position: relative;
-            z-index: 2;
+        &__img-desktop{
             @include brSpLandscape{
+                display: none;
+            }
+        }
+        &__img-sp{
+            display: none;
+            @include brSpLandscape{
+                display: block;
+            }
+        }
+        &__content{
+            position: absolute;
+            left: calc((100% - 1200px)/2);
+            top: calc(50% - 20px);
+            transform: translateY(-50%);
+            z-index: 2;
+            @media (max-width: 1230px){
+                left: 25px;
+            }
+            @include brSpLandscape{
+                top: calc(50% - 4px);
                 text-align: center;
+                left: 20px;
+                right: 20px;
             }
             h2{
                 color: #fff;
@@ -38,11 +101,12 @@
                 font-family: "honoka-shin-mincho";
                 font-weight: 300;
                 margin-bottom: 26px;
-                margin-left: -30px;
+                margin-left: -50px;
                 @include brSpLandscape{
                     font-size: 30px;
                     line-height: 51px;
                     margin-bottom: 14px;
+                    margin-left: 0;
                 }
             }
             p{
@@ -50,7 +114,6 @@
                 font-size: 20px;
                 line-height: 27px;
                 letter-spacing: 0;
-                font-family: YuGothic, "Yu Gothic", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "メイリオ", Meiryo, sans-serif;
                 @include brSpLandscape{
                     font-size: 14px;
                     line-height: 19px;
@@ -89,7 +152,7 @@
             }
             h3{
                 font-family: "游明朝", YuMincho, "Yu Mincho", "Noto Serif JP", serif;
-                font-weight: bold;
+                font-weight: 500;
                 font-size: 40px;
                 line-height: 64px;
                 margin-bottom: 37px;
@@ -97,6 +160,7 @@
                     display: none;
                 }
                 b{
+                    font-weight: 500;
                     font-size: 60px;
                     line-height: 96px;
                     color: $cAccent;
@@ -107,10 +171,18 @@
             }
             h4{
                 font-family: "游明朝", YuMincho, "Yu Mincho", "Noto Serif JP", serif;
-                font-weight: bold;
+                font-weight: 500;
                 font-size: 34px;
                 line-height: 54px;
                 margin-bottom: -8px;
+                position: relative;
+                &::before{
+                    content: url("../img/index/fig_blur.png");
+                    position: absolute;
+                    left: -50px;
+                    top: -27px;
+                    z-index: -1;
+                }
                 @include brSpLandscape{
                     display: none;   
                 }
@@ -121,7 +193,7 @@
                 font-weight: bold;
                 font-size: 20px;
                 line-height: 30px;
-                font-weight: 600;
+                font-weight: 500;
                 margin-bottom: -9px;
                 @include brSpLandscape{
                     display: block;
@@ -235,6 +307,8 @@
                                     font-size: 72px;
                                     line-height: 58px;
                                     color: $textColor;
+                                    margin-left: 10px;
+                                    margin-right: -6px;
                                     @include brSpLandscape{
                                         font-size: 35px;
                                         line-height: 40px;
@@ -266,36 +340,41 @@
                         .value{
                             font-family: "honoka-shin-mincho";
                             font-size: 65px;
+                            font-weight: 300;
                             line-height: 35px;
-                            min-width: 240px;
+                            min-width: 270px;
                             position: relative;
                             letter-spacing: -5px;
                             bottom: -17px;
+                            text-align: right;
                             @include brSpLandscape{
                                 font-size: 39px;
                                 line-height: 26px;
                                 min-width: auto; 
                                 bottom: -10px;
                                 letter-spacing: -3px;
+                                text-align: center;
                             }
                             &::after{
                                 content: "";
-                                width: calc(100% + 20px);
+                                width: calc(100% - 10px);
                                 height: 1px;
                                 background-color: $cAccent;
                                 position: absolute;
                                 bottom: 0;
-                                left: 50%;
-                                transform: translateX(-50%);
+                                right: -17px;
                                 @include brSpLandscape{
                                     width: 100%;
                                     bottom: -7px;
+                                    right: -5px;
                                 }
                             }
                             span{
                                 font-size: 30px;
                                 line-height: 34px;
                                 font-weight: 300;
+                                letter-spacing: 0;
+                                margin-left: 5px;
                                 @include brSpLandscape{
                                     font-size: 16px;
                                     line-height: 26px;
@@ -334,6 +413,17 @@
                 @include brSpLandscape{
                     right: calc(100% - 8px);
                 }
+            }
+        }
+        &__img-desktop{
+            @include brSpLandscape{
+                display: none;
+            }
+        }
+        &__img-sp{
+            display: none;
+            @include brSpLandscape{
+                display: block;
             }
         }
         &__list{
@@ -391,8 +481,7 @@
                 max-width: 100%;
                 @include brSpLandscape{
                     padding-right: 0;
-                    height: 180px;
-                    object-fit: cover;
+                    
                 }
             }
         }
@@ -496,7 +585,9 @@
         }
         .c-title-center{
             p{
-                display: none;
+                @include brSpLandscape{
+                    display: none;
+                }
             }
         }
         &__inner{
@@ -548,6 +639,7 @@
             line-height: 33px;
             margin-top: 21px;
             margin-bottom: 27px;
+            color: #1F0E03;
             @include brSpLandscape{
                 font-size: 13px;
                 line-height: 25px;
@@ -707,10 +799,6 @@
                 }
                 img{
                     transition: .4s all;
-                    @include brSpLandscape{
-                        height: 327px;
-                        object-fit: cover;
-                    }
                 }
             }
         }
@@ -730,6 +818,9 @@
             font-weight: 600;
             line-height: 24px;
             margin-bottom: 16px;
+            @include brSpLandscape{
+                padding-right: 27px;
+            }
         }
         &__tag{
             a{
@@ -755,6 +846,10 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            svg{
+                position: relative;
+                left: 1px;
+            }
             &:hover{
                 background-color: $textColor;
                 path{
@@ -802,6 +897,8 @@
             }
             p{
                 &.desktop{
+                    font-size: 16px;
+                    line-height: 22px;
                     @include brSpLandscape{
                         display: none;
                     }
@@ -1211,6 +1308,7 @@
                 padding-right: 25px;
             }
         }
+
         &__inner{
             width: 1180px;
             max-width: 100%;
@@ -1218,12 +1316,14 @@
             .c-title-center{
                 margin-bottom: 27px;
                 @include brSpLandscape{
-                    margin-bottom: 13px;
+                    margin-bottom: 9px;
                 }
                 p{
                     font-size: 16px;
+                    line-height: 22px;
                     @include brSpLandscape{
                         font-size: 11px;
+                        line-height: 17px;
                     }
                 }
             }
@@ -1317,7 +1417,8 @@
                 justify-content: flex-end;
                 width: 100%;
                 padding: 0;
-                margin-bottom: 8px;
+                margin-bottom: 6px;
+                padding-left: 10px;
             }
         }
         &__label{
@@ -1327,17 +1428,24 @@
             line-height: 20px;
             font-family: "Yu Gothic";
             margin-bottom: -1px;
+            @include brSpLandscape{
+                position: relative;
+                top: 1px;
+            }
         }
         &__date{
             font-size: 12px;
             font-weight: 700;
             color: #ADADAD;
-            line-height: 20px;
+            line-height: 24px;
             font-family: "Yu Gothic";
             position: relative;
             @include brSpLandscape{
                 color: #000;
                 margin-right: 15px;
+                span{
+                    margin-left: 3px;
+                }
                 &::after{
                     content: "";
                     width: 1px;
@@ -1356,12 +1464,18 @@
             color: #000000;
             line-height: 24px;
             font-family: "Yu Gothic";
-            padding-right: 36px;
+            padding-right: 30px;
+            @include brSpLandscape{
+                padding-left: 10px;
+            }
+            span{
+                margin: 0 7px;
+            }
         }
         .c-btn-effect{
             margin: 40px auto 0;
             @include brSpLandscape{
-                margin-top: 27px;
+                margin-top: 23px;
             }
         }
     }

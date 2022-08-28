@@ -84,11 +84,15 @@
     &__info{
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: space-between;
+        padding: 0 25px;
         margin-top: 23px;
     }
     &__contact{
         margin-right: 46px;
+        .c-btn-round{
+            font-weight: 600;
+        }
     }
     &__social-link{
         a{

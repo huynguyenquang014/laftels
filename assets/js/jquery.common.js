@@ -59,6 +59,9 @@ function anchorLink(element, spaceToTop){
 }
 
 $(document).ready(function() {
+	AOS.init({
+		duration: 1000
+	});
 	$(window).on("scroll", function () {
 		AOS.init({
 			duration: 1000

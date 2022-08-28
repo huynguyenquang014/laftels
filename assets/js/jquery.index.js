@@ -12,7 +12,7 @@ $(window).load(function() {
     });
 
     $('.p-index__case__slider').slick({ 
-        autoplay: true,
+        autoplay: false,
         autoplaySpeed: 3000,
         slidesToShow: 3,
         dots: false,
