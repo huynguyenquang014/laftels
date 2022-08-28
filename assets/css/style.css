@@ -2197,6 +2197,8 @@ input, textarea {
 }
 .p-index__column__slider-sp .p-index__column__title-sp {
   font-size: 12px !important;
+  font-weight: 600;
+  line-height: 18px;
 }
 .p-index__column__slider-sp .p-index__column__col {
   padding-left: 12.5px;
