@@ -5862,6 +5862,17 @@ input, textarea {
 .c-tabs__nav ul li select:focus-visible, .c-tabs-about__nav ul li select:focus-visible {
   outline: none;
 }
+@media (max-width: 599px) {
+  .c-tabs__nav ul li .c-select, .c-tabs-about__nav ul li .c-select {
+    background-color: #F4F4F4;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
 .c-tabs__nav ul li a, .c-tabs__nav ul li select, .c-tabs-about__nav ul li a, .c-tabs-about__nav ul li select {
   color: #000;
   font-size: 20px;

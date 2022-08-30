@@ -75,6 +75,13 @@
                         outline: none;
                     }
                 }
+                .c-select{
+                    @include brSpLandscape{
+                        background-color: #F4F4F4;
+                        display: flex;
+                        justify-content: center;
+                    }
+                }
                 a, select{
                     color: #000;
                     font-size: 20px;
