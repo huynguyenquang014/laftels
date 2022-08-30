@@ -1,0 +1,32 @@
+@charset "utf-8";
+
+.p-news-details{
+    .c-top-mv{
+        img{
+            @include brSpLandscape{
+                height: 328px;
+                object-fit: cover;
+            }
+        }
+    }
+    &__content{
+        position: relative;
+        &__inner{
+            background-color: #fff;
+            margin-top: -265px;
+            padding: 18px 50px 90px;
+            .c-breadcrumb {
+                margin-bottom: 32px;
+                @include brSpLandscape{
+                    margin-bottom: 10px;
+                }
+            }
+            @include brSmallPc{
+                margin-top: -162px;
+            }
+            @include brSpLandscape{
+                padding: 4px 10px 60px;
+            }
+        }
+    }
+}

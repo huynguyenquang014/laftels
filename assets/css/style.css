@@ -3544,7 +3544,7 @@ input, textarea {
 }
 .p-news__item > ul li {
   border-bottom: 1px solid #D1D1D1;
-  padding-bottom: 9px;
+  padding-bottom: 7px;
   padding-top: 12px;
 }
 .p-news__item__meta {
@@ -3557,7 +3557,7 @@ input, textarea {
       -ms-flex-align: center;
           align-items: center;
   padding: 0 20px;
-  margin-bottom: 1px;
+  margin-bottom: 0px;
 }
 .p-news__item__date {
   color: #BFBFBF;
@@ -3565,6 +3565,12 @@ input, textarea {
   font-weight: 600;
   line-height: 35px;
   margin-right: 10px;
+}
+@media (max-width: 599px) {
+  .p-news__item__date {
+    position: relative;
+    top: 2px;
+  }
 }
 .p-news__item__label {
   font-size: 12px;
@@ -3584,13 +3590,18 @@ input, textarea {
 }
 .p-news__item__title {
   font-size: 16px;
-  line-height: 25px;
+  line-height: 28px;
   font-weight: 600;
   margin-bottom: 9px;
   padding: 0 20px;
 }
 .p-news__item__title span {
   margin-left: -9px;
+}
+@media (max-width: 599px) {
+  .p-news__item__title span {
+    margin-left: 0;
+  }
 }
 @media (max-width: 599px) {
   .p-news__item__title {
@@ -3603,6 +3614,40 @@ input, textarea {
 @media (max-width: 599px) {
   .p-news .c-pagination {
     margin-top: 30px;
+  }
+}
+
+@media (max-width: 599px) {
+  .p-news-details .c-top-mv img {
+    height: 328px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+}
+.p-news-details__content {
+  position: relative;
+}
+.p-news-details__content__inner {
+  background-color: #fff;
+  margin-top: -265px;
+  padding: 18px 50px 90px;
+}
+.p-news-details__content__inner .c-breadcrumb {
+  margin-bottom: 32px;
+}
+@media (max-width: 599px) {
+  .p-news-details__content__inner .c-breadcrumb {
+    margin-bottom: 10px;
+  }
+}
+@media (max-width: 1279px) {
+  .p-news-details__content__inner {
+    margin-top: -162px;
+  }
+}
+@media (max-width: 599px) {
+  .p-news-details__content__inner {
+    padding: 4px 10px 60px;
   }
 }
 
@@ -5824,6 +5869,7 @@ input, textarea {
   line-height: 27px;
   display: block;
   text-align: center;
+  text-align: -webkit-center;
   border: none;
   width: 100%;
 }
