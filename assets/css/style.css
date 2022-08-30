@@ -5874,6 +5874,7 @@ input, textarea {
   }
   .c-tabs__nav ul li .c-select select, .c-tabs-about__nav ul li .c-select select {
     width: auto;
+    margin-bottom: 0;
   }
 }
 .c-tabs__nav ul li a, .c-tabs__nav ul li select, .c-tabs-about__nav ul li a, .c-tabs-about__nav ul li select {
