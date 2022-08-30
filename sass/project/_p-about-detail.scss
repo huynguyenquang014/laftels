@@ -1,0 +1,46 @@
+.p-about-detail {
+    .c-top-mv {
+        position: relative;
+    }
+    .c-top-mv__title {
+        position: absolute;
+        top: 153px;
+        left: calc((100% - 907px) / 2);
+        h3 {
+            font-size: 30px;
+            line-height: 48px;
+            font-weight: bold;
+            width: 459px;
+            max-width: 100%;
+        }
+    }
+    &__position {
+        position: absolute;
+        bottom: 196px;
+        left: calc((100% - 907px) / 2);
+        p {
+            font-size: 16px;
+            line-height: 30px;
+            font-weight: 400;
+        }
+        h3 {
+            strong {
+                font-size: 24px;
+                font-weight: bold;
+                line-height: 39px;
+            }
+            span {
+                font-size: 16px;
+                font-weight: 600;
+                line-height: 22px;
+                margin-left: 16px;
+            }
+        }
+    }
+    &__content {
+        &__left {
+            width: 500px;
+            max-width: 100%;
+        }
+    }
+}

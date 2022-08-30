@@ -1,0 +1,15 @@
+.c-select{
+    position: relative;
+    &::after{
+        content: url("../img/common/icn_arrow_select_01.svg");
+        position: absolute;
+        right: 10px;
+        top: calc(50% - 3px);
+        transform: translateY(-50%);
+        pointer-events: none;
+    }
+    select{
+        appearance: none;
+        cursor: pointer;
+    }
+}

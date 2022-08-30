@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Laftels</title>
+    <link rel="icon" type="image/png" href="./assets/img/common/fig_favicon.png">
+    <meta name="format-detection" content="telephone=no" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="icon" href="./assets/img/common/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/animate.min.css">
+    <link rel="stylesheet" href="./assets/css/slick.css">
+    <link href="./assets/css/aos.css" rel="stylesheet">
+    <link href="./assets/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <!---header-->
+    <header class="l-header">
+        <!-- Header desktop-->
+        <div class="l-header-top">
+            <div class="l-container-fluid">
+                <div class="l-row">
+                    <div class="l-col-auto">
+                        <a class="l-header-top__logo" href="./index.html">
+                            <img src="./assets/img/common/fig_logo.svg" alt="LAFTELS">
+                        </a>
+                    </div>
+                    <div class="l-col l-header-top__col-right">
+                        <div class="l-header-top__menu">
+                            <ul>
+                                <li>
+                                    <a href="./about.html"><span class="ja">私たちについて</span><span
+                                            class="en">ABOUT</span></a>
+                                </li>
+                                <li>
+                                    <a href="./service.html"><span class="ja">サービス</span><span
+                                            class="en">SERVICE</span></a>
+                                </li>
+                                <li>
+                                    <a href="./case.html"><span class="ja">導入事例</span><span class="en">CASE</span></a>
+                                </li>
+                                <li>
+                                    <a href="./seminar.html"><span class="ja">セミナー情報</span><span
+                                            class="en">SEMINAR</span></a>
+                                </li>
+                                <li>
+                                    <a href="./column.html"><span class="ja">コラム</span><span
+                                            class="en">COLUMN</span></a>
+                                </li>
+                                <li>
+                                    <a href="./news.html"><span class="ja">お知らせ</span><span class="en">NEWS</span></a>
+                                </li>
+                                <li>
+                                    <a href="./recruit.html"><span class="ja">採用情報</span><span
+                                            class="en">RECRUIT</span></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="l-header-top__info">
+                            <div class="l-header-top__contact">
+                                <a class="c-btn-round" href="./contact.html"><span class="ja">お問い合わせ</span><span
+                                        class="en">CONTACT</span></a>
+                            </div>
+                            <div class="l-header-top__social-link">
+                                <a href="https://www.facebook.com/laftels/" target="_blank">
+                                    <img src="./assets/img/common/icn_facebook.svg" alt="facebook">
+                                </a>
+                                <a href="https://twitter.com/laftels" target="_blank">
+                                    <img src="./assets/img/common/icn_twitter.svg" alt="twitter">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End header desktop -->
+
+        <!-- Header mobile -->
+        <div class="l-header-mb">
+            <div class="l-container">
+                <div class="l-row">
+                    <div class="l-col-auto">
+                        <a href="#">
+                            <img src="./assets/img/common/fig_logo_mobile.svg" alt="">
+                        </a>
+                    </div>
+                    <div class="l-col">
+                        <div class="js-toggle-menu">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <div class="l-header-mb__menu">
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        <span>ABOUT</span>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="8.121" height="13.414" viewBox="0 0 8.121 13.414">
+                                            <path id="Path_271" data-name="Path 271" d="M0,12,6,6,0,0"
+                                                transform="translate(0.707 0.707)" fill="none" stroke="#1f1f1f"
+                                                stroke-width="2" />
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span>SERVICE</span>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="8.121" height="13.414" viewBox="0 0 8.121 13.414">
+                                            <path id="Path_271" data-name="Path 271" d="M0,12,6,6,0,0"
+                                                transform="translate(0.707 0.707)" fill="none" stroke="#1f1f1f"
+                                                stroke-width="2" />
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span>CASE</span>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="8.121" height="13.414" viewBox="0 0 8.121 13.414">
+                                            <path id="Path_271" data-name="Path 271" d="M0,12,6,6,0,0"
+                                                transform="translate(0.707 0.707)" fill="none" stroke="#1f1f1f"
+                                                stroke-width="2" />
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span>SEMINAR</span>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="8.121" height="13.414" viewBox="0 0 8.121 13.414">
+                                            <path id="Path_271" data-name="Path 271" d="M0,12,6,6,0,0"
+                                                transform="translate(0.707 0.707)" fill="none" stroke="#1f1f1f"
+                                                stroke-width="2" />
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span>COLUMN</span>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="8.121" height="13.414" viewBox="0 0 8.121 13.414">
+                                            <path id="Path_271" data-name="Path 271" d="M0,12,6,6,0,0"
+                                                transform="translate(0.707 0.707)" fill="none" stroke="#1f1f1f"
+                                                stroke-width="2" />
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span>NEWS</span>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="8.121" height="13.414" viewBox="0 0 8.121 13.414">
+                                            <path id="Path_271" data-name="Path 271" d="M0,12,6,6,0,0"
+                                                transform="translate(0.707 0.707)" fill="none" stroke="#1f1f1f"
+                                                stroke-width="2" />
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span>RECRUIT</span>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="8.121" height="13.414" viewBox="0 0 8.121 13.414">
+                                            <path id="Path_271" data-name="Path 271" d="M0,12,6,6,0,0"
+                                                transform="translate(0.707 0.707)" fill="none" stroke="#1f1f1f"
+                                                stroke-width="2" />
+                                        </svg>
+                                    </a>
+                                </li>
+                            </ul>
+                            <div class="l-header-mb__info">
+                                <div class="l-header-mb__contact">
+                                    <a class="c-btn-round" href="./contact.html">CONTACT</a>
+                                </div>
+                                <div class="l-header-mb__social-link">
+                                    <a href="https://www.facebook.com/laftels/" target="_blank">
+                                        <img src="./assets/img/common/icn_facebook.svg" alt="facebook">
+                                    </a>
+                                    <a href="https://twitter.com/laftels" target="_blank">
+                                        <img src="./assets/img/common/icn_twitter.svg" alt="twitter">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End header mobile -->
+    </header>
+    <!---end header-->
+
+    <!---main-->
+    <!---main-->
+    <section class="p-service">
+
+        <div class="c-top-mv">
+            <!--- top mv pc-->
+            <img class="c-top-mv__pc" src="./assets/img/service/img_top-mv.png" alt="">
+            <!---end top mv pc-->
+
+            <!---top mv sp -->
+            <img class="c-top-mv__sp" src="./assets/img/service/img_top-mv_sp.png" alt="">
+            <!---end top mv sp -->
+            <div class="c-top-mv__title">
+                <h3>SERVICE</h3>
+                <p>サービス</p>
+            </div>
+        </div>
+
+        <div class="l-container">
+            <div class="c-wrap">
+                <div class="p-service__inner">
+                    <div class="c-breadcrumb">
+                        <ul>
+                            <li>
+                                <a href="#">TOP</a>
+                            </li>
+                            <li>
+                                <a href="#">サービス</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="c-nav-link">
+                        <ul>
+                            <li>
+                                <a class="" href="#">サービス</a>
+                            </li>
+                            <li>
+                                <a class="active" href="#">ラフメソッド</a>
+                            </li>
+                            <li>
+                                <a class="" href="#">人事システムLHR</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="p-service__raftels">
+                    <h2>ラフテルズのサービス</h2>
+                    <div class="p-service__raftels__content">
+                        <img class="p-service__raftels__content__img" src="./assets/img/service/img_raftels.png" alt="" />
+                        <img class="p-service__raftels__content__img-sp" src="./assets/img/service/img_raftels_sp.png" alt="" />
+                        <ul class="p-service__raftels__pc">
+                            <li>
+                                テキストテキストテキストテキスト テキストテキストテキストテキスト テキストテキストテキストテキスト テキストテキストテキスト
+                            </li>
+                            <li>
+                                飲食業界をカッコ良くする為のサービス。 名刺、クレドカード、ロゴなどのデザイン。そ してコースメニュー、採用サイトの制作も行います。
+                            </li>
+                            <li>
+                                テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+                            </li>
+                            <li>
+                                小学生に飲食店の素晴らしさを体験して もらい、将来働く選択肢に入れてもらう目 的と、CSR活動を目的としたサービス。
+                            </li>
+                            <li>
+                                業態マッチングを顧問先限定のクローズでのサービス展開。 今後は韓国企業とのマッチングサービスも視野に入れています。
+                            </li>
+                        </ul>
+                        <ul class="p-service__raftels__sp">
+                            <li>
+
+                                <div class="p-service__raftels__sp__title">
+                                    <h3>ラフメソッド</h3>
+                                    <p>コンサルティング</p>
+                                </div>
+                                <p class="p-service__raftels__sp__content">
+                                    テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+                                </p>
+
+                            </li>
+                            <li>
+                                <div class="p-service__raftels__sp__title">
+                                    <h3>LHR</h3>
+                                    <p>人事システムサービス</p>
+                                </div>
+                                <p class="p-service__raftels__sp__content">
+                                    飲食業界をカッコ良くする為のサービス。名刺、クレドカード、ロゴなどのデザイン。そしてコースメニュー、採用サイトの制作も行います。
+                                </p>
+                            </li>
+                            <li>
+                                <div class="p-service__raftels__sp__title">
+                                    <h3> ラフデザイン</h3>
+                                    <p>デザイン・サイト制作</p>
+                                </div>
+                                <p class="p-service__raftels__sp__content">
+                                    業態マッチングを顧問先限定のクローズでのサービス展開。今後は韓国企業とのマッチングサービスも視野に入れています。
+                                </p>
+                            </li>
+                            <li>
+                                <div class="p-service__raftels__sp__title">
+                                    <h3>ラフレンド</h3>
+                                    <p>業態マッチングサービス</p>
+                                </div>
+                                <p class="p-service__raftels__sp__content">
+                                    小学生に飲食店の素晴らしさを体験してもらい、将来働く選択肢に入れてもらう目的と、CSR活動を目的としたサービス。
+                                </p>
+                            </li>
+                            <li>
+                                <div class="p-service__raftels__sp__title">
+                                    <h3>ラフザニア</h3>
+                                    <p>小学生向け飲食店職業体験</p>
+                                </div>
+                                <p class="p-service__raftels__sp__content">
+                                    テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="p-service__method">
+            <div class="l-container">
+                <div class="p-service__method__title">
+                    <h2>LAF METHOD</h2>
+                    <p>ラフメソッド</p>
+                </div>
+                <div class="p-service__method__what">
+                    <h3>ラフメソッドとは</h3>
+                    <div class="l-row">
+                        <div class="l-col p-service__method__what__left">
+                            <p class="p-service__method__what__content">
+                                ラフテルズは、アーリーステージ企業の短期中期経営計画を達成させる為、経営幹部の一員として戦略立案・実行・<br /> サポートまで行います。
+                            </p>
+                            <p class="p-service__method__what__decs">
+                                日本の人事や人事部は「管理型」と認識されており、現在の地位は決して高いものではありません。しかし昨今、経営戦略の実現を担う「戦略型」へと転換すべきである、という考え方が生まれてきました。<br /> 経営戦略と人事（人材）マネジメントを連動させることによって、自社の競争優位の実現を目指す。それを戦略的にまとめ、アーリーステージ向けに特化したモノが「ラフメソッド」です
+
+                            </p>
+                        </div>
+                        <div class="l-col p-service__method__what__right">
+                            <img class="p-service__method__what__pc" src="./assets//img//service/img_what.png" alt="">
+                            <img class="p-service__method__what__sp" src="./assets//img//service/img_what_sp.png" alt="">
+                            <p class="p-service__method__what__decs-img">
+                                採用、評価、教育、労務の全ての戦略立案を行えるところが、ラフメソッド最大の強みです。更に、社労士、弁護士との提携で万全の法対策を行っています。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-service__method__rough">
+                    <h3>ラフメソッドの流れ</h3>
+                    <p class="p-service__method__rough__title">
+                        ラフメソッド＝拡大成長戦略コンサルティング
+                    </p>
+                    <p class="p-service__method__rough__decs">
+                        ラフメソッドは、24回のカリキュラムに落とし込んだ独自のメソッドです。短期的な付き合いでは無く、2年近くかけて顧問先の経営陣と共に各社に合った制度設計をして行きます。
+                    </p>
+                    <div class="p-service__method__service">
+                        <h4>- サービスの流れ -</h4>
+                        <ul class="p-service__method__list">
+                            <li>
+                                <img src="./assets/img/service/img_service_01.png" alt="">
+                                <div class="p-service__method__list__content">
+                                    <p>まずは </p>
+                                    <p>ご相談ください </p>
+                                    <p>（無料）</p>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="./assets/img/service/img_service_02.png" alt="">
+                                <div class="p-service__method__list__content">
+                                    <p>・経営課題の把握</p>
+                                    <p>・解決策のご提案</p>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="./assets/img/service/img_service_03.png" alt="">
+                                <div class="p-service__method__list__content">
+                                    <p>設計フェーズ</p>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="./assets/img/service/img_service_04.png" alt="">
+                                <div class="p-service__method__list__content">
+                                    <p>人事部構築フェーズ</p>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="./assets/img/service/img_service_05.png" alt="">
+                                <div class="p-service__method__list__content">
+                                    <p>継続的な</p>
+                                    <p>アフターフォロー</p>
+                                </div>
+                            </li>
+                        </ul>
+                        <ul class="p-service__method__list-sp">
+                            <li>
+                                <img src="./assets/img/service/img_service_sp_01.png" alt="">
+                                <div class="p-service__method__list__content">
+                                    <p class="p-service__method__list__content__title">経営計画 </p>
+                                    <p>コンサル1回目を無料体験(DAY1) </p>
+                                    <p>3ヶ年計画の立案</p>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="./assets/img/service/img_service_sp_02.png" alt="">
+                                <div class="p-service__method__list__content">
+                                    <p>組織(図)計画</p>
+                                    <p>部門・階層・給与づくり</p>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="./assets/img/service/img_service_sp_03.png" alt="">
+                                <div class="p-service__method__list__content">
+                                    <p>労務改善計画</p>
+                                    <p>休日・労働時間の見直し（法律対策）</p>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="./assets/img/service/img_service_sp_04.png" alt="">
+                                <div class="p-service__method__list__content">
+                                    <p>採用計画</p>
+                                    <p>新卒採用・中途採用の計画立案</p>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="./assets/img/service/img_service_sp_05.png" alt="">
+                                <div class="p-service__method__list__content">
+                                    <p>評価制度設計</p>
+                                    <p>評価の項目・スケジュールと賞与査定</p>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="./assets/img/service/img_service_sp_06.png" alt="">
+                                <div class="p-service__method__list__content">
+                                    <p>理念設計</p>
+                                    <p>浸透を中心としたクレド策定</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="p-service__method__sales">
+                        <h4>- 充実のアフターフォロー -</h4>
+                        <div class="p-service__method__sales__content">
+                            <div class="p-service__method__sales__content__box">
+                                <h4>制度設計（ラフメソッド）</h4>
+                                <p>組織戦略・採用戦略・人事戦略を、お客様に合わせて <br> 戦略立案いたします。
+                                </p>
+                                <div class="p-service__method__sales__content__box__img">
+                                    <img src="./assets/img/service/img_box_01.png" alt="">
+                                </div>
+                            </div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="11.992" height="22.385" viewBox="0 0 11.992 22.385">
+                                <path id="Polygon_13" data-name="Polygon 13" d="M11.193,0,22.385,11.992H0Z"
+                                    transform="translate(11.992) rotate(90)" fill="#eb5c01" />
+                            </svg>
+                            <svg class="p-service__method__sales__content__svg" xmlns="http://www.w3.org/2000/svg" width="22.385" height="11.992" viewBox="0 0 22.385 11.992">
+                                <path id="Polygon_18" data-name="Polygon 18" d="M11.193,0,22.385,11.992H0Z"
+                                    transform="translate(22.385 11.992) rotate(180)" fill="#eb5c01" />
+                            </svg>
+
+                            <div class="p-service__method__sales__content__box">
+                                <h4>ラフメソッドの実行・サポート</h4>
+                                <p>お客様に合わせて設計した制度の実行からサポートまでを行います。制度を作って終わりではなく、成長拡大のための継続的なフォローを行います。</p>
+                                <div class="p-service__method__sales__content__box__img">
+                                    <img src="./assets/img/service/img_box_02.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="p-service__case">
+            <h2>CASE STUDY</h2>
+            <p class="p-service__case__decs">導入事例</p>
+            <div class="p-service__case__slogans">
+                <p>
+                    ラフテルズのサービスをご利用いただいたお客様から <br /> 嬉しいお声をいただいています。
+                </p>
+                <p class="p-service__case__slogans_sp">
+                    ラフテルズのサービスを <br /> ご利用いただいたお客様から <br /> 嬉しいお声をいただいています。
+                </p>
+            </div>
+            <div class="l-container">
+                <div class="l-row">
+                    <div class="l-col">
+                        <div class="p-service__case__box">
+                            <a href="#" class="p-service__case__box__image">
+                                <img src="./assets/img/service/img_case_01.png" alt="">
+                            </a>
+                            <div class="p-service__case__box__content">
+                                <h6>実施例</h6>
+                                <p class="p-service__case__box__decs">
+                                    見出し見出し見出し見出し見出し見出し見出し見出し見出し見出し見出し見出し見出し見出し
+                                </p>
+                                <p class="p-service__case__box__name">
+                                    株式会社ダミーダミーダミーダミー <br /> 代表取締役　苗字 名前
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="l-col">
+                        <div class="p-service__case__box">
+                            <a href="#" class="p-service__case__box__image">
+                                <img src="./assets/img/service/img_case_02.png" alt="">
+                            </a>
+                            <div class="p-service__case__box__content">
+                                <h6 class="c-sub-color">お客様の声</h6>
+                                <p class="p-service__case__box__decs">
+                                    見出し見出し見出し見出し見出し見出し見出し見出し見出し見出し見出し見出し見出し見出し</p>
+                                <p class="p-service__case__box__name">
+                                    株式会社ダミーダミーダミーダミー <br /> 代表取締役　苗字 名前
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="l-col">
+                        <div class="p-service__case__box">
+                            <a href="#" class="p-service__case__box__image">
+                                <img src="./assets/img/service/img_case_03.png" alt="">
+                            </a>
+                            <div class="p-service__case__box__content">
+                                <h6>実施例</h6>
+                                <p class="p-service__case__box__decs">
+                                    見出し見出し見出し見出し見出し見出し見出し見出し見出し見出し見出し見出し見出し見出し
+
+                                </p>
+                                <p class="p-service__case__box__name">
+                                    株式会社ダミーダミーダミーダミー <br /> 代表取締役　苗字 名前
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a href="" class="c-btn-effect">
+                    <span>VIEW ALL</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="8.021" height="13.921" viewBox="0 0 8.021 13.921">
+                        <path id="Path_52" data-name="Path 52" d="M341.6,3657.392l6.43,6.43-6.43,6.43"
+                            transform="translate(-341.069 -3656.862)" fill="none" stroke="#1f1f1f" stroke-width="1.5" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+    <!---end main-->
+    <!----end main-->
+
+    <!-- Footer -->
+    <footer class="l-footer">
+        <div class="l-footer__recruit">
+            <div class="l-container" data-aos="fade-left">
+                <div class="c-title-center">
+                    <h3>RECRUIT</h3>
+                    <p>採用情報</p>
+                </div>
+                <p class="l-footer__recruit__desc">
+                    新しいクルーを募集します。<br>共に戦い、社内外に大きなインパクトを<br class="sp">起こしてくれる<br>新たな仲間との出会いを楽しみにしています。
+                </p>
+                <a href="#" class="c-btn-effect">
+                    <span>新卒採用/中途採用</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="8.021" height="13.921" viewBox="0 0 8.021 13.921">
+                        <path id="Path_52" data-name="Path 52" d="M341.6,3657.392l6.43,6.43-6.43,6.43"
+                            transform="translate(-341.069 -3656.862)" fill="none" stroke="#1f1f1f" stroke-width="1.5" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+
+        <div class="l-footer__doc-request">
+            <div class="l-container" data-aos="fade-right">
+                <div class="c-title-center">
+                    <h3>資料請求</h3>
+                </div>
+                <p class="l-footer__doc-request__desc">
+                    ラフテルズのサービスについての資料を<br class="sp">ダウンロードいただけます。<br>お気軽にお申し込みください。
+                </p>
+                <a href="#" class="c-btn-effect">
+                    <span>資料請求をする</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="8.021" height="13.921" viewBox="0 0 8.021 13.921">
+                        <path id="Path_52" data-name="Path 52" d="M341.6,3657.392l6.43,6.43-6.43,6.43"
+                            transform="translate(-341.069 -3656.862)" fill="none" stroke="#1f1f1f" stroke-width="1.5" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+
+        <div class="l-footer__main">
+            <div class="l-container">
+                <div class="l-row">
+                    <div class="l-footer__main__col">
+                        <a href="#" class="l-footer__main__logo">
+                            <img src="./assets/img/common/fig_logo.svg" alt="laftels">
+                        </a>
+                        <div class="l-footer__main__link-sp">
+                            <ul>
+                                <li>
+                                    <a href="#" class="l-footer__main__category">ABOUT</a>
+                                    <a href="#" class="l-footer__main__category-child">ラフテルズについて</a>
+                                    <a href="#" class="l-footer__main__category-child">スタッフ紹介</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="l-footer__main__category">SERVICE</a>
+                                    <a href="#" class="l-footer__main__category-child">事業内容</a>
+                                    <a href="#" class="l-footer__main__category-child">デザイン制作</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="l-footer__main__category">CASE</a>
+                                    <a href="#" class="l-footer__main__category-child">実施例</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="l-footer__main__category">SEMINAR</a>
+                                    <a href="#" class="l-footer__main__category-child">セミナー情報</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="l-footer__main__category">COLUMN</a>
+                                    <a href="#" class="l-footer__main__category-child">組織戦略</a>
+                                    <a href="#" class="l-footer__main__category-child">採用戦略</a>
+                                    <a href="#" class="l-footer__main__category-child">人事戦略</a>
+                                    <a href="#" class="l-footer__main__category-child">セミナーレポート</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="l-footer__main__category">NEWS</a>
+                                    <a href="#" class="l-footer__main__category-child">お知らせ</a>
+                                    <a href="#" class="l-footer__main__category-child">メディア掲載</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="l-footer__main__category">RECRUIT</a>
+                                    <a href="#" class="l-footer__main__category-child">新卒採用・中途採用</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="l-footer__main__privacy-sp">
+                            <a href="#">ブライバシーポリシー</a>
+                        </div>
+                        <a class="c-btn-round" href="./contact.html">CONTACT</a>
+                        <div class="l-footer__main__social-link">
+                            <a href="https://www.facebook.com/laftels/" target="_blank">
+                                <img src="./assets/img/common/icn_facebook.svg" alt="facebook">
+                            </a>
+                            <a href="https://twitter.com/laftels" target="_blank">
+                                <img src="./assets/img/common/icn_twitter.svg" alt="twitter">
+                            </a>
+                        </div>
+                        <div class="l-footer__main__privacy">
+                            <a href="#">ブライバシーポリシー</a>
+                        </div>
+                        <div class="l-footer__main__copy-right">Copyright © LAFTELS inc. Allrights Reserved.</div>
+                    </div>
+                    <div class="l-footer__main__col">
+                        <div class="l-footer__main__link">
+                            <ul>
+                                <li>
+                                    <a href="#" class="l-footer__main__category">私たちについて</a>
+                                    <a href="#" class="l-footer__main__category-child">ラフテルズについて</a>
+                                    <a href="#" class="l-footer__main__category-child">スタッフ紹介</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="l-footer__main__category">サービス</a>
+                                    <a href="#" class="l-footer__main__category-child">事業内容</a>
+                                    <a href="#" class="l-footer__main__category-child">デザイン制作</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="l-footer__main__category">導入事例</a>
+                                    <a href="#" class="l-footer__main__category-child">実施例</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="l-footer__main__category">セミナー情報</a>
+                                    <a href="#" class="l-footer__main__category-child">セミナー情報</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="l-footer__main__category">コラム</a>
+                                    <a href="#" class="l-footer__main__category-child">組織戦略</a>
+                                    <a href="#" class="l-footer__main__category-child">採用戦略</a>
+                                    <a href="#" class="l-footer__main__category-child">人事戦略</a>
+                                    <a href="#" class="l-footer__main__category-child">セミナーレポート</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="l-footer__main__category">お知らせ</a>
+                                    <a href="#" class="l-footer__main__category-child">お知らせ</a>
+                                    <a href="#" class="l-footer__main__category-child">メディア掲載</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="l-footer__main__category">採用情報</a>
+                                    <a href="#" class="l-footer__main__category-child">新卒採用・中途採用</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>s
+        </div>
+    </footer>
+    <!-- End footer -->
+
+    <!-- Javascript -->
+    <script src="./assets/js/jquery.min.js"></script>
+    <script src="./assets/js/aos.js"></script>
+    <script src="./assets/js/slick.min.js"></script>
+    <script src="./assets/js/jquery.easing.min.js"></script>
+    <script src="./assets/js/jquery.nice-select.min.js"></script>
+    <script src="./assets/js/jquery.menu.js"></script>
+    <script src="./assets/js/jquery.common.js"></script>
+    <script src="./assets/js/jquery.index.js"></script>
+    <script src="./assets/js/jquery.serice-system.js"></script>
+
+</body>
+
+</html>

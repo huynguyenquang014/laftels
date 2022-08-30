@@ -65,6 +65,10 @@ $linkColor_hover : #cc9999;
 	src: url("../font/Honoka_Shin_Mincho_L.otf");
 }
 
+@font-face {
+	font-family: "gill-sans-regular";
+	src: url("../font/Gill-Sans.otf");
+}
 
 body{
 	font-family: $fontFamily;

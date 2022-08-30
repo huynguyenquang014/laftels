@@ -1484,4 +1484,20 @@
             }
         }
     }
+
+
+    ~ .l-footer{
+        .l-footer__recruit {
+            @include brSpLandscape{
+                background-image: url("../img/common/bg_top-recruit_sp.jpg");
+            }
+            
+        }
+        .l-footer__doc-request {
+            @include brSpLandscape{
+                background-image: url("../img/common/bg_top-doc-request_sp.jpg");
+            }
+            
+        }
+    }
 }

@@ -19,20 +19,20 @@ $(function(){
 
 	/* Tab */
 	$( document ).ready(function() {
-		$('.c-tabs__head li:first-child').addClass('active');
-		$('.c-tabs__content__block').hide();
-		$('.c-tabs__content__block:first').show();
+		$('.c-tabs__nav li:first-child').addClass('active');
+		$('.c-tabs__content').hide();
+		$('.c-tabs__content:first').show();
 
 		// Click function
-		$('.c-tabs__head li').click(function(){
-			$('.c-tabs__head li').removeClass('active');
+		$('.c-tabs__nav li').click(function(){
+			$('.c-tabs__nav li').removeClass('active');
 			$(this).addClass('active');
-			$('.c-tabs__content__block').hide();
+			$('.c-tabs__content').hide();
 
 			var activeTab = $(this).find('a').attr('href');
 			$(activeTab).fadeIn();
-			return false;
-			});
+			// return false;
+		});
 	});
 });
 
