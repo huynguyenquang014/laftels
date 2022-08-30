@@ -80,6 +80,9 @@
                         background-color: #F4F4F4;
                         display: flex;
                         justify-content: center;
+                        select{
+                            width: auto;
+                        }
                     }
                 }
                 a, select{
