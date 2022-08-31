@@ -68,6 +68,20 @@ $(document).ready(function() {
 			duration: 1000
 		});
 	});
+
+	const inputs = document.getElementsByClassName('js-fake-input');
+	const selects = document.getElementsByClassName('js-select');
+
+	for (let i = 0; i < inputs.length; i++) {
+	getSelected(i);
+	selects[i].addEventListener("change", function() {
+		getSelected(i);
+	});
+	}
+
+	function getSelected(i){
+	inputs[i].value = selects[i].options[selects[i].selectedIndex].text;
+	}
 });
 
 $(function() { // Dropdown toggle
