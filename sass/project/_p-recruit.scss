@@ -1,0 +1,457 @@
+@charset "utf-8";
+
+.p-recruit{
+    .c-top-mv{
+        
+    }
+    &__content{
+        position: relative;
+        margin-bottom: 100px;
+        @include brSpLandscape{
+            margin-bottom: 40px;
+        }
+        &__inner{
+            background-color: #fff;
+            margin-top: -265px;
+            padding: 18px 50px 120px;
+            .c-breadcrumb {
+                margin-bottom: 32px;
+                @include brSpLandscape{
+                    margin-bottom: 7px;
+                }
+            }
+            .c-tabs__nav{
+                margin-bottom: 79px;
+                @include brSpLandscape{
+                    margin-bottom: 17px;
+                }
+            }
+            @include brSmallPc{
+                margin-top: -84px;
+            }
+            @include brSpLandscape{
+                padding: 4px 10px 19px;
+            }
+        }
+    }
+
+    &__intro{
+        text-align: center;
+        &__title{
+            font-size: 20px;
+            font-weight: 600;
+            line-height: 27px;
+            color: #000;
+            margin-bottom: 46px;
+            @include brSpLandscape{
+                font-size: 18px;
+                line-height: 24px;
+                margin-bottom: 27px;
+            }
+        }
+        &__column{
+            width: 621px;
+            max-width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 71px;
+            @include brSpLandscape{
+                margin-bottom: 3px;
+            }
+            .l-row{
+                justify-content: space-between;
+            }
+        }
+        &__col{
+            padding-left: 15px;
+            padding-right: 15px;
+            @include brSpLandscape{
+                &:nth-child(1){
+                    flex: 100%;
+                    max-width: 100%;
+                    .p-recruit__intro__circle{
+                        margin-left: auto;
+                        margin-right: auto;
+                    }
+                }
+                &:nth-child(2){
+                    flex: 50%;
+                    max-width: 50%;
+                    .p-recruit__intro__circle{
+                        margin-left: auto;
+                        top: -20px;
+                        right: -15px;
+                    }
+                }
+                &:nth-child(3){
+                    flex: 50%;
+                    max-width: 50%;
+                    .p-recruit__intro__circle{
+                        margin-right: auto;
+                        top: -20px;
+                        left: -15px;
+                    }
+                }
+            }
+        }
+        &__circle{
+            padding: 10px;
+            width: 175px;
+            height: 175px;
+            border: 1px solid $cAccent;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: relative;
+            @include brSpLandscape{
+                width: 140px;
+                height: 140px;
+            }
+            p{
+                font-size: 15px;
+                font-weight: 600;
+                line-height: 20px;
+                color: $cAccent;
+                &.pc{
+                    @include brSpLandscape{
+                        display: none;
+                    }
+                }
+                &.sp{
+                    display: none;
+                    @include brSpLandscape{
+                        display: block;
+                    }
+                }
+                br + br{
+                    display: none;
+                    @include brSpLandscape{
+                        display: inline-block;
+                    }
+                }
+            }
+        }
+        &__desc{
+            margin-bottom: 24px;
+            font-size: 18px;
+            font-weight: 300;
+            line-height: 24px;
+            color: #000;
+            &.pc{
+                @include brSpLandscape{
+                    display: none;
+                }
+            }
+            &.sp{
+                display: none;
+                @include brSpLandscape{
+                    display: block;
+                    font-size: 14px;
+                    font-weight: 300;
+                    line-height: 24px;
+                }
+            }
+            b{
+                font-weight: 600;
+                color: $cAccent;
+            }
+        }
+    }
+
+    &__section{
+        @include brSpLandscape{
+            margin-top: 52px;
+        }
+        &__title{
+            font-size: 35px;
+            font-weight: 600;
+            line-height: 47px;
+            text-align: center;
+            margin-bottom: 82px;
+            @include brSpLandscape{
+                font-size: 20px;
+                line-height: 27px;
+                margin-bottom: 22px;
+            }
+            span{
+                position: relative;
+                &::before{
+                    content: "";
+                    width: 80px;
+                    height: 2px;
+                    background-color: $textColor;
+                    position: absolute;
+                    right: calc(100% + 33px);
+                    top: 50%;
+                    transform: translateY(-50%);
+                    @include brSpLandscape{
+                        right: calc(100% + 19px);
+                    }
+                }
+                &::after{
+                    content: "";
+                    width: 80px;
+                    height: 2px;
+                    background-color: $textColor;
+                    position: absolute;
+                    left: calc(100% + 33px);
+                    top: 50%;
+                    transform: translateY(-50%);
+                    @include brSpLandscape{
+                        left: calc(100% + 19px);
+                    }
+                }
+            }
+        }
+        .c-tabs{
+            @include brSpLandscape{
+                display: none;
+            }
+            &__nav{
+                margin-bottom: 83px;
+            }
+            ul{
+                li{
+                    min-width: 222px;
+                    a{
+                        font-size: 15px;
+                        line-height: 20px;
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
+        &__dropdown{
+            display: none;
+            @include brSpLandscape{
+                display: block;
+            }
+        }
+        &__box{
+            font-size: 18px;
+            line-height: 24px;
+            padding: 48px 50px 22px;
+            background-color: #fff;
+            box-shadow: 0 3px 20px rgba(0, 0, 0, 0.16);
+            margin-bottom: 70px;
+            @include brSpLandscape{
+                font-size: 12px;
+                font-weight: 300;
+                line-height: 17px;
+                box-shadow: none;
+                padding: 36px 10px 22px;
+                margin-bottom: 6px;
+            }
+            h5{
+                font-size: 18px;
+                font-weight: 600;
+                margin-bottom: 12px;
+                @include brSpLandscape{
+                    font-size: 15px;
+                    line-height: 20px;
+                    margin-bottom: 8px;
+                }
+            }
+        }
+        &__steps{
+            margin-top: 51px;
+            @include brSpLandscape{
+                margin-top: 55px;
+            }
+            h5{
+                margin-bottom: 37px;
+                @include brSpLandscape{
+                    margin-bottom: 19px;
+                }
+            }
+            ul{
+                display: flex;
+                flex-wrap: wrap;
+                width: 1050px;
+                justify-content: space-between;
+                margin-left: auto;
+                margin-right: auto;
+                max-width: 100%;
+                position: relative;
+                @include brSpLandscape{
+                    justify-content: center;
+                    max-width: calc(100% + 17px);
+                    margin-left: -9px;
+                }
+                &::before{
+                    content: "";
+                    width: 100%;
+                    height: 1.5px;
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    background-color: $textColor;
+                    z-index: 1;
+                    @include brSpLandscape{
+                        display: none;   
+                    }
+                }
+                li{
+                    width: 130px;
+                    height: 130px;
+                    border: 1px solid $textColor;
+                    border-radius: 50%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    text-align: center;
+                    padding: 10px;
+                    background-color: #fff;
+                    position: relative;
+                    z-index: 2;
+                    @include brSpLandscape{
+                        width: 100px;
+                        height: 100px;
+                        margin-left: 7px;
+                        margin-right: 7px;
+                    }
+                    &:nth-child(1){
+                        .p-recruit__section__steps-title{
+                            color: #EB5C01;
+                        }
+                    }
+                    &:nth-child(2){
+                        .p-recruit__section__steps-title{
+                            color: #EBAC01;
+                        }
+                    }
+                    &:nth-child(3){
+                        .p-recruit__section__steps-title{
+                            color: #84B500;
+                        }
+                    }
+                    &:nth-child(4){
+                        .p-recruit__section__steps-title{
+                            color: #4A5DAF;
+                        }
+                    }
+                    &:nth-child(5){
+                        .p-recruit__section__steps-title{
+                            color: #B45FAA;
+                        }
+                    }
+                }
+            }
+            &-title{
+                font-size: 14px;
+                font-weight: 600;
+                line-height: 19px;
+                margin-bottom: 7px;
+                margin-top: 7px;
+                @include brSpLandscape{
+                    font-size: 12px;
+                    line-height: 17px;
+                    margin-bottom: 3px;
+                }
+            }
+            &-desc{
+                font-size: 14px;
+                font-weight: 600;
+                line-height: 19px;
+                color: #000;
+                margin-bottom: 3px;
+                @include brSpLandscape{
+                    font-size: 12px;
+                    line-height: 17px;
+                }
+            }
+            &-selection{
+                font-size: 12px;
+                font-weight: 300;
+                line-height: 17px;
+                color: #000;
+                min-height: 17px;
+                @include brSpLandscape{
+                    font-size: 10px;
+                    line-height: 14px;
+                }
+            }
+        }
+        &__list{
+            margin-top: 47px;
+            @include brSpLandscape{
+                margin-top: 28px;
+            }
+            ul{
+                li{
+                    display: flex;
+                    align-items: flex-start;
+                    padding-bottom: 18px;
+                    margin-bottom: 19px;
+                    position: relative;
+                    @include brSpLandscape{
+                        display: block;
+                        margin-bottom: 12px;
+                    }
+                    &::after{
+                        content: "";
+                        width: calc(100% + 40px);
+                        height: 1px;
+                        background-color: #eaeaea;
+                        left: -20px;
+                        bottom: 0;
+                        position: absolute;
+                        z-index: 2;
+                    }
+                    h5{
+                        width: 240px;
+                        min-width: 240px;
+                        margin-right: 18px;
+                        margin-bottom: 0;
+                        @include brSpLandscape{
+                            font-size: 14px;
+                            line-height: 19px;
+                            margin-bottom: 10px;
+                        }
+                    }       
+                    p{
+                        font-size: 18px;
+                        font-weight: 300;
+                        line-height: 24px;
+                        &.pc{
+                            @include brSpLandscape{
+                                display: none;
+                            }
+                        }
+                        &.sp{
+                            display: none;
+                            @include brSpLandscape{
+                                display: block;
+                                margin-bottom: 34px;
+                            }
+                        }
+                        @include brSpLandscape{
+                            font-size: 12px;
+                            line-height: 17px;
+                        }
+                    }
+                }
+            }
+        }
+        .c-btn-effect{
+            margin-left: auto;
+            margin-right: auto;
+            @include brSpLandscape{
+                font-size: 14px;
+                line-height: 19px;
+            }
+        }
+    }
+
+    &__line{
+        width: 100%;
+        height: 1px;
+        background-color: #D1D1D1;
+        margin: 80px 0 74px;
+        @include brSpLandscape{
+            display: none;
+        }
+    }
+}

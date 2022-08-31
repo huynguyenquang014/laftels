@@ -15,6 +15,7 @@
             display: none;
             @include brSpLandscape{
                 display: block;
+                padding: 0 7px;
             }
 
         }
@@ -26,6 +27,7 @@
             @include brSpLandscape{
                 margin-left: -5px;
                 margin-right: -5px;
+                justify-content: flex-start;
             }
             &::after{
                 content: "";
@@ -54,6 +56,14 @@
                     padding-right: 5px;
                     flex: 50%;
                     max-width: 50%;
+                } 
+                &.badge{
+                    &::before{
+                        content: url("../img/common/img_badge.png");
+                        position: absolute;
+                        top: -40px;
+                        left: 1px;  
+                    }
                 }
                 &.active{
                     &::after{
@@ -81,8 +91,9 @@
                         display: flex;
                         justify-content: center;
                         select{
-                            width: auto;
-                            margin-bottom: 0;
+                            width: auto; 
+                            display: block;
+                            margin: 0 auto;
                         }
                     }
                 }

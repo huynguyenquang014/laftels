@@ -18,22 +18,23 @@ $(function(){
 	}
 
 	/* Tab */
-	$( document ).ready(function() {
-		$('.c-tabs__nav li:first-child').addClass('active');
-		$('.c-tabs__content').hide();
-		$('.c-tabs__content:first').show();
+	// $( document ).ready(function() {
+	// 	$('.c-tabs__nav li:first-child').addClass('active');
+	// 	$('.c-tabs__content').hide();
+	// 	$('.c-tabs__content:first').show();
 
-		// Click function
-		$('.c-tabs__nav li').click(function(){
-			$('.c-tabs__nav li').removeClass('active');
-			$(this).addClass('active');
-			$('.c-tabs__content').hide();
+	// 	// Click function
+	// 	$('.c-tabs__nav li').click(function(){
+	// 		$('.c-tabs__nav li').removeClass('active');
+	// 		$(this).addClass('active');
+	// 		$('.c-tabs__content').hide();
 
-			var activeTab = $(this).find('a').attr('href');
-			$(activeTab).fadeIn();
-			// return false;
-		});
-	});
+	// 		var activeTab = $(this).find('a').attr('href');
+	// 		$(activeTab).fadeIn();
+	// 		return false;
+	// 	});
+	// });
+
 });
 
 /* Accordion */
@@ -69,3 +70,16 @@ $(document).ready(function() {
 	});
 });
 
+$(function() { // Dropdown toggle
+	$('.c-dropdown__toggle').click(function(e) {
+		e.preventDefault();
+		$(this).next('.c-dropdown__menu').slideToggle();
+	});
+	
+	$(document).click(function(e) { 
+		var target = e.target; 
+		if (!$(target).is('.c-dropdown__toggle') && !$(target).parents().is('.c-dropdown__toggle')) 
+		//{ $('.dropdown').hide(); }
+		{ $('.c-dropdown__menu').slideUp(); }
+	});
+});
