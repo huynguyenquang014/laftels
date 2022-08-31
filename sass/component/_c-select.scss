@@ -1,5 +1,6 @@
 .c-select{
     position: relative;
+    border-radius: 4px;
     &::after{
         content: url("../img/common/icn_arrow_select_01.svg");
         position: absolute;
@@ -11,22 +12,20 @@
     select{
         appearance: none;
         cursor: pointer;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0 ;
+    }
+    input{
+        text-align: center;
+        width:100%;
+        pointer-events:none;
+        border: none;
+        height: 44px;
+        background: #F4F4F4;
+        border-radius: 4px;
     }
 }
-
-
-.c-select select{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0 ;
-}
-  
-.c-select input{
-    text-align: center;
-    width:100%;
-    pointer-events:none;
-}
-  
