@@ -6418,7 +6418,6 @@ input, textarea {
             justify-content: center;
   }
   .c-tabs__nav ul li .c-select select, .c-tabs-about__nav ul li .c-select select {
-    width: auto;
     display: block;
     margin: 0 auto;
   }
