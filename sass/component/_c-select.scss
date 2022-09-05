@@ -24,12 +24,18 @@
         width:100%;
         pointer-events:none;
         border: none;
-        height: 44px;
-        background: #F4F4F4;
-        border-radius: 4px;
-        font-size: 14px;
-        line-height: 19px;
+        font-size: 20px;
+        line-height: 27px;
         color: #1F1F1F;
         font-weight: 600;
+        width: 120px;
+        @include brSpLandscape{
+            height: 44px;
+            background: #F4F4F4;
+            border-radius: 4px;
+            font-size: 14px;
+            line-height: 19px;
+            color: #1F1F1F;
+        }
     }
 }

@@ -2,6 +2,7 @@
 
 .p-index {
     margin-bottom: 100px;
+    overflow-x: hidden;
     @include brSpLandscape{
         margin-bottom: 60px;
     }
