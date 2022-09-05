@@ -6543,6 +6543,10 @@ input, textarea {
   height: 44px;
   background: #F4F4F4;
   border-radius: 4px;
+  font-size: 14px;
+  line-height: 19px;
+  color: #1F1F1F;
+  font-weight: 600;
 }
 
 .c-dropdown {
