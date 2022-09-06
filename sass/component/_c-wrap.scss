@@ -4,10 +4,13 @@
     border: 1px solid #fff;
     position: relative;
     z-index: 1;
-    @include brTablet{
+    @include brSmallPc {
+        margin-top: -120px;
+    }
+    @include brTablet {
         margin-top: -90px;
     }
-    @include brSpLandscape{
+    @include brSpLandscape {
         margin-top: -84px;
     }
 }

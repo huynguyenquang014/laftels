@@ -42,6 +42,8 @@
 @import "project/p-service-system";
 @import "project/p-service";
 @import "project/p-about-member";
+@import "project/p-about-pc";
+@import "project/p-contact";
 //-------------------------------------------
 // Component
 //-------------------------------------------
@@ -52,9 +54,9 @@
 @import "component/c-wrap";
 @import "component/c-nav-link";
 @import "component/c-tabs";
-@import "component/c-pagination"; 
-@import "component/c-select"; 
-@import "component/c-dropdown"; 
+@import "component/c-pagination";
+@import "component/c-select";
+@import "component/c-dropdown";
 //-------------------------------------------
 // State
 //-------------------------------------------

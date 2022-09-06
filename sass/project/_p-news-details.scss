@@ -126,17 +126,19 @@
         }
     }
     &__decs {
-        margin-top: 39px;
-        font-size: 16px;
-        color: $cBase;
-        line-height: 22px;
-        font-weight: 300;
-        @include brTablet {
-            font-size: 14px;
-        }
-        @include brSpLandscape {
-            font-size: 13px;
-            line-height: 20px;
+        p {
+            margin-top: 39px;
+            font-size: 16px;
+            color: $cBase;
+            line-height: 22px;
+            font-weight: 300;
+            @include brTablet {
+                font-size: 14px;
+            }
+            @include brSpLandscape {
+                font-size: 13px;
+                line-height: 20px;
+            }
         }
         img {
             margin-top: 71px;

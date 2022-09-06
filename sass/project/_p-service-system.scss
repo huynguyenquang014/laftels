@@ -401,28 +401,44 @@
                 height: 327px;
                 margin-bottom: 5px;
             }
+            &__image {
+                a {
+                    overflow: hidden;
+                    img {
+                        transition: .4s all;
+                    }
+                    &:hover {
+                        img {
+                            transform: scale(1.1);
+                        }
+                    }
+                }
+            }
             &__content {
                 padding: 19px 16px;
                 @include brSpLandscape {
                     padding: 9px 22px;
                 }
                 &__title {
-                    color: $cAccent;
-                    font-size: 18px;
-                    font-weight: 600;
-                    padding-bottom: 10px;
-                    @include brTablet {
-                        font-size: 14px;
+                    a {
+                        color: $cAccent;
+                        font-size: 18px;
+                        font-weight: 600;
+                        padding-bottom: 15px;
                         line-height: 26px;
-                    }
-                    @include brSpLandscape {
-                        padding-bottom: 7px;
+                        @include brTablet {
+                            font-size: 14px;
+                        }
+                        @include brSpLandscape {
+                            padding-bottom: 7px;
+                        }
                     }
                 }
                 &__decs {
                     font-size: 15px;
                     color: $cBase;
                     line-height: 20px;
+                    font-weight: 400;
                     @include brTablet {
                         font-size: 12px;
                         line-height: 17px;

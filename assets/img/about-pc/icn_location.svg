@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="22" height="44.692" viewBox="0 0 22 44.692">
+  <g id="Group_2438" data-name="Group 2438" transform="translate(-1273.805 -3998.221)">
+    <text id="MAP" transform="translate(1284.805 4039.913)" fill="#eb5c01" font-size="10" font-family="SegoeUI, Segoe UI"><tspan x="-10.515" y="0">MAP</tspan></text>
+    <g id="Group_324" data-name="Group 324" transform="translate(1274.758 3998.221)">
+      <circle id="Ellipse_8" data-name="Ellipse 8" cx="10.045" cy="10.045" r="10.045" transform="translate(0 0)" fill="#eb5c01"/>
+      <path id="Polygon_10" data-name="Polygon 10" d="M8.706,0l8.706,12.724H0Z" transform="translate(18.751 28.127) rotate(180)" fill="#eb5c01"/>
+      <circle id="Ellipse_9" data-name="Ellipse 9" cx="3.348" cy="3.348" r="3.348" transform="translate(6.697 6.697)" fill="#fff"/>
+    </g>
+  </g>
+</svg>

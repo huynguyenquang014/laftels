@@ -36,6 +36,7 @@
             a {
                 font-size: 14px;
                 line-height: 20px;
+                font-weight: 400;
                 @include brSpLandscape {
                     font-size: 10px;
                     line-height: 20px;

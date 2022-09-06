@@ -1,12 +1,12 @@
 .c-top-mv {
-    &__sp{
+    &__sp {
         display: none;
-        @include brSpLandscape{
+        @include brSpLandscape {
             display: block;
         }
     }
-    &__pc{
-        @include brSpLandscape{
+    &__pc {
+        @include brSpLandscape {
             display: none;
         }
     }
@@ -14,10 +14,10 @@
         position: absolute;
         top: 160px;
         left: calc((100% - 1200px) / 2);
-        @include brSmallPc{
+        @include brSmallPc {
             left: 15px;
         }
-        @include brTablet{
+        @include brTablet {
             top: calc(65px + 25px);
             left: 25px;
         }
@@ -25,7 +25,7 @@
             font-size: 50px;
             line-height: 68px;
             font-weight: 600;
-            @include brTablet{
+            @include brTablet {
                 font-size: 25px;
                 line-height: 34px;
                 margin-bottom: -3px;
@@ -36,11 +36,11 @@
             font-weight: 600;
             line-height: 47px;
             margin-top: -5px;
-            @include brTablet{
+            color: $cBase;
+            @include brTablet {
                 font-size: 15px;
                 line-height: 20px;
             }
         }
     }
 }
-

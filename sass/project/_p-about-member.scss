@@ -7,7 +7,7 @@
         position: absolute;
         top: 153px;
         left: calc((100% - 907px) / 2);
-        @media (max-width: 1366px){
+        @media (max-width: 1366px) {
             top: 80px;
         }
         @include brTablet {
@@ -16,6 +16,7 @@
         }
         @include brSpLandscape {
             top: 43px;
+            display: none;
         }
         h3 {
             font-size: 30px;
@@ -38,7 +39,7 @@
         position: absolute;
         bottom: 196px;
         left: calc((100% - 907px) / 2);
-        @media (max-width: 1366px){
+        @media (max-width: 1366px) {
             bottom: 96px;
         }
         @include brTablet {
@@ -46,6 +47,7 @@
         }
         @include brSpLandscape {
             bottom: 63px;
+            display: none;
         }
         p {
             font-size: 16px;
@@ -88,6 +90,11 @@
         }
     }
     &__content {
+        .l-container {
+            @include brSpLandscape {
+                padding: 0 25px;
+            }
+        }
         .l-col {
             @include brTablet {
                 max-width: 50%;
@@ -104,8 +111,8 @@
                 position: relative;
                 z-index: 1;
                 @include brSpLandscape {
-                    margin-top: -22px;
-                    max-width: none;
+                    margin-top: 25px;
+                    max-width: 270px;
                 }
             }
         }
@@ -123,23 +130,26 @@
                     margin-top: 115px;
                 }
                 @include brSpLandscape {
-                    margin-top: 43px;
+                    margin-top: 17px;
+                    font-size: 16px;
+                    line-height: 27px;
                 }
             }
             p {
-                margin-top: 94px;
+                margin-top: 47px;
                 width: 515px;
                 max-width: 100%;
                 font-size: 16px;
                 line-height: 30px;
-                font-weight: 400;
+                font-weight: 500;
                 @include brTablet {
                     font-size: 14px;
                     line-height: 24px;
                     margin-top: 54px;
                 }
                 @include brSpLandscape {
-                    margin-top: 20px;
+                    margin-top: 8px;
+                    font-size: 12px;
                 }
             }
         }
@@ -147,15 +157,18 @@
     &__content-two {
         padding: 94px 0 50px;
         position: relative;
-        .l-container{
+        .l-container {
             position: relative;
+            @include brSpLandscape {
+                padding: 0 25px;
+            }
         }
         @include brTablet {
             padding: 74px 0 50px;
             margin-bottom: 70px;
         }
         @include brSpLandscape {
-            padding: 50px 0 50px;
+            padding: 60px 0 50px;
             margin-bottom: 0;
         }
         img {
@@ -164,8 +177,15 @@
             left: 415px;
             max-width: 1000px;
             z-index: -1;
-            @include brSpLandscape{
+            @include brTablet {
+                left: 215px;
+            }
+            @include brSpLandscape {
                 position: static;
+                width: calc(100% + 50px);
+                object-fit: cover;
+                margin-left: -25px;
+                min-height: 200px;
             }
         }
         &__block {
@@ -177,6 +197,7 @@
             }
             @include brSpLandscape {
                 padding-left: 0;
+                padding-top: 17px;
             }
             h3 {
                 font-size: 30px;
@@ -184,27 +205,24 @@
                 max-width: 100%;
                 line-height: 48px;
                 font-weight: bold;
-                // margin-top: 227px;
                 @include brTablet {
                     font-size: 18px;
-                    line-height: 22px;
+                    line-height: 27px;
                     max-width: 354px;
                 }
                 @include brSpLandscape {
-                    
+                    font-size: 16px;
                 }
-                @include brSpPortrait {
-                    
-                }
+                @include brSpPortrait {}
             }
             p {
                 text-align: left;
-                margin-top: 94px;
+                margin-top: 47px;
                 width: 515px;
                 max-width: 100%;
                 font-size: 16px;
                 line-height: 30px;
-                font-weight: 400;
+                font-weight: 500;
                 @include brTablet {
                     font-size: 14px;
                     line-height: 24px;
@@ -212,8 +230,9 @@
                     max-width: 354px;
                 }
                 @include brSpLandscape {
-                    margin-top: 20px;
+                    margin-top: 8px;
                     max-width: 100%;
+                    font-size: 12px;
                 }
             }
         }
@@ -224,11 +243,19 @@
         @include brTablet {
             padding: 60px 0 90px;
         }
-        .c-title-center{
-            h3{
+        @include brSpLandscape {
+            padding-bottom: 30px;
+        }
+        .l-container {
+            @include brSpLandscape {
+                padding: 0 25px;
+            }
+        }
+        .c-title-center {
+            h3 {
                 margin-bottom: -4px;
             }
-            p{
+            p {
                 font-family: "Yu Gothic";
                 font-size: 16px;
                 line-height: 26px;
@@ -252,7 +279,7 @@
         }
         &__slider {
             margin-top: 44px;
-            @include brSpLandscape{
+            @include brSpLandscape {
                 margin-top: 15px;
             }
         }
@@ -270,12 +297,19 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            svg{
+            svg {
                 position: relative;
                 left: 1px;
             }
             @include brTablet {
                 right: 13px;
+            }
+            @include brSpLandscape {
+                width: 15px;
+                height: 15px;
+                svg {
+                    width: 5px;
+                }
             }
             &:hover {
                 background-color: $textColor;
@@ -313,8 +347,8 @@
                 position: absolute;
                 z-index: 1;
                 left: 0px;
-                border-right: 30px solid transparent;
-                border-top: 30px solid $textColor;
+                border-right: 19px solid transparent;
+                border-top: 19px solid $textColor;
                 top: 0;
             }
             p {
@@ -322,6 +356,10 @@
                 padding: 17px 20px 15px 20px;
                 line-height: 20px;
                 font-weight: 500;
+                @include brSpLandscape {
+                    font-size: 11px;
+                    line-height: 10px;
+                }
             }
             h4 {
                 margin-left: 20px;
@@ -329,12 +367,22 @@
                     font-size: 16px;
                     font-weight: bold;
                     line-height: 26px;
+                    @include brSpLandscape {
+                        font-size: 13px;
+                        line-height: 17px;
+                    }
                 }
                 span {
                     margin-left: 6px;
                     font-size: 14px;
                     line-height: 20px;
                     font-weight: 400;
+                    @include brSpLandscape {
+                        display: block;
+                        margin-left: 0;
+                        font-size: 11px;
+                        line-height: 10px;
+                    }
                 }
             }
         }
@@ -342,14 +390,18 @@
             margin-left: -13.5px;
             margin-right: -13.5px;
             @include brTablet {
-                margin-left: -7px;
-                margin-right: -7px;
+                margin-left: -10px;
+                margin-right: -10px;
+            }
+            @include brSpLandscape {
+                overflow: visible;
+                margin-right: 130px;
             }
         }
         .slick-slide {
             padding: 0 13.5px;
             @include brTablet {
-                padding: 0 7px;
+                padding: 0 10px;
             }
         }
         .slick-arrow {
@@ -367,8 +419,8 @@
             justify-content: center;
             z-index: 1;
             @include brTablet {
-                width: 30px;
-                height: 30px;
+                width: 35px;
+                height: 35px;
                 svg {
                     width: 7px;
                 }
@@ -390,6 +442,9 @@
                 @include brTablet {
                     left: -13px;
                 }
+                @include brSpLandscape {
+                    display: none !important;
+                }
             }
         }
     }
@@ -401,6 +456,9 @@
         line-height: 32px;
         font-weight: 700;
         margin-bottom: 83px;
+        @include brSpLandscape {
+            margin-bottom: 40px;
+        }
     }
     .c-breadcrumb {
         position: relative;
@@ -426,13 +484,13 @@
         }
         li {
             margin-right: 36px;
-            @include brSpLandscape{
+            @include brSpLandscape {
                 margin-right: 22px;
             }
-            + li{
-                &::before{
+            +li {
+                &::before {
                     left: -22px;
-                    @include brSpLandscape{
+                    @include brSpLandscape {
                         left: -12px;
                     }
                 }
@@ -442,11 +500,53 @@
             }
         }
     }
-    .c-top-mv__pc {
+    &__respon {
+        display: none;
+        position: relative;
+        &::after {
+            content: "";
+            background: linear-gradient(0deg, #353535, rgba(53, 53, 53, 0));
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 134px;
+            left: 0;
+        }
         @include brSpLandscape {
             display: block;
-            min-height: 280px;
-            object-fit: cover;
+        }
+        img {
+            margin-top: -249px;
+            position: relative;
+            z-index: -1;
+        }
+        &__decs {
+            position: absolute;
+            bottom: 16px;
+            left: 25px;
+            z-index: 10;
+            p {
+                font-size: 12px;
+                font-weight: 500;
+                line-height: 30px;
+                color: #FFF;
+                margin-bottom: -9px;
+            }
+            h3 {
+                strong {
+                    font-size: 20px;
+                    line-height: 32px;
+                    font-weight: 700;
+                    color: #fff;
+                }
+                span {
+                    color: #fff;
+                    font-size: 12px;
+                    font-weight: 600;
+                    margin-left: 17px;
+                    line-height: 17px;
+                }
+            }
         }
     }
 }
