@@ -223,6 +223,7 @@
     &__method {
         background: #F5F5F5;
         padding-bottom: 50px;
+        overflow-x: hidden;
         @include brSpLandscape {
             background: rgba($color: #F5F5F5, $alpha: 0.3);
             margin-top: -106px;

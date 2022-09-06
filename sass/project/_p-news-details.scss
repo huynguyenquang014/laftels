@@ -37,6 +37,9 @@
             position: absolute;
             top: 370px;
             left: -57px;
+            @include brTablet{
+                display: none;
+            }
         }
         &::after {
             content: "";
@@ -49,6 +52,9 @@
             z-index: 1;
             top: 235px;
             z-index: -1;
+            @include brTablet{
+                display: none;
+            }
         }
         &__inner {
             background-color: #fff;

@@ -3777,6 +3777,11 @@ input, textarea {
   top: 370px;
   left: -57px;
 }
+@media (max-width: 959px) {
+  .p-news-details__content::before {
+    display: none;
+  }
+}
 .p-news-details__content::after {
   content: "";
   background: #fff;
@@ -3788,6 +3793,11 @@ input, textarea {
   z-index: 1;
   top: 235px;
   z-index: -1;
+}
+@media (max-width: 959px) {
+  .p-news-details__content::after {
+    display: none;
+  }
 }
 .p-news-details__content__inner {
   background-color: #fff;
@@ -5735,6 +5745,7 @@ input, textarea {
 .p-service__method {
   background: #F5F5F5;
   padding-bottom: 50px;
+  overflow-x: hidden;
 }
 @media (max-width: 599px) {
   .p-service__method {
