@@ -1,6 +1,7 @@
 @charset "utf-8";
 
 .p-about-pc{
+    overflow-x: hidden;
     &__content{
         position: relative;
         margin-bottom: 94px;

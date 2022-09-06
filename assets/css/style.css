@@ -47,6 +47,10 @@ img {
   vertical-align: bottom;
 }
 
+select {
+  color: #1F1F1F;
+}
+
 table {
   width: 100%;
 }
@@ -2783,6 +2787,9 @@ input, textarea {
   }
 }
 
+.p-about {
+  overflow-x: hidden;
+}
 .p-about__content {
   position: relative;
 }
@@ -2999,6 +3006,9 @@ input, textarea {
   }
 }
 
+.p-case {
+  overflow-x: hidden;
+}
 @media (max-width: 599px) {
   .p-case .c-top-mv img {
     height: 328px;
@@ -3211,6 +3221,9 @@ input, textarea {
   margin-bottom: 5px;
 }
 
+.p-case-details {
+  overflow-x: hidden;
+}
 @media (max-width: 599px) {
   .p-case-details .c-top-mv img {
     height: 328px;
@@ -3597,6 +3610,9 @@ input, textarea {
   }
 }
 
+.p-news {
+  overflow-x: hidden;
+}
 @media (max-width: 599px) {
   .p-news .c-top-mv img {
     height: 328px;
@@ -3735,6 +3751,9 @@ input, textarea {
   }
 }
 
+.p-news-details {
+  overflow-x: hidden;
+}
 .p-news-details .l-container {
   background: #fff;
   position: relative;
@@ -4322,6 +4341,9 @@ input, textarea {
   color: #fff;
 }
 
+.p-recruit {
+  overflow-x: hidden;
+}
 .p-recruit__content {
   position: relative;
   margin-bottom: 100px;
@@ -4857,6 +4879,9 @@ input, textarea {
   }
 }
 
+.p-service-system {
+  overflow-x: hidden;
+}
 .p-service-system .c-breadcrumb {
   padding: 20px 0 0 46px;
 }
@@ -5492,6 +5517,7 @@ input, textarea {
 }
 
 .p-service {
+  overflow-x: hidden;
   padding-bottom: 50px;
 }
 .p-service .c-breadcrumb {
@@ -6594,6 +6620,9 @@ input, textarea {
   }
 }
 
+.p-about-details {
+  overflow-x: hidden;
+}
 .p-about-details .c-top-mv {
   position: relative;
 }
@@ -7248,6 +7277,9 @@ input, textarea {
   line-height: 17px;
 }
 
+.p-about-pc {
+  overflow-x: hidden;
+}
 .p-about-pc__content {
   position: relative;
   margin-bottom: 94px;
@@ -8219,6 +8251,9 @@ input, textarea {
           justify-content: center;
 }
 
+.p-contact {
+  overflow-x: hidden;
+}
 .p-contact .c-breadcrumb {
   padding: 8px 0 0 99px;
 }
@@ -8807,6 +8842,7 @@ input, textarea {
 }
 .p-contact__form__content input[type=date] {
   width: 200px;
+  height: 50px;
 }
 .p-contact__form__content select {
   border: 1px solid #ADADAD;

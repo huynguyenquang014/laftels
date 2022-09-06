@@ -1,6 +1,7 @@
 @charset "utf-8";
 
 .p-case{
+    overflow-x: hidden;
     .c-top-mv{
         img{
             @include brSpLandscape{
