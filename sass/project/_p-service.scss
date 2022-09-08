@@ -378,6 +378,9 @@
                     padding-top: 12px;
                     font-size: 15px;
                     line-height: 23px;
+                    br {
+                        display: none;
+                    }
                 }
             }
             &__decs {
@@ -567,6 +570,7 @@
                     top: calc(50% - 5px);
                     left: calc(50% + 7px);
                     transform: translate(-50%, -50%);
+                    z-index: 1;
                     @include brTablet {
                         left: 50%;
                         width: 116px;
@@ -600,6 +604,8 @@
                     font-size: 13px;
                     font-weight: 600;
                     line-height: 20px;
+                    position: relative;
+                    z-index: 10;
                     @include brTablet {
                         font-size: 11px;
                     }
@@ -767,7 +773,7 @@
                 display: flex;
                 gap: 30px;
                 margin-top: 25px;
-                align-items: center;
+                // align-items: center;
                 width: 915px;
                 max-width: 100%;
                 @include brSpLandscape {
@@ -777,6 +783,14 @@
                 }
                 &__box {
                     position: relative;
+                    display: flex;
+                    flex-direction: column;
+                    // height: 100%;
+                    width: 445px;
+                    max-width: 100%;
+                    border: 1px solid #707070;
+                    padding: 16px 20.7px 20px 20.7px;
+                    flex-grow: 1;
                     &:nth-child(2) {
                         @include brSpLandscape {
                             margin-top: 35px;
@@ -795,12 +809,6 @@
                             }
                         }
                     }
-                    height: 100%;
-                    width: 445px;
-                    max-width: 100%;
-                    border: 1px solid #707070;
-                    padding: 16px 20.7px 20px 20.7px;
-                    flex-grow: 1;
                     @include brTablet {
                         min-height: 310px;
                     }
@@ -824,16 +832,16 @@
                         font-weight: 300;
                         line-height: 18px;
                         color: $cBase;
-                        padding: 10px 0;
+                        padding: 10px 0 35px;
                         @include brSpLandscape {
-                            padding: 11px 0 0 13px;
+                            padding: 11px 13px 30px 13px;
                             br {
                                 display: none;
                             }
                         }
                     }
                     img {
-                        margin-top: 25px;
+                        margin-top: auto;
                         @include brSpLandscape {
                             margin-top: 9px;
                             min-height: 153px;
@@ -846,6 +854,9 @@
         }
     }
     &__case {
+        @include brSpLandscape {
+            background: rgba(245, 245, 245, 0.3);
+        }
         h2 {
             font-weight: 600;
             line-height: 47px;
@@ -859,7 +870,7 @@
                 line-height: 33px;
             }
             @include brSpLandscape {
-                margin-top: 23px;
+                margin-top: 0px;
             }
             &::after {
                 content: '';

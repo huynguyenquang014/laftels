@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="277.12" height="280.023" viewBox="0 0 277.12 280.023">
+  <g id="Group_2986" data-name="Group 2986" transform="translate(-964.829 -1942.418)">
+    <text id="自社の競争優位の実現" transform="translate(1103.521 2218.441)" fill="#eb5c01" font-size="14" font-family="YuGothicUI-Semibold, Yu Gothic UI" font-weight="600"><tspan x="-67.703" y="0">自社の競争優位の実現</tspan></text>
+    <g id="Group_2986-2" data-name="Group 2986" transform="translate(0 9.59)">
+      <line id="Line_35" data-name="Line 35" y2="28.144" transform="translate(1103.588 2161.85)" fill="none" stroke="#da6529" stroke-width="1"/>
+      <path id="Path_238" data-name="Path 238" d="M14343.5,1761.325s4.2,6.461,4.916,6.1,4.685-6.1,4.685-6.1" transform="translate(-13244.717 422.674)" fill="none" stroke="#da6529" stroke-width="1"/>
+    </g>
+    <text id="ラフメソッド" transform="translate(1098.521 2002.275)" fill="#eb5c01" font-size="10" font-family="YuGothicUI-Light, Yu Gothic UI" font-weight="300"><tspan x="-19.963" y="0">ラフメソッド</tspan></text>
+    <g id="Ellipse_5" data-name="Ellipse 5" transform="translate(1068.488 2012.275)" fill="none" stroke="#eb5c1e" stroke-width="1">
+      <ellipse cx="86.73" cy="86.73" rx="86.73" ry="86.73" stroke="none"/>
+      <ellipse cx="86.73" cy="86.73" rx="86.23" ry="86.23" fill="none"/>
+    </g>
+    <text id="組織戦略" transform="translate(1017 2116.293)" fill="#eb5c01" font-size="14" font-family="YuGothicUI-Semibold, Yu Gothic UI" font-weight="600"><tspan x="-28" y="0">組織戦略</tspan></text>
+    <text id="人事戦略" transform="translate(1185 2116.293)" fill="#eb5c01" font-size="14" font-family="YuGothicUI-Semibold, Yu Gothic UI" font-weight="600"><tspan x="-28" y="0">人事戦略</tspan></text>
+    <text id="採用_評価_労務_給与" data-name="採用・評価
+労務・給与" transform="translate(1185 2135.293)" fill="#eb5c01" font-size="10" font-family="YuGothicUI-Light, Yu Gothic UI" font-weight="300"><tspan x="-22.5" y="0">採用・評価</tspan><tspan y="0" font-family="OpenSans-Light, Open Sans"></tspan><tspan x="-22.5" y="13">労務・給与</tspan></text>
+    <g id="Ellipse_67" data-name="Ellipse 67" transform="translate(964.829 2012.275)" fill="none" stroke="#eb5c1e" stroke-width="1">
+      <ellipse cx="86.73" cy="86.73" rx="86.73" ry="86.73" stroke="none"/>
+      <ellipse cx="86.73" cy="86.73" rx="86.23" ry="86.23" fill="none"/>
+    </g>
+    <g id="Ellipse_69" data-name="Ellipse 69" transform="translate(1014.33 1942.418)" fill="none" stroke="#eb5c1e" stroke-width="1">
+      <ellipse cx="86.73" cy="86.73" rx="86.73" ry="86.73" stroke="none"/>
+      <ellipse cx="86.73" cy="86.73" rx="86.23" ry="86.23" fill="none"/>
+    </g>
+    <text id="経営戦略" transform="translate(1099.967 1984.459)" fill="#eb5c01" font-size="14" font-family="YuGothicUI-Semibold, Yu Gothic UI" font-weight="600"><tspan x="-28" y="0">経営戦略</tspan></text>
+    <text id="管理体制_教育_キャリアパス" data-name="管理体制・教育
+キャリアパス" transform="translate(1017 2134.293)" fill="#eb5c01" font-size="9" font-family="YuGothicUI-Light, Yu Gothic UI" font-weight="300"><tspan x="-29.25" y="0">管理体制・教育</tspan><tspan y="0" font-family="OpenSans-Light, Open Sans"></tspan><tspan x="-19.927" y="12">キャリアパス</tspan></text>
+    <path id="Path_1567" data-name="Path 1567" d="M10690.577-18041.617c-25.54,17.605-39.46,53.611-33.643,80.6,22.564,9.418,55.046,5.332,67.558-2.314C10729.926-17991.928,10713.915-18026.359,10690.577-18041.617Z" transform="translate(-9587.133 20070.766)" fill="#eb5c1e"/>
+    <text id="LAF_METHOD" data-name="LAF
+METHOD" transform="translate(1104 2073)" fill="#f8f8f8" font-size="15" font-family="OpenSans-Bold, Open Sans" font-weight="700" letter-spacing="-0.04em"><tspan x="-12.928" y="0">LAF</tspan><tspan x="-30.925" y="19">ME</tspan><tspan y="19" letter-spacing="-0.06em">THO</tspan><tspan y="19">D</tspan></text>
+  </g>
+</svg>
