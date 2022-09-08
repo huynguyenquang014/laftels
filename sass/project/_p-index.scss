@@ -6,57 +6,6 @@
     @include brSpLandscape{
         margin-bottom: 60px;
     }
-	// &__top-mv{
-    //     background: url("../img/index/bg_top-mv.jpg") no-repeat center;
-    //     background-size: cover;
-    //     padding: 302px 0 353px;
-    //     position: relative;
-    //     @include brSpLandscape{
-    //         background-image: url("../img/index/bg_top-mv_sp.jpg");
-    //         padding: 258px 0 264px;
-    //     }
-    //     &::before{
-    //         content: "";
-    //         width: 100%;
-    //         height: 100%;
-    //         background: rgba(21, 0, 0, 0.21);
-    //         position: absolute;
-    //         top: 0;
-    //         left: 0;
-    //         z-index: 1;
-    //     }
-    //     &__content{
-    //         position: relative;
-    //         z-index: 2;
-    //         @include brSpLandscape{
-    //             text-align: center;
-    //         }
-    //         h2{
-    //             color: #fff;
-    //             font-size: 48px;
-    //             line-height: 64px;
-    //             font-family: "honoka-shin-mincho";
-    //             font-weight: 300;
-    //             margin-bottom: 26px;
-    //             margin-left: -50px;
-    //             @include brSpLandscape{
-    //                 font-size: 30px;
-    //                 line-height: 51px;
-    //                 margin-bottom: 14px;
-    //             }
-    //         }
-    //         p{
-    //             color: #fff;
-    //             font-size: 20px;
-    //             line-height: 27px;
-    //             letter-spacing: 0;
-    //             @include brSpLandscape{
-    //                 font-size: 14px;
-    //                 line-height: 19px;
-    //             }   
-    //         }
-    //     }
-    // }
     &__top-mv{
         position: relative;
         &::before{
@@ -1480,16 +1429,6 @@
             @include brSpLandscape{
                 margin-top: 23px;
             }
-        }
-    }
-
-
-    ~ .l-footer{
-        .l-footer__recruit.sp {
-            background-image: url("../img/common/bg_top-recruit_sp.jpg");
-        }
-        .l-footer__doc-request.sp {
-            background-image: url("../img/common/bg_top-doc-request_sp.jpg");
         }
     }
 }

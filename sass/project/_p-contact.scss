@@ -121,6 +121,7 @@
                 font-weight: 700;
                 font-size: 16px;
                 line-height: 26px;
+                font-family: 'Yu Gothic';
                 @include brSpLandscape {
                     font-size: 15px;
                 }
@@ -139,6 +140,7 @@
                 line-height: 22px;
                 font-weight: 500;
                 padding-top: 3px;
+                font-family: 'Yu Gothic';
                 @include brSpLandscape {
                     font-size: 13px;
                 }
@@ -198,6 +200,7 @@
                             font-size: 20px;
                             line-height: 27px;
                             margin-right: 19px;
+                            font-family: 'Open Sans';
                             color: #ADADAD;
                             @include brSpLandscape {
                                 font-size: 16px;
@@ -469,84 +472,7 @@
                     font-weight: 500;
                     line-height: 30px;
                 }
-                [type="radio"]:checked,
-                [type="radio"]:not(:checked) {
-                    position: absolute;
-                    left: -9999px;
-                }
-                [type="radio"]:checked+label,
-                [type="radio"]:not(:checked)+label {
-                    position: relative;
-                    padding-left: 28px;
-                    cursor: pointer;
-                    line-height: 20px;
-                    display: inline-block;
-                    color: $textColor;
-                    margin-bottom: 16px;
-                }
-                [type="radio"]:checked+label:before,
-                [type="radio"]:not(:checked)+label:before {
-                    content: '';
-                    position: absolute;
-                    left: 0;
-                    top: 0;
-                    width: 16px;
-                    height: 16px;
-                    border: 1px solid #A3A3A3;
-                    border-radius: 100%;
-                    background: #fff;
-                }
-                [type="radio"]:checked+label:after,
-                [type="radio"]:not(:checked)+label:after {
-                    content: '';
-                    width: 10px;
-                    height: 10px;
-                    background: $textColor;
-                    position: absolute;
-                    top: 4px;
-                    left: 4px;
-                    border-radius: 100%;
-                    -webkit-transition: all 0.2s ease;
-                    transition: all 0.2s ease;
-                }
-                [type="radio"]:not(:checked)+label:after {
-                    opacity: 0;
-                    -webkit-transform: scale(0);
-                    transform: scale(0);
-                }
-                [type="radio"]:checked+label:after {
-                    opacity: 1;
-                    -webkit-transform: scale(1);
-                    transform: scale(1);
-                }
-                input[type="text"],
-                input[type="date"] {
-                    border: 1px solid #ADADAD;
-                    max-width: 100%;
-                    width: 670px;
-                    background-color: #F8F8F8;
-                    padding: 15px 20px;
-                    font-size: 16px;
-                    font-family: YuGothic, "Yu Gothic", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "メイリオ", Meiryo, sans-serif;
-                    font-weight: 500;
-                    border-radius: 5px;
-                    color: $textColor;
-                    &::placeholder {
-                        padding: 0;
-                        font-size: 16px;
-                        line-height: 26px;
-                        font-weight: 500;
-                        color: #A3A3A3;
-                        font-family: YuGothic, "Yu Gothic", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "メイリオ", Meiryo, sans-serif;
-                    }
-                }
-                input[type="date"] {
-                    width: 200px;
-                    height: 50px;
-                    // &::-webkit-calendar-picker-indicator{
-                    //     opacity: 0;
-                    // }
-                }
+                
                 select {
                     cursor: pointer;
                     border: 1px solid #ADADAD;
@@ -664,19 +590,37 @@
                 text-align: center;
                 line-height: 26px;
                 font-weight: 700;
+                margin-bottom: 15px;
             }
-            &__content {
-                padding: 12px 80px 0px;
+            &__inner{
+                padding: 5px 80px 0px;
                 border-radius: 5px;
-                margin-top: 15px;
+                margin-top: 10px;
+                margin-bottom: 10px;
                 position: relative;
                 overflow-y: scroll;
-                height: 200px;
-                background: #F8F8F8;
-                border: 1px solid #ADADAD;
+                height: 188px;
                 @include brSpLandscape {
                     padding: 12px 20px 0;
                 }
+                &::-webkit-scrollbar-track {
+                    background-color: transparent;
+                }
+                &::-webkit-scrollbar {
+                    width: 6px;
+                    background-color: transparent;
+                }
+                &::-webkit-scrollbar-thumb {
+                    border-radius: 4px;
+                    background-color: #ADADAD;
+                    border: 2px solid #ADADAD;
+                }
+            }
+            &__content {
+                border-radius: 5px;
+                border: 1px solid #ADADAD;
+                background: #F8F8F8;
+                padding-right: 6px;
                 p {
                     font-family: YuGothic, "Yu Gothic", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "メイリオ", Meiryo, sans-serif;
                     font-size: 16px;
@@ -692,18 +636,7 @@
                         font-weight: 700;
                     }
                 }
-                &::-webkit-scrollbar-track {
-                    background-color: #F5F5F5;
-                }
-                &::-webkit-scrollbar {
-                    width: 6px;
-                    background-color: #F5F5F5;
-                }
-                &::-webkit-scrollbar-thumb {
-                    border-radius: 4px;
-                    background-color: #ADADAD;
-                    border: 2px solid #ADADAD;
-                }
+                
             }
         }
         &__confirm {

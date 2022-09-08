@@ -584,6 +584,7 @@
 
     &__office{
         margin-top: 32px;
+        overflow-x: hidden;
         @include brSpLandscape{
             margin-top: 43px;       
         }

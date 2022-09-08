@@ -127,13 +127,13 @@ svg, path{
 	color: $cSub !important; 
 }
 
-[type="radio"]:checked,
-[type="radio"]:not(:checked) {
+input[type="radio"]:checked,
+input[type="radio"]:not(:checked) {
 	position: absolute;
 	left: -9999px;
 }
-[type="radio"]:checked+label,
-[type="radio"]:not(:checked)+label {
+input[type="radio"]:checked+label,
+input[type="radio"]:not(:checked)+label {
 	position: relative;
 	padding-left: 28px;
 	cursor: pointer;
@@ -142,8 +142,8 @@ svg, path{
 	color: $textColor;
 	margin-bottom: 16px;
 }
-[type="radio"]:checked+label:before,
-[type="radio"]:not(:checked)+label:before {
+input[type="radio"]:checked+label:before,
+input[type="radio"]:not(:checked)+label:before {
 	content: '';
 	position: absolute;
 	left: 0;
@@ -154,8 +154,8 @@ svg, path{
 	border-radius: 100%;
 	background: #fff;
 }
-[type="radio"]:checked+label:after,
-[type="radio"]:not(:checked)+label:after {
+input[type="radio"]:checked+label:after,
+input[type="radio"]:not(:checked)+label:after {
 	content: '';
 	width: 10px;
 	height: 10px;
@@ -167,30 +167,41 @@ svg, path{
 	-webkit-transition: all 0.2s ease;
 	transition: all 0.2s ease;
 }
-[type="radio"]:not(:checked)+label:after {
+input[type="radio"]:not(:checked)+label:after {
 	opacity: 0;
 	-webkit-transform: scale(0);
 	transform: scale(0);
 }
-[type="radio"]:checked+label:after {
+input[type="radio"]:checked+label:after {
 	opacity: 1;
 	-webkit-transform: scale(1);
 	transform: scale(1);
 }
-input[type="text"] {
+input[type="text"],
+input[type="date"] {
 	border: 1px solid #ADADAD;
 	max-width: 100%;
 	width: 670px;
 	background-color: #F8F8F8;
-	padding: 15px 10px;
+	padding: 15px 20px;
 	font-size: 16px;
+	font-family: YuGothic, "Yu Gothic", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "メイリオ", Meiryo, sans-serif;
 	font-weight: 500;
 	border-radius: 5px;
+	color: $textColor;
 	&::placeholder {
+		padding: 0;
 		font-size: 16px;
 		line-height: 26px;
 		font-weight: 500;
 		color: #A3A3A3;
-		padding-left: 15px;
+		font-family: YuGothic, "Yu Gothic", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "メイリオ", Meiryo, sans-serif;
 	}
+}
+input[type="date"] {
+	width: 200px;
+	height: 50px;
+	// &::-webkit-calendar-picker-indicator{
+	//     opacity: 0;
+	// }
 }
