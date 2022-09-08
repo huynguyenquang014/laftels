@@ -7897,7 +7897,7 @@ input, textarea {
     font-size: 15px;
     line-height: 20px;
     margin-bottom: 5px;
-    padding-left: 17px;
+    padding-left: 0;
   }
 }
 .p-about-pc__credo__value {
