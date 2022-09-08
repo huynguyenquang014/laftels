@@ -10,6 +10,10 @@
   font-family: "gill-sans-regular";
   src: url("../font/Gill-Sans.otf");
 }
+html {
+  overflow-x: hidden;
+}
+
 body {
   font-family: "Open Sans", sans-serif;
   background-color: #fff;
@@ -8287,7 +8291,6 @@ input, textarea {
 }
 .p-about-pc__office {
   margin-top: 32px;
-  overflow-x: hidden;
 }
 @media (max-width: 599px) {
   .p-about-pc__office {
