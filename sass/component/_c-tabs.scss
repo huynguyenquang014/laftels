@@ -87,6 +87,10 @@
                     }
                 }
                 .c-select{
+                    .js-fake-input{
+                        background: transparent;
+                        padding: 0;
+                    }
                     @include brSpLandscape{
                         background-color: #F4F4F4;
                         display: flex;

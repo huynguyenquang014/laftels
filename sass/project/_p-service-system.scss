@@ -1,7 +1,15 @@
 @charset "utf-8";
 .p-service-system {
+    .c-nav-link {
+        ul {
+            &::after {
+                width: 607px;
+            }
+        }
+    }
     .c-breadcrumb {
         padding: 20px 0 0 46px;
+        margin-bottom: 0;
         @include brSpLandscape {
             padding: 4px 0 0 8px;
         }
@@ -86,6 +94,7 @@
                         font-size: 35px;
                         line-height: 47px;
                         margin-right: 13px;
+                        font-weight: 600;
                         @include brTablet {
                             font-size: 20px;
                             line-height: 27px;
@@ -214,6 +223,10 @@
                         @include brTablet {
                             top: calc(50% + 11px);
                         }
+                        @media (max-width:679px) {
+                            width: 270px;
+                            height: 270px;
+                        }
                         @include brSpLandscape {
                             width: 250px;
                             height: 250px;
@@ -260,7 +273,7 @@
                     }
                 }
                 &__decs {
-                    padding-top: 6px;
+                    padding-top: 10px;
                     font-weight: 400;
                     line-height: 22px;
                     @include brTablet {
@@ -282,7 +295,7 @@
         position: relative;
         padding-bottom: 83px;
         @include brSpLandscape {
-            margin-top: 63px;
+            margin-top: 53px;
         }
         @include brSpPortrait {
             padding-bottom: 0;
@@ -296,16 +309,22 @@
             left: 50%;
             transform: translateX(-50%);
             top: -34px;
+            img {
+                width: 60px;
+            }
             @include brTablet {
-                svg {
+                img {
                     width: 45px;
                 }
             }
             @include brSpLandscape {
-                svg {
+                top: -22px;
+                img {
+                    height: 40px;
                     width: 40px;
                     position: relative;
                     z-index: 2;
+                    margin-bottom: 15px;
                 }
             }
             &::before {
@@ -377,6 +396,7 @@
         }
         &__sp {
             display: none;
+            overflow: hidden;
             @include brSpLandscape {
                 display: block;
                 // display: flex;
@@ -385,7 +405,7 @@
                 margin: 30px -15px 0 -15px;
                 position: relative;
                 z-index: 1;
-                padding: 80px 64px 68px 64px;
+                padding: 80px 64px 74px 64px;
             }
         }
         &__box {
@@ -398,12 +418,14 @@
                 max-height: 100%;
             }
             @include brSpLandscape {
-                height: 327px;
+                // height: 327px;
                 margin-bottom: 5px;
             }
             &__image {
                 a {
                     overflow: hidden;
+                    display: block;
+                    object-fit: cover;
                     img {
                         transition: .4s all;
                     }
@@ -415,7 +437,7 @@
                 }
             }
             &__content {
-                padding: 19px 16px;
+                padding: 14px 16px;
                 @include brSpLandscape {
                     padding: 9px 22px;
                 }
@@ -462,17 +484,16 @@
             width: 10000%;
             z-index: 20;
             height: calc(100% + 10px);
-            right: calc((100% / 2) + 197px);
-            @include brSpPortrait {
-                right: calc((100% / 2) + 151px);
-            }
+            right: 100%;
+            // @include brSpPortrait {
+            //     right: calc((100% / 2) + 151px);
+            // }
         }
     }
-    .slick-prev {
+    .slick-arrow {
         position: absolute;
-        top: 50%;
+        top: calc(50% - 10px);
         transform: translateY(-50%);
-        left: 0;
         background: $cAccent;
         opacity: .5;
         z-index: 30;
@@ -480,16 +501,11 @@
             padding: 12px 18px;
         }
     }
+    .slick-prev {
+        left: 0;
+    }
     .slick-next {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
         right: 0;
-        opacity: .5;
-        background: $cAccent;
-        img {
-            padding: 12px 18px;
-        }
     }
     .slick-dots {
         padding-top: 5px;

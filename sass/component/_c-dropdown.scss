@@ -8,9 +8,11 @@
         line-height: 22px;
         min-width: 250px;
         max-width: 100%;
-        text-align: center;
+        padding-left: 15px;
+        padding-right: 35px;
         border-bottom: 1.5px solid #D1D1D1;
         padding-bottom: 11px;
+        background: url("../img/common/icn_down.svg") no-repeat calc(100% - 15px) 8px;
         &:focus-visible{
             outline: none;
         }

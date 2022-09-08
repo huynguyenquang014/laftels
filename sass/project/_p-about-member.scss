@@ -24,6 +24,7 @@
             font-weight: bold;
             width: 459px;
             max-width: 100%;
+            font-family: YuGothic, "Yu Gothic", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "メイリオ", Meiryo, sans-serif;
             @include brTablet {
                 width: 300px;
                 font-size: 18px;
@@ -53,6 +54,7 @@
             font-size: 16px;
             line-height: 30px;
             font-weight: 500;
+            font-family: YuGothic, "Yu Gothic", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "メイリオ", Meiryo, sans-serif;
             @include brTablet {
                 font-size: 14px;
                 line-height: 20px;
@@ -66,6 +68,7 @@
                 font-size: 24px;
                 font-weight: bold;
                 line-height: 39px;
+                font-family: YuGothic, "Yu Gothic", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "メイリオ", Meiryo, sans-serif;
                 @include brTablet {
                     font-size: 16px;
                     line-height: 20px;
@@ -124,6 +127,7 @@
                 line-height: 48px;
                 font-weight: bold;
                 margin-top: 173px;
+                font-family: YuGothic, "Yu Gothic", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "メイリオ", Meiryo, sans-serif;
                 @include brTablet {
                     font-size: 18px;
                     line-height: 22px;
@@ -140,6 +144,7 @@
                 width: 515px;
                 max-width: 100%;
                 font-size: 16px;
+                font-family: YuGothic, "Yu Gothic", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "メイリオ", Meiryo, sans-serif;
                 line-height: 30px;
                 font-weight: 500;
                 @include brTablet {
@@ -200,6 +205,7 @@
                 padding-top: 17px;
             }
             h3 {
+                font-family: YuGothic, "Yu Gothic", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "メイリオ", Meiryo, sans-serif;
                 font-size: 30px;
                 width: 515px;
                 max-width: 100%;
@@ -216,6 +222,7 @@
                 @include brSpPortrait {}
             }
             p {
+                font-family: YuGothic, "Yu Gothic", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "メイリオ", Meiryo, sans-serif;
                 text-align: left;
                 margin-top: 47px;
                 width: 515px;
@@ -259,6 +266,11 @@
                 font-family: "Yu Gothic";
                 font-size: 16px;
                 line-height: 26px;
+                @include brSpLandscape {
+                    font-size: 11px;
+                    line-height: 15px;
+                    font-family: "Open Sans", sans-serif;
+                }
             }
         }
         &::before {
@@ -287,6 +299,7 @@
             position: relative;
         }
         &__link {
+            position: relative;
             position: absolute;
             right: 15px;
             bottom: 13px;
@@ -297,9 +310,16 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            svg {
-                position: relative;
-                left: 1px;
+            &::before {
+                content: url("../img/common/icn_about-menber_link.svg");
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                @include brSpLandscape {
+                    content: url("../img/common/icn_about-menber_link-sp.svg");
+                    top: 30%;
+                }
             }
             @include brTablet {
                 right: 13px;
@@ -352,6 +372,7 @@
                 top: 0;
             }
             p {
+                font-family: YuGothic, "Yu Gothic", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "メイリオ", Meiryo, sans-serif;
                 font-size: 14px;
                 padding: 17px 20px 15px 20px;
                 line-height: 20px;
@@ -366,6 +387,7 @@
                 strong {
                     font-size: 16px;
                     font-weight: bold;
+                    font-family: YuGothic, "Yu Gothic", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "メイリオ", Meiryo, sans-serif;
                     line-height: 26px;
                     @include brSpLandscape {
                         font-size: 13px;
@@ -431,19 +453,18 @@
                 }
             }
             &.slick-prev {
-                left: auto;
-                right: -75px;
+                left: -75px;
                 @include brTablet {
                     right: -13px;
                 }
-            }
-            &.slick-next {
-                left: -75px;
-                @include brTablet {
-                    left: -13px;
-                }
                 @include brSpLandscape {
                     display: none !important;
+                }
+            }
+            &.slick-next {
+                right: -75px;
+                @include brTablet {
+                    left: -13px;
                 }
             }
         }
@@ -466,10 +487,14 @@
         padding: 26px 0 9px;
         a {
             color: #ADADAD;
+            @include brSpLandscape {
+                font-size: 12px;
+            }
         }
         a.active {
             color: $textColor;
             font-weight: 500;
+            font-family: YuGothic, "Yu Gothic", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "メイリオ", Meiryo, sans-serif;
         }
         svg {
             opacity: .3;

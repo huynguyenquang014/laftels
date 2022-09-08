@@ -251,6 +251,9 @@
                     margin-bottom: 8px;
                 }
             }
+            p{
+                font-weight: 300;
+            }
         }
         &__steps{
             margin-top: 51px;
@@ -383,9 +386,20 @@
                     padding-bottom: 18px;
                     margin-bottom: 19px;
                     position: relative;
+                    &:last-child{
+                        &::after{
+                            opacity: 0;
+                        }
+                        
+                    }
                     @include brSpLandscape{
                         display: block;
                         margin-bottom: 12px;
+                        &:last-child{
+                            &::after{
+                                opacity: 1;
+                            }
+                        }
                     }
                     &::after{
                         content: "";
@@ -396,6 +410,10 @@
                         bottom: 0;
                         position: absolute;
                         z-index: 2;
+                        @include brSpLandscape{
+                            width: 100%;
+                            left: 0;
+                        }
                     }
                     h5{
                         width: 240px;

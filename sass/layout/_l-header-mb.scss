@@ -74,8 +74,13 @@
                     justify-content: space-between;
                     border-bottom: 1px solid #F0F0F0;
                     padding: 14.5px 40px;
-                    svg{
-
+                    position: relative;
+                    &::before{
+                        content: url("../img/common/icn_arrow-right_black.svg");
+                        position: absolute;
+                        right: 38px;
+                        top: 50%;
+                        transform: translateY(-50%);
                     }
                 }
             }

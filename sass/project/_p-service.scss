@@ -3,8 +3,10 @@
     padding-bottom: 50px;
     .c-breadcrumb {
         padding: 20px 0 0 46px;
+        margin-bottom: 28px;
         @include brSpLandscape {
             padding: 4px 0 0 8px;
+            margin-bottom: 7px;
         }
     }
     .c-top-mv__title {
@@ -27,9 +29,9 @@
     }
     &__raftels {
         h2 {
-            font-size: 30px;
+            font-size: 35px;
             line-height: 47px;
-            padding: 39px 0 21px;
+            padding: 32px 0 21px;
             border-bottom: 1px solid #D1D1D1;
             margin: 0 48px 27px 48px;
             font-weight: 600;
@@ -203,6 +205,7 @@
                     font-size: 23px;
                     line-height: 28px;
                     font-weight: bold;
+                    font-family: YuGothic, "Yu Gothic", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "メイリオ", Meiryo, sans-serif;
                 }
                 p {
                     margin-top: 6px;
@@ -284,6 +287,7 @@
                 font-weight: 600;
                 @include brTablet {
                     font-size: 13px;
+                    line-height: 14px;
                 }
             }
         }
@@ -362,10 +366,13 @@
                 line-height: 30px;
                 font-weight: 600;
                 position: relative;
+                width: 496px;
+                max-width: 100%;
                 z-index: 1;
                 @include brTablet {
                     font-size: 15px;
                     line-height: 23px;
+                    width: unset;
                 }
                 @include brSpLandscape {
                     padding-top: 12px;
@@ -620,7 +627,7 @@
                     margin-right: auto;
                 }
                 img {
-                    margin-left: 20px;
+                    margin-left: 13px;
                     width: 25px;
                     height: 96px;
                     position: relative;
@@ -741,8 +748,6 @@
         }
         &__sales {
             padding-top: 48px;
-            // width: 915px;
-            // max-width: 100%;
             @include brTablet {
                 padding-top: 30px;
             }
@@ -760,33 +765,41 @@
             }
             &__content {
                 display: flex;
-                gap: 8px;
+                gap: 30px;
                 margin-top: 25px;
                 align-items: center;
-                
+                width: 915px;
+                max-width: 100%;
                 @include brSpLandscape {
                     display: block;
-                    padding: 0 5px;
+                    padding: 0 6px;
                     margin-top: 20px;
-                    svg {
-                        display: none;
-                    }
-                }
-                &__svg {
-                    display: none;
-                    @include brSpLandscape {
-                        display: block !important;
-                        margin: auto;
-                        margin-top: 10px;
-                        margin-bottom: 11px
-                    }
                 }
                 &__box {
+                    position: relative;
+                    &:nth-child(2) {
+                        @include brSpLandscape {
+                            margin-top: 35px;
+                        }
+                        &::before {
+                            content: url('../img/common/icn_service.svg');
+                            position: absolute;
+                            left: -20px;
+                            top: 50%;
+                            transform: translateY(-50%);
+                            @include brSpLandscape {
+                                content: url('../img/common/icn_service-sp.svg');
+                                top: -29px;
+                                left: 50%;
+                                transform: translateX(-50%);
+                            }
+                        }
+                    }
                     height: 100%;
                     width: 445px;
                     max-width: 100%;
                     border: 1px solid #707070;
-                    padding: 16px 25px 20px 25px;
+                    padding: 16px 20.7px 20px 20.7px;
                     flex-grow: 1;
                     @include brTablet {
                         min-height: 310px;
@@ -814,6 +827,9 @@
                         padding: 10px 0;
                         @include brSpLandscape {
                             padding: 11px 0 0 13px;
+                            br {
+                                display: none;
+                            }
                         }
                     }
                     img {
@@ -822,6 +838,7 @@
                             margin-top: 9px;
                             min-height: 153px;
                             object-fit: cover;
+                            margin-bottom: 0;
                         }
                     }
                 }
@@ -928,6 +945,11 @@
             margin-left: auto;
             margin-right: auto;
             margin-top: 56px;
+            margin-bottom: 95px;
+            @include brTablet {
+                margin-bottom: 30px;
+                margin-top: 30px;
+            }
         }
         &__box {
             box-shadow: 0 3px 20px rgba($color: #919191, $alpha: .16);
@@ -954,6 +976,10 @@
                 line-height: 17px;
                 color: $cAccent;
                 padding-bottom: 8px;
+                @include brSpLandscape {
+                    font-size: 14px;
+                    line-height: 19px;
+                }
             }
             &__decs {
                 a {
@@ -974,6 +1000,14 @@
                     padding-left: 0;
                 }
             }
+        }
+        .l-row {
+            margin-left: -17px;
+            margin-right: -17px;
+        }
+        .l-col {
+            padding-left: 17px;
+            padding-right: 17px;
         }
         @include brSpLandscape {
             .l-row {

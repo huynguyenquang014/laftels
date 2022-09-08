@@ -7,6 +7,22 @@
         li{
             padding: 0 5px;
             margin-bottom: 10px;
+            &.prev{
+                a{
+                    background: url("../img/common/icn_pagination-left.svg") no-repeat center;
+                    &:hover{
+                        background-image: url("../img/common/icn_pagination-left_white.svg");
+                    }
+                }
+            }
+            &.next{
+                a{
+                    background: url("../img/common/icn_pagination-right.svg") no-repeat center;
+                    &:hover{
+                        background-image: url("../img/common/icn_pagination-right_white.svg");
+                    }
+                }
+            }
             &.active, &:hover{
                 a{
                     background-color: #000;

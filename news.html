@@ -3,7 +3,6 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>Laftels</title>
-		<link rel="icon" type="image/png" href="./assets/img/common/fig_favicon.png">
 		<meta name="format-detection" content="telephone=no" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -15,6 +14,12 @@
 		<link rel="stylesheet" href="./assets/css/slick.css">
 		<link href="./assets/css/aos.css" rel="stylesheet">
 		<link href="./assets/css/style.css" rel="stylesheet">
+		<!-- Javascript -->
+		<script src="./assets/js/jquery.min.js"></script>
+		<script src="./assets/js/aos.js"></script>
+		<script src="./assets/js/slick.min.js"></script>
+		<script src="./assets/js/jquery.easing.min.js"></script>
+		<script src="./assets/js/jquery.common.js"></script>
 	</head>
 	<body>
 		<header class="l-header">
@@ -98,71 +103,36 @@
 									<li>
 										<a href="./about.html">
 											<span>ABOUT</span>
-											<svg xmlns="http://www.w3.org/2000/svg" width="8.121" height="13.414" viewBox="0 0 8.121 13.414">
-												<path id="Path_271" data-name="Path 271" d="M0,12,6,6,0,0"
-													transform="translate(0.707 0.707)" fill="none" stroke="#1f1f1f"
-													stroke-width="2" />
-											</svg>
 										</a>
 									</li>
 									<li>
 										<a href="./service.html">
 											<span>SERVICE</span>
-											<svg xmlns="http://www.w3.org/2000/svg" width="8.121" height="13.414" viewBox="0 0 8.121 13.414">
-												<path id="Path_271" data-name="Path 271" d="M0,12,6,6,0,0"
-													transform="translate(0.707 0.707)" fill="none" stroke="#1f1f1f"
-													stroke-width="2" />
-											</svg>
 										</a>
 									</li>
 									<li>
 										<a href="./case.html">
 											<span>CASE</span>
-											<svg xmlns="http://www.w3.org/2000/svg" width="8.121" height="13.414" viewBox="0 0 8.121 13.414">
-												<path id="Path_271" data-name="Path 271" d="M0,12,6,6,0,0"
-													transform="translate(0.707 0.707)" fill="none" stroke="#1f1f1f"
-													stroke-width="2" />
-											</svg>
 										</a>
 									</li>
 									<li>
 										<a href="./seminar.html">
 											<span>SEMINAR</span>
-											<svg xmlns="http://www.w3.org/2000/svg" width="8.121" height="13.414" viewBox="0 0 8.121 13.414">
-												<path id="Path_271" data-name="Path 271" d="M0,12,6,6,0,0"
-													transform="translate(0.707 0.707)" fill="none" stroke="#1f1f1f"
-													stroke-width="2" />
-											</svg>
 										</a>
 									</li>
 									<li>
 										<a href="./column.html">
 											<span>COLUMN</span>
-											<svg xmlns="http://www.w3.org/2000/svg" width="8.121" height="13.414" viewBox="0 0 8.121 13.414">
-												<path id="Path_271" data-name="Path 271" d="M0,12,6,6,0,0"
-													transform="translate(0.707 0.707)" fill="none" stroke="#1f1f1f"
-													stroke-width="2" />
-											</svg>
 										</a>
 									</li>
 									<li>
 										<a href="./news.html">
 											<span>NEWS</span>
-											<svg xmlns="http://www.w3.org/2000/svg" width="8.121" height="13.414" viewBox="0 0 8.121 13.414">
-												<path id="Path_271" data-name="Path 271" d="M0,12,6,6,0,0"
-													transform="translate(0.707 0.707)" fill="none" stroke="#1f1f1f"
-													stroke-width="2" />
-											</svg>
 										</a>
 									</li>
 									<li>
 										<a href="./recruit.html">
 											<span>RECRUIT</span>
-											<svg xmlns="http://www.w3.org/2000/svg" width="8.121" height="13.414" viewBox="0 0 8.121 13.414">
-												<path id="Path_271" data-name="Path 271" d="M0,12,6,6,0,0"
-													transform="translate(0.707 0.707)" fill="none" stroke="#1f1f1f"
-													stroke-width="2" />
-											</svg>
 										</a>
 									</li>
 								</ul>
@@ -330,24 +300,16 @@
 
 							<div class="c-pagination">
 								<ul>
-									<li>
-										<a href="#">
-											<svg xmlns="http://www.w3.org/2000/svg" width="8.768" height="11.223" viewBox="0 0 8.768 11.223">
-												<path id="Path_316" data-name="Path 316" d="M-7185.457,16615.809l-7.038,5,7.038,5" transform="translate(7193.79 -16615.197)" fill="none" stroke="#707070" stroke-width="1.5"/>
-											</svg>							  
-										</a>
+									<li class="prev">
+										<a href="#"></a>
 									</li>
 									<li><a href="#">1</a></li>
 									<li class="active"><a href="#">2</a></li>
 									<li><a href="#">3</a></li>
 									<li><a href="#">...</a></li>
 									<li><a href="#">10</a></li>
-									<li>
-										<a href="#">
-											<svg xmlns="http://www.w3.org/2000/svg" width="8.768" height="11.223" viewBox="0 0 8.768 11.223">
-												<path id="Path_316" data-name="Path 316" d="M-7192.5,16615.809l7.038,5-7.038,5" transform="translate(7192.93 -16615.197)" fill="none" stroke="#707070" stroke-width="1.5"/>
-											</svg>											  
-										</a>
+									<li class="next"> 
+										<a href="#"></a>
 									</li>
 								</ul>
 							</div>
@@ -359,37 +321,58 @@
 
 		<!-- Footer -->
 		<footer class="l-footer">
-			<div class="l-footer__recruit">
+			<div class="l-footer__recruit pc">
 				<div class="l-container" data-aos="fade-left">
 					<div class="c-title-center">
 						<h3>RECRUIT</h3>
 						<p>採用情報</p>
 					</div>
 					<p class="l-footer__recruit__desc">
-						新しいクルーを募集します。<br>共に戦い、社内外に大きなインパクトを<br class="sp">起こしてくれる<br>新たな仲間との出会いを楽しみにしています。
+						新しいクルーを募集します。<br>共に戦い、社内外に大きなインパクトを起こしてくれる<br>新たな仲間との出会いを楽しみにしています。
 					</p>
 					<a href="#" class="c-btn-effect">
 						<span>新卒採用/中途採用</span>
-						<svg xmlns="http://www.w3.org/2000/svg" width="8.021" height="13.921" viewBox="0 0 8.021 13.921">
-							<path id="Path_52" data-name="Path 52" d="M341.6,3657.392l6.43,6.43-6.43,6.43" transform="translate(-341.069 -3656.862)" fill="none" stroke="#1f1f1f" stroke-width="1.5"/>
-						</svg>										  
 					</a>
 				</div>
 			</div>
-
-			<div class="l-footer__doc-request">
+			<div class="l-footer__recruit sp">
+				<div class="l-container" data-aos="fade-left">
+					<div class="c-title-center">
+						<h3>RECRUIT</h3>
+						<p>採用情報</p>
+					</div>
+					<p class="l-footer__recruit__desc">
+						新しいクルーを募集します。<br>共に戦い、社内外に大きなインパクトを<br>起こしてくれる<br>新たな仲間との出会いを楽しみにしています。
+					</p>
+					<a href="#" class="c-btn-effect">
+						<span>新卒採用/中途採用</span>
+					</a>
+				</div>
+			</div>
+	
+			<div class="l-footer__doc-request pc">
 				<div class="l-container" data-aos="fade-right">
 					<div class="c-title-center">
 						<h3>資料請求</h3>
 					</div>
 					<p class="l-footer__doc-request__desc">
-						ラフテルズのサービスについての資料を<br class="sp">ダウンロードいただけます。<br>お気軽にお申し込みください。
+						ラフテルズのサービスについての資料をダウンロードいただけます。<br>お気軽にお申し込みください。
 					</p>
 					<a href="#" class="c-btn-effect">
 						<span>資料請求をする</span>
-						<svg xmlns="http://www.w3.org/2000/svg" width="8.021" height="13.921" viewBox="0 0 8.021 13.921">
-							<path id="Path_52" data-name="Path 52" d="M341.6,3657.392l6.43,6.43-6.43,6.43" transform="translate(-341.069 -3656.862)" fill="none" stroke="#1f1f1f" stroke-width="1.5"/>
-						</svg>										  
+					</a>
+				</div>
+			</div>
+			<div class="l-footer__doc-request sp">
+				<div class="l-container" data-aos="fade-right">
+					<div class="c-title-center">
+						<h3>資料請求</h3>
+					</div>
+					<p class="l-footer__doc-request__desc">
+						ラフテルズのサービスについての資料を<br>ダウンロードいただけます。<br>お気軽にお申し込みください。
+					</p>
+					<a href="#" class="c-btn-effect">
+						<span>資料請求をする</span>
 					</a>
 				</div>
 			</div>
@@ -501,13 +484,6 @@
 			</div>
 		</footer>
 		<!-- End footer -->
-		
-		<!-- Javascript -->
-		<script src="./assets/js/jquery.min.js"></script>
-		<script src="./assets/js/aos.js"></script>
-		<script src="./assets/js/slick.min.js"></script>
-		<script src="./assets/js/jquery.easing.min.js"></script>
-		<script src="./assets/js/jquery.common.js"></script>
 	</body>
 </html>
 

@@ -537,6 +537,15 @@ input, textarea {
           justify-content: space-between;
   border-bottom: 1px solid #F0F0F0;
   padding: 14.5px 40px;
+  position: relative;
+}
+.l-header-mb__menu ul li a::before {
+  content: url("../img/common/icn_arrow-right_black.svg");
+  position: absolute;
+  right: 38px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 .l-header-mb__info {
   display: -webkit-box;
@@ -623,15 +632,26 @@ input, textarea {
 }
 .l-footer__recruit {
   padding: 80px 0;
-  background: url("../img/common/bg_recruit.jpg") no-repeat center;
   background-size: cover;
   text-align: center;
   position: relative;
 }
+.l-footer__recruit.pc {
+  background: url("../img/common/bg_recruit.jpg") no-repeat center;
+}
 @media (max-width: 599px) {
-  .l-footer__recruit {
-    padding: 100px 0 83px;
-    background-image: url("../img/common/bg_recruit_sp.jpg");
+  .l-footer__recruit.pc {
+    display: none;
+  }
+}
+.l-footer__recruit.sp {
+  display: none;
+  padding: 100px 0 83px;
+  background-image: url("../img/common/bg_recruit_sp.jpg");
+}
+@media (max-width: 599px) {
+  .l-footer__recruit.sp {
+    display: block;
   }
 }
 .l-footer__recruit::before {
@@ -694,6 +714,9 @@ input, textarea {
   font-size: 18px;
   line-height: 24px;
 }
+.l-footer__recruit .c-btn-effect span::before {
+  content: url("../img/common/icn_arrow-right_white.svg");
+}
 @media (max-width: 599px) {
   .l-footer__recruit .c-btn-effect {
     font-size: 14px;
@@ -702,20 +725,28 @@ input, textarea {
     margin-top: 25px;
   }
 }
-.l-footer__recruit .c-btn-effect svg path {
-  stroke: #fff;
-}
 .l-footer__doc-request {
   padding: 115px 0 107px;
-  background: url("../img/common/bg_doc-request.jpg") no-repeat center;
   background-size: cover;
   text-align: center;
   position: relative;
 }
+.l-footer__doc-request.pc {
+  background: url("../img/common/bg_doc-request.jpg") no-repeat center;
+}
 @media (max-width: 599px) {
-  .l-footer__doc-request {
-    padding: 98px 0 111px;
-    background-image: url("../img/common/bg_doc-request_sp.jpg");
+  .l-footer__doc-request.pc {
+    display: none;
+  }
+}
+.l-footer__doc-request.sp {
+  display: none;
+  padding: 98px 0 111px;
+  background-image: url("../img/common/bg_doc-request.jpg");
+}
+@media (max-width: 599px) {
+  .l-footer__doc-request.sp {
+    display: block;
   }
 }
 .l-footer__doc-request::before {
@@ -786,6 +817,9 @@ input, textarea {
   font-size: 18px;
   line-height: 24px;
 }
+.l-footer__doc-request .c-btn-effect span::before {
+  content: url("../img/common/icn_arrow-right_white.svg");
+}
 @media (max-width: 599px) {
   .l-footer__doc-request .c-btn-effect {
     font-size: 14px;
@@ -793,9 +827,6 @@ input, textarea {
     border-color: #1F1F1F;
     margin-top: 25px;
   }
-}
-.l-footer__doc-request .c-btn-effect svg path {
-  stroke: #fff;
 }
 .l-footer__main {
   padding: 80px 0 30px;
@@ -1711,8 +1742,10 @@ input, textarea {
 .p-index__business__text a:hover path {
   stroke: #EB5C01;
 }
-.p-index__business__text a svg {
+.p-index__business__text a img {
   margin-top: -6px;
+  width: auto;
+  padding-left: 0 !important;
 }
 .p-index__about-service {
   margin-top: 100px;
@@ -1999,6 +2032,9 @@ input, textarea {
     padding-right: 27px;
   }
 }
+.p-index__case__tag {
+  padding-right: 50px;
+}
 .p-index__case__tag a {
   background-color: #1F1F1F;
   border-radius: 16px;
@@ -2027,16 +2063,10 @@ input, textarea {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-}
-.p-index__case__link svg {
-  position: relative;
-  left: 1px;
+  background: #fff url("../img/common/icn_arrow-right_black.svg") no-repeat center;
 }
 .p-index__case__link:hover {
-  background-color: #1F1F1F;
-}
-.p-index__case__link:hover path {
-  stroke: #fff;
+  background: #1F1F1F url("../img/common/icn_arrow-right_white.svg") no-repeat center;
 }
 .p-index__case__progress {
   margin-bottom: 40px;
@@ -2660,6 +2690,11 @@ input, textarea {
   line-height: 20px;
   font-family: "Yu Gothic";
 }
+.p-index__news__title-icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
 .p-index__news__list li {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2776,15 +2811,11 @@ input, textarea {
     margin-top: 23px;
   }
 }
-@media (max-width: 599px) {
-  .p-index ~ .l-footer .l-footer__recruit {
-    background-image: url("../img/common/bg_top-recruit_sp.jpg");
-  }
+.p-index ~ .l-footer .l-footer__recruit.sp {
+  background-image: url("../img/common/bg_top-recruit_sp.jpg");
 }
-@media (max-width: 599px) {
-  .p-index ~ .l-footer .l-footer__doc-request {
-    background-image: url("../img/common/bg_top-doc-request_sp.jpg");
-  }
+.p-index ~ .l-footer .l-footer__doc-request.sp {
+  background-image: url("../img/common/bg_top-doc-request_sp.jpg");
 }
 
 .p-about__content {
@@ -2890,10 +2921,7 @@ input, textarea {
           transform: scale(1.1);
 }
 .p-about__member__col a:hover .p-about__member__btn-right {
-  background-color: #1F1F1F;
-}
-.p-about__member__col a:hover .p-about__member__btn-right path {
-  stroke: #fff;
+  background: #1F1F1F url("../img/common/icn_arrow-right_white.svg") no-repeat center;
 }
 .p-about__member__col a img {
   width: 100%;
@@ -2970,15 +2998,15 @@ input, textarea {
           justify-content: center;
   -webkit-transition: 0.4s;
   transition: 0.4s;
+  background: #fff url("../img/common/icn_arrow-right_black.svg") no-repeat center;
+}
+.p-about__member__btn-right:hover {
+  background: #1F1F1F url("../img/common/icn_arrow-right_white.svg") no-repeat center;
 }
 @media (max-width: 599px) {
   .p-about__member__btn-right {
     top: calc(50% - 4px);
   }
-}
-.p-about__member__btn-right svg {
-  position: relative;
-  left: 1px;
 }
 .p-about__member__btn-down {
   width: calc(100% + 20px);
@@ -2994,6 +3022,9 @@ input, textarea {
           align-items: center;
   margin-top: 14px;
   margin-left: -10px;
+}
+.p-about__member__btn-down img {
+  width: auto;
 }
 @media (max-width: 599px) {
   .p-about__member__btn-down {
@@ -3743,6 +3774,12 @@ input, textarea {
   background: #fff;
   position: relative;
 }
+@media (max-width: 599px) {
+  .p-news-details .l-container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
 .p-news-details .l-container::before {
   content: url("../img/news-details/bg_news_02.jpg");
   position: absolute;
@@ -3761,15 +3798,9 @@ input, textarea {
   bottom: -4px;
   width: 100%;
 }
-@media (max-width: 599px) {
-  .p-news-details .c-top-mv img {
-    height: 328px;
-    -o-object-fit: cover;
-       object-fit: cover;
-  }
-}
 .p-news-details__content {
   position: relative;
+  padding: 0 15px;
 }
 .p-news-details__content::before {
   content: url("../img/news-details/img_label.png");
@@ -3810,6 +3841,7 @@ input, textarea {
 @media (max-width: 599px) {
   .p-news-details__content__inner .c-breadcrumb {
     margin-bottom: 10px;
+    margin-left: -10px;
   }
 }
 @media (max-width: 1279px) {
@@ -3820,18 +3852,34 @@ input, textarea {
 @media (max-width: 959px) {
   .p-news-details__content__inner {
     padding: 18px 50px 90px;
+    margin-top: -90px;
   }
 }
 @media (max-width: 599px) {
   .p-news-details__content__inner {
-    padding: 4px 10px 60px;
+    margin-top: -84px;
+    padding: 4px 0 60px;
   }
 }
 .p-news-details__title h3 {
   font-size: 30px;
   line-height: 41px;
   font-weight: 600;
+  position: relative;
   margin-top: -3px;
+}
+@media (max-width: 599px) {
+  .p-news-details__title h3::after {
+    content: "";
+    width: 100%;
+    position: absolute;
+    height: 1.5px;
+    background: #EB5C01;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    bottom: -23px;
+  }
 }
 @media (max-width: 959px) {
   .p-news-details__title h3 {
@@ -3845,7 +3893,7 @@ input, textarea {
     line-height: 24px;
   }
 }
-.p-news-details__repost {
+.p-news-details__repost, .p-news-details__repost-sp {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3857,46 +3905,64 @@ input, textarea {
           align-items: center;
 }
 @media (max-width: 599px) {
-  .p-news-details__repost {
+  .p-news-details__repost, .p-news-details__repost-sp {
     gap: 20px;
   }
 }
-.p-news-details__repost h4 {
+.p-news-details__repost h4, .p-news-details__repost-sp h4 {
   font-size: 20px;
   color: #EB5C01;
   font-weight: 600;
   line-height: 27px;
 }
 @media (max-width: 959px) {
-  .p-news-details__repost h4 {
+  .p-news-details__repost h4, .p-news-details__repost-sp h4 {
     font-size: 18px;
     line-height: 22px;
   }
 }
 @media (max-width: 599px) {
-  .p-news-details__repost h4 {
-    font-size: 15px;
+  .p-news-details__repost h4, .p-news-details__repost-sp h4 {
+    font-size: 12px;
+    line-height: 17px;
   }
 }
-.p-news-details__repost__tag {
+.p-news-details__repost__tag, .p-news-details__repost-sp__tag {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   gap: 30px;
 }
 @media (max-width: 599px) {
-  .p-news-details__repost__tag {
+  .p-news-details__repost__tag, .p-news-details__repost-sp__tag {
     gap: 10px;
   }
 }
-.p-news-details__repost__tag p {
+.p-news-details__repost__tag p, .p-news-details__repost-sp__tag p {
   font-size: 14px;
   font-weight: 600;
   line-height: 19px;
 }
 @media (max-width: 599px) {
-  .p-news-details__repost__tag p {
-    font-size: 13px;
+  .p-news-details__repost__tag p, .p-news-details__repost-sp__tag p {
+    font-size: 11px;
+    color: #ACACAC;
+  }
+}
+@media (max-width: 599px) {
+  .p-news-details__repost {
+    display: none;
+  }
+}
+.p-news-details__repost-sp {
+  border-bottom: none;
+  display: none;
+}
+@media (max-width: 599px) {
+  .p-news-details__repost-sp {
+    display: block;
+    padding-top: 0;
+    margin-top: -5px;
   }
 }
 .p-news-details__decs p {
@@ -3913,8 +3979,8 @@ input, textarea {
 }
 @media (max-width: 599px) {
   .p-news-details__decs p {
-    font-size: 13px;
-    line-height: 20px;
+    margin-top: 42px;
+    line-height: 22px;
   }
 }
 .p-news-details__decs img {
@@ -3922,11 +3988,16 @@ input, textarea {
 }
 @media (max-width: 599px) {
   .p-news-details__decs img {
-    margin-top: 50px;
+    margin-top: 12px;
   }
 }
 .p-news-details__repost-two {
   margin-top: 43px;
+}
+@media (max-width: 599px) {
+  .p-news-details__repost-two {
+    margin-top: 24px;
+  }
 }
 .p-news-details__repost-two h4 {
   font-size: 24px;
@@ -3945,6 +4016,20 @@ input, textarea {
   .p-news-details__repost-two h4 {
     font-size: 18px;
     line-height: 24px;
+    padding-bottom: 14px;
+  }
+}
+.p-news-details__repost-two h4.sp {
+  display: none;
+}
+@media (max-width: 599px) {
+  .p-news-details__repost-two h4.sp {
+    display: block;
+  }
+}
+@media (max-width: 599px) {
+  .p-news-details__repost-two h4.pc {
+    display: none;
   }
 }
 .p-news-details__repost-two__content__title {
@@ -3962,9 +4047,9 @@ input, textarea {
 }
 @media (max-width: 599px) {
   .p-news-details__repost-two__content__title {
-    font-size: 14px;
+    font-size: 15px;
     line-height: 17px;
-    margin-top: 42px;
+    margin-top: 23px;
   }
 }
 .p-news-details__repost-two__content__title::before {
@@ -3977,6 +4062,11 @@ input, textarea {
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   top: 50%;
+}
+@media (max-width: 599px) {
+  .p-news-details__repost-two__content__title::before {
+    height: 41px;
+  }
 }
 .p-news-details__repost-two__content__decs {
   font-size: 16px;
@@ -3992,8 +4082,8 @@ input, textarea {
 }
 @media (max-width: 599px) {
   .p-news-details__repost-two__content__decs {
-    font-size: 13px;
-    line-height: 20px;
+    line-height: 22px;
+    margin-top: 18px;
   }
 }
 .p-news-details__repost-two__content__decs b {
@@ -4022,7 +4112,7 @@ input, textarea {
 }
 @media (max-width: 599px) {
   .p-news-details__repost-two__image img {
-    margin-top: 50px;
+    margin-top: 12px;
   }
 }
 .p-news-details__repost-two__image__title {
@@ -4039,6 +4129,7 @@ input, textarea {
   .p-news-details__repost-two__image__title {
     font-size: 14px;
     line-height: 20px;
+    margin-top: 24px;
   }
 }
 .p-news-details__repost-two__image__decs {
@@ -4057,6 +4148,7 @@ input, textarea {
   .p-news-details__repost-two__image__decs {
     font-size: 13px;
     line-height: 20px;
+    margin-top: 12px;
   }
 }
 .p-news-details__repost-two__image__decs b {
@@ -4090,7 +4182,7 @@ input, textarea {
 }
 @media (max-width: 599px) {
   .p-news-details__form {
-    margin-top: 70px;
+    margin-top: 89px;
   }
 }
 .p-news-details__form ul li {
@@ -4113,6 +4205,11 @@ input, textarea {
   font-weight: 600;
   padding-left: 29px;
 }
+@media (max-width: 599px) {
+  .p-news-details__form ul li h4 {
+    padding-left: 0;
+  }
+}
 .p-news-details__form ul li span.dot {
   font-size: 9px;
 }
@@ -4130,7 +4227,9 @@ input, textarea {
 }
 @media (max-width: 599px) {
   .p-news-details__form__decs p {
-    padding-left: 70px;
+    margin-top: 4px;
+    font-size: 12px;
+    line-height: 17px;
   }
 }
 .p-news-details .c-btn-effect {
@@ -4140,7 +4239,7 @@ input, textarea {
 }
 @media (max-width: 599px) {
   .p-news-details .c-btn-effect {
-    margin-top: 60px;
+    margin-top: 45px;
   }
 }
 .p-news-details__group-btn {
@@ -4159,7 +4258,8 @@ input, textarea {
 }
 @media (max-width: 599px) {
   .p-news-details__group-btn {
-    gap: 41px;
+    gap: 23px;
+    margin-top: 45px;
   }
 }
 .p-news-details__group-btn__next {
@@ -4178,12 +4278,33 @@ input, textarea {
       -ms-flex-pack: center;
           justify-content: center;
 }
+.p-news-details__group-btn__next.right {
+  background: url("../img/common/icn_pagination-right.svg") no-repeat center;
+}
+.p-news-details__group-btn__next.right:hover {
+  background-image: url("../img/common/icn_pagination-right_white.svg");
+}
+.p-news-details__group-btn__next.left {
+  background: url("../img/common/icn_pagination-left.svg") no-repeat center;
+}
+.p-news-details__group-btn__next.left:hover {
+  background-image: url("../img/common/icn_pagination-left_white.svg");
+}
+@media (max-width: 599px) {
+  .p-news-details__group-btn__next {
+    width: 30px;
+    height: 30px;
+  }
+}
 .p-news-details__group-btn__next:hover {
-  background: #1F1F1F;
+  background-color: #1F1F1F;
   border: 1px solid #1F1F1F;
 }
-.p-news-details__group-btn__next:hover svg path {
-  stroke: #fff;
+.p-news-details__group-btn__next:hover::before {
+  content: url("../img/common/icn_news-details_left-white.svg");
+}
+.p-news-details__group-btn__next:hover:last-of-type::before {
+  content: url("../img/common/icn_news-details_right-white.svg");
 }
 .p-news-details__group-btn__back-home {
   font-size: 18px;
@@ -4194,6 +4315,13 @@ input, textarea {
   max-width: 100%;
   text-align: center;
   padding-bottom: 8px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+@media (max-width: 599px) {
+  .p-news-details__group-btn__back-home {
+    font-size: 14px;
+    line-height: 16px;
+  }
 }
 .p-news-details__group-btn__back-home::before {
   content: "";
@@ -4225,7 +4353,7 @@ input, textarea {
 }
 @media (max-width: 599px) {
   .p-news-details__posts {
-    padding-bottom: 50px;
+    padding-bottom: 62px;
   }
 }
 .p-news-details__posts .l-container {
@@ -4237,12 +4365,21 @@ input, textarea {
   margin-top: -25px;
   margin-bottom: 46px;
 }
+@media (max-width: 599px) {
+  .p-news-details__posts .c-title-left {
+    text-align: center;
+    font-size: 20px;
+    line-height: 27px;
+    margin-top: -14px;
+    margin-bottom: 27px;
+  }
+}
 .p-news-details__posts .l-row {
   margin: 0 -8px;
 }
 @media (max-width: 599px) {
   .p-news-details__posts .l-row {
-    display: block;
+    display: none;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -4255,6 +4392,64 @@ input, textarea {
   .p-news-details__posts .l-col {
     max-width: 100%;
   }
+}
+.p-news-details__posts ul {
+  position: relative;
+  display: none;
+  margin-left: -11px;
+  margin-right: -11px;
+}
+@media (max-width: 599px) {
+  .p-news-details__posts ul {
+    display: block;
+  }
+}
+.p-news-details__posts .slick-arrow {
+  position: absolute;
+  top: calc(50% + 6px);
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  background: #1F1F1F;
+  z-index: 30;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+}
+.p-news-details__posts .slick-arrow svg {
+  margin-top: 3px;
+}
+.p-news-details__posts .slick-prev {
+  left: -15px;
+}
+.p-news-details__posts .slick-prev svg {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+.p-news-details__posts .slick-next {
+  right: -15px;
+}
+.p-news-details__posts .slick-dots {
+  margin-top: -43px;
+  text-align: center;
+}
+.p-news-details__posts .slick-dots li {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.p-news-details__posts .slick-dots li.slick-active button {
+  background: #1F1F1F;
+  border-radius: 50%;
+}
+.p-news-details__posts .slick-dots li button {
+  background: #D1D1D1;
+  font-size: 0px;
+  border: 1px solid #D1D1D1;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
 }
 .p-news-details__box {
   -webkit-box-shadow: 0 3px 20px rgba(154, 154, 154, 0.16);
@@ -4295,6 +4490,13 @@ input, textarea {
   -webkit-transition: 0.4s all;
   transition: 0.4s all;
 }
+@media (max-width: 599px) {
+  .p-news-details__box__image img {
+    min-height: 233px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+}
 .p-news-details__box__image:hover img {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
@@ -4315,6 +4517,11 @@ input, textarea {
   margin-top: 14px;
   padding-bottom: 15px;
 }
+@media (max-width: 599px) {
+  .p-news-details__box__tag {
+    margin-top: 9px;
+  }
+}
 .p-news-details__box__tag a {
   background-color: #F4F4F4;
   border-radius: 16px;
@@ -4328,7 +4535,14 @@ input, textarea {
 }
 @media (max-width: 959px) {
   .p-news-details__box__tag a {
-    font-size: 11px;
+    font-size: 12px;
+  }
+}
+@media (max-width: 599px) {
+  .p-news-details__box__tag a {
+    padding: 5px 17px;
+    margin-right: 4px;
+    margin-bottom: 5px;
   }
 }
 .p-news-details__box__tag a:hover {
@@ -4636,6 +4850,9 @@ input, textarea {
     margin-bottom: 8px;
   }
 }
+.p-recruit__section__box p {
+  font-weight: 300;
+}
 .p-recruit__section__steps {
   margin-top: 51px;
 }
@@ -4795,10 +5012,16 @@ input, textarea {
   margin-bottom: 19px;
   position: relative;
 }
+.p-recruit__section__list ul li:last-child::after {
+  opacity: 0;
+}
 @media (max-width: 599px) {
   .p-recruit__section__list ul li {
     display: block;
     margin-bottom: 12px;
+  }
+  .p-recruit__section__list ul li:last-child::after {
+    opacity: 1;
   }
 }
 .p-recruit__section__list ul li::after {
@@ -4810,6 +5033,12 @@ input, textarea {
   bottom: 0;
   position: absolute;
   z-index: 2;
+}
+@media (max-width: 599px) {
+  .p-recruit__section__list ul li::after {
+    width: 100%;
+    left: 0;
+  }
 }
 .p-recruit__section__list ul li h5 {
   width: 240px;
@@ -4871,8 +5100,12 @@ input, textarea {
   }
 }
 
+.p-service-system .c-nav-link ul::after {
+  width: 607px;
+}
 .p-service-system .c-breadcrumb {
   padding: 20px 0 0 46px;
+  margin-bottom: 0;
 }
 @media (max-width: 599px) {
   .p-service-system .c-breadcrumb {
@@ -4988,6 +5221,7 @@ input, textarea {
   font-size: 35px;
   line-height: 47px;
   margin-right: 13px;
+  font-weight: 600;
 }
 @media (max-width: 959px) {
   .p-service-system__body__inner__personnel__title h3 strong {
@@ -5150,6 +5384,12 @@ input, textarea {
     top: calc(50% + 11px);
   }
 }
+@media (max-width: 679px) {
+  .p-service-system__body__features ul li::before {
+    width: 270px;
+    height: 270px;
+  }
+}
 @media (max-width: 599px) {
   .p-service-system__body__features ul li::before {
     width: 250px;
@@ -5210,7 +5450,7 @@ input, textarea {
   }
 }
 .p-service-system__body__features__box__decs {
-  padding-top: 6px;
+  padding-top: 10px;
   font-weight: 400;
   line-height: 22px;
 }
@@ -5235,7 +5475,7 @@ input, textarea {
 }
 @media (max-width: 599px) {
   .p-service-system__lhr {
-    margin-top: 63px;
+    margin-top: 53px;
   }
 }
 @media (max-width: 479px) {
@@ -5254,16 +5494,24 @@ input, textarea {
           transform: translateX(-50%);
   top: -34px;
 }
+.p-service-system__lhr__title img {
+  width: 60px;
+}
 @media (max-width: 959px) {
-  .p-service-system__lhr__title svg {
+  .p-service-system__lhr__title img {
     width: 45px;
   }
 }
 @media (max-width: 599px) {
-  .p-service-system__lhr__title svg {
+  .p-service-system__lhr__title {
+    top: -22px;
+  }
+  .p-service-system__lhr__title img {
+    height: 40px;
     width: 40px;
     position: relative;
     z-index: 2;
+    margin-bottom: 15px;
   }
 }
 .p-service-system__lhr__title::before {
@@ -5353,6 +5601,7 @@ input, textarea {
 }
 .p-service-system__lhr__sp {
   display: none;
+  overflow: hidden;
 }
 @media (max-width: 599px) {
   .p-service-system__lhr__sp {
@@ -5363,7 +5612,7 @@ input, textarea {
     margin: 30px -15px 0 -15px;
     position: relative;
     z-index: 1;
-    padding: 80px 64px 68px 64px;
+    padding: 80px 64px 74px 64px;
   }
 }
 .p-service-system__lhr__box {
@@ -5381,12 +5630,14 @@ input, textarea {
 }
 @media (max-width: 599px) {
   .p-service-system__lhr__box {
-    height: 327px;
     margin-bottom: 5px;
   }
 }
 .p-service-system__lhr__box__image a {
   overflow: hidden;
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .p-service-system__lhr__box__image a img {
   -webkit-transition: 0.4s all;
@@ -5397,7 +5648,7 @@ input, textarea {
           transform: scale(1.1);
 }
 .p-service-system__lhr__box__content {
-  padding: 19px 16px;
+  padding: 14px 16px;
 }
 @media (max-width: 599px) {
   .p-service-system__lhr__box__content {
@@ -5449,37 +5700,25 @@ input, textarea {
   width: 10000%;
   z-index: 20;
   height: calc(100% + 10px);
-  right: calc(50% + 197px);
+  right: 100%;
 }
-@media (max-width: 479px) {
-  .p-service-system .slick-list::before {
-    right: calc(50% + 151px);
-  }
-}
-.p-service-system .slick-prev {
+.p-service-system .slick-arrow {
   position: absolute;
-  top: 50%;
+  top: calc(50% - 10px);
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
-  left: 0;
   background: #EB5C01;
   opacity: 0.5;
   z-index: 30;
 }
-.p-service-system .slick-prev img {
+.p-service-system .slick-arrow img {
   padding: 12px 18px;
+}
+.p-service-system .slick-prev {
+  left: 0;
 }
 .p-service-system .slick-next {
-  position: absolute;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
   right: 0;
-  opacity: 0.5;
-  background: #EB5C01;
-}
-.p-service-system .slick-next img {
-  padding: 12px 18px;
 }
 .p-service-system .slick-dots {
   padding-top: 5px;
@@ -5510,10 +5749,12 @@ input, textarea {
 }
 .p-service .c-breadcrumb {
   padding: 20px 0 0 46px;
+  margin-bottom: 28px;
 }
 @media (max-width: 599px) {
   .p-service .c-breadcrumb {
     padding: 4px 0 0 8px;
+    margin-bottom: 7px;
   }
 }
 .p-service .c-top-mv__title h3 {
@@ -5533,9 +5774,9 @@ input, textarea {
   }
 }
 .p-service__raftels h2 {
-  font-size: 30px;
+  font-size: 35px;
   line-height: 47px;
-  padding: 39px 0 21px;
+  padding: 32px 0 21px;
   border-bottom: 1px solid #D1D1D1;
   margin: 0 48px 27px 48px;
   font-weight: 600;
@@ -5728,6 +5969,7 @@ input, textarea {
   font-size: 23px;
   line-height: 28px;
   font-weight: bold;
+  font-family: YuGothic, "Yu Gothic", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "メイリオ", Meiryo, sans-serif;
 }
 .p-service__raftels__sp__title p {
   margin-top: 6px;
@@ -5822,6 +6064,7 @@ input, textarea {
 @media (max-width: 959px) {
   .p-service__method__title p {
     font-size: 13px;
+    line-height: 14px;
   }
 }
 .p-service__method__what {
@@ -5910,12 +6153,15 @@ input, textarea {
   line-height: 30px;
   font-weight: 600;
   position: relative;
+  width: 496px;
+  max-width: 100%;
   z-index: 1;
 }
 @media (max-width: 959px) {
   .p-service__method__what__content {
     font-size: 15px;
     line-height: 23px;
+    width: unset;
   }
 }
 @media (max-width: 599px) {
@@ -6231,7 +6477,7 @@ input, textarea {
   }
 }
 .p-service__method__list-sp li img {
-  margin-left: 20px;
+  margin-left: 13px;
   width: 25px;
   height: 96px;
   position: relative;
@@ -6351,42 +6597,53 @@ input, textarea {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 8px;
+  gap: 30px;
   margin-top: 25px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  width: 915px;
+  max-width: 100%;
 }
 @media (max-width: 599px) {
   .p-service__method__sales__content {
     display: block;
-    padding: 0 5px;
+    padding: 0 6px;
     margin-top: 20px;
-  }
-  .p-service__method__sales__content svg {
-    display: none;
-  }
-}
-.p-service__method__sales__content__svg {
-  display: none;
-}
-@media (max-width: 599px) {
-  .p-service__method__sales__content__svg {
-    display: block !important;
-    margin: auto;
-    margin-top: 10px;
-    margin-bottom: 11px;
   }
 }
 .p-service__method__sales__content__box {
+  position: relative;
   height: 100%;
   width: 445px;
   max-width: 100%;
   border: 1px solid #707070;
-  padding: 16px 25px 20px 25px;
+  padding: 16px 20.7px 20px 20.7px;
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
+}
+@media (max-width: 599px) {
+  .p-service__method__sales__content__box:nth-child(2) {
+    margin-top: 35px;
+  }
+}
+.p-service__method__sales__content__box:nth-child(2)::before {
+  content: url("../img/common/icn_service.svg");
+  position: absolute;
+  left: -20px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+@media (max-width: 599px) {
+  .p-service__method__sales__content__box:nth-child(2)::before {
+    content: url("../img/common/icn_service-sp.svg");
+    top: -29px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
 }
 @media (max-width: 959px) {
   .p-service__method__sales__content__box {
@@ -6423,6 +6680,9 @@ input, textarea {
   .p-service__method__sales__content__box p {
     padding: 11px 0 0 13px;
   }
+  .p-service__method__sales__content__box p br {
+    display: none;
+  }
 }
 .p-service__method__sales__content__box img {
   margin-top: 25px;
@@ -6433,6 +6693,7 @@ input, textarea {
     min-height: 153px;
     -o-object-fit: cover;
        object-fit: cover;
+    margin-bottom: 0;
   }
 }
 .p-service__case h2 {
@@ -6550,6 +6811,13 @@ input, textarea {
   margin-left: auto;
   margin-right: auto;
   margin-top: 56px;
+  margin-bottom: 95px;
+}
+@media (max-width: 959px) {
+  .p-service__case .c-btn-effect {
+    margin-bottom: 30px;
+    margin-top: 30px;
+  }
 }
 .p-service__case__box {
   -webkit-box-shadow: 0 3px 20px rgba(145, 145, 145, 0.16);
@@ -6584,6 +6852,12 @@ input, textarea {
   color: #EB5C01;
   padding-bottom: 8px;
 }
+@media (max-width: 599px) {
+  .p-service__case__box h6 {
+    font-size: 14px;
+    line-height: 19px;
+  }
+}
 .p-service__case__box__decs a {
   font-size: 14px;
   line-height: 19px;
@@ -6602,6 +6876,14 @@ input, textarea {
   .p-service__case__box__name {
     padding-left: 0;
   }
+}
+.p-service__case .l-row {
+  margin-left: -17px;
+  margin-right: -17px;
+}
+.p-service__case .l-col {
+  padding-left: 17px;
+  padding-right: 17px;
 }
 @media (max-width: 599px) {
   .p-service__case .l-row {
@@ -6640,6 +6922,7 @@ input, textarea {
   font-weight: bold;
   width: 459px;
   max-width: 100%;
+  font-family: YuGothic, "Yu Gothic", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "メイリオ", Meiryo, sans-serif;
 }
 @media (max-width: 959px) {
   .p-about-details .c-top-mv__title h3 {
@@ -6679,6 +6962,7 @@ input, textarea {
   font-size: 16px;
   line-height: 30px;
   font-weight: 500;
+  font-family: YuGothic, "Yu Gothic", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "メイリオ", Meiryo, sans-serif;
 }
 @media (max-width: 959px) {
   .p-about-details__position p {
@@ -6695,6 +6979,7 @@ input, textarea {
   font-size: 24px;
   font-weight: bold;
   line-height: 39px;
+  font-family: YuGothic, "Yu Gothic", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "メイリオ", Meiryo, sans-serif;
 }
 @media (max-width: 959px) {
   .p-about-details__position h3 strong {
@@ -6761,6 +7046,7 @@ input, textarea {
   line-height: 48px;
   font-weight: bold;
   margin-top: 173px;
+  font-family: YuGothic, "Yu Gothic", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "メイリオ", Meiryo, sans-serif;
 }
 @media (max-width: 959px) {
   .p-about-details__content__right h3 {
@@ -6781,6 +7067,7 @@ input, textarea {
   width: 515px;
   max-width: 100%;
   font-size: 16px;
+  font-family: YuGothic, "Yu Gothic", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "メイリオ", Meiryo, sans-serif;
   line-height: 30px;
   font-weight: 500;
 }
@@ -6860,6 +7147,7 @@ input, textarea {
   }
 }
 .p-about-details__content-two__block h3 {
+  font-family: YuGothic, "Yu Gothic", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "メイリオ", Meiryo, sans-serif;
   font-size: 30px;
   width: 515px;
   max-width: 100%;
@@ -6879,6 +7167,7 @@ input, textarea {
   }
 }
 .p-about-details__content-two__block p {
+  font-family: YuGothic, "Yu Gothic", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "メイリオ", Meiryo, sans-serif;
   text-align: left;
   margin-top: 47px;
   width: 515px;
@@ -6929,6 +7218,13 @@ input, textarea {
   font-size: 16px;
   line-height: 26px;
 }
+@media (max-width: 599px) {
+  .p-about-details__member .c-title-center p {
+    font-size: 11px;
+    line-height: 15px;
+    font-family: "Open Sans", sans-serif;
+  }
+}
 .p-about-details__member::before {
   content: "";
   position: absolute;
@@ -6957,6 +7253,7 @@ input, textarea {
   position: relative;
 }
 .p-about-details__member__link {
+  position: relative;
   position: absolute;
   right: 15px;
   bottom: 13px;
@@ -6974,9 +7271,19 @@ input, textarea {
       -ms-flex-pack: center;
           justify-content: center;
 }
-.p-about-details__member__link svg {
-  position: relative;
-  left: 1px;
+.p-about-details__member__link::before {
+  content: url("../img/common/icn_about-menber_link.svg");
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+@media (max-width: 599px) {
+  .p-about-details__member__link::before {
+    content: url("../img/common/icn_about-menber_link-sp.svg");
+    top: 30%;
+  }
 }
 @media (max-width: 959px) {
   .p-about-details__member__link {
@@ -7037,6 +7344,7 @@ input, textarea {
   top: 0;
 }
 .p-about-details__member__content p {
+  font-family: YuGothic, "Yu Gothic", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "メイリオ", Meiryo, sans-serif;
   font-size: 14px;
   padding: 17px 20px 15px 20px;
   line-height: 20px;
@@ -7054,6 +7362,7 @@ input, textarea {
 .p-about-details__member__content h4 strong {
   font-size: 16px;
   font-weight: bold;
+  font-family: YuGothic, "Yu Gothic", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "メイリオ", Meiryo, sans-serif;
   line-height: 26px;
 }
 @media (max-width: 599px) {
@@ -7135,25 +7444,24 @@ input, textarea {
   stroke: #fff;
 }
 .p-about-details__member .slick-arrow.slick-prev {
-  left: auto;
-  right: -75px;
+  left: -75px;
 }
 @media (max-width: 959px) {
   .p-about-details__member .slick-arrow.slick-prev {
     right: -13px;
   }
 }
+@media (max-width: 599px) {
+  .p-about-details__member .slick-arrow.slick-prev {
+    display: none !important;
+  }
+}
 .p-about-details__member .slick-arrow.slick-next {
-  left: -75px;
+  right: -75px;
 }
 @media (max-width: 959px) {
   .p-about-details__member .slick-arrow.slick-next {
     left: -13px;
-  }
-}
-@media (max-width: 599px) {
-  .p-about-details__member .slick-arrow.slick-next {
-    display: none !important;
   }
 }
 .p-about-details .c-btn-effect {
@@ -7178,9 +7486,15 @@ input, textarea {
 .p-about-details .c-breadcrumb a {
   color: #ADADAD;
 }
+@media (max-width: 599px) {
+  .p-about-details .c-breadcrumb a {
+    font-size: 12px;
+  }
+}
 .p-about-details .c-breadcrumb a.active {
   color: #1F1F1F;
   font-weight: 500;
+  font-family: YuGothic, "Yu Gothic", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "メイリオ", Meiryo, sans-serif;
 }
 .p-about-details .c-breadcrumb svg {
   opacity: 0.3;
@@ -7279,6 +7593,7 @@ input, textarea {
 }
 @media (max-width: 599px) {
   .p-about-pc__content__inner {
+    margin-top: -83px;
     padding: 4px 10px 60px;
   }
 }
@@ -7429,6 +7744,12 @@ input, textarea {
   margin-bottom: -2px;
   position: relative;
 }
+@media (max-width: 599px) {
+  .p-about-pc__credo__title .c-title-center h3 {
+    font-size: 24px;
+    line-height: 33px;
+  }
+}
 .p-about-pc__credo__title .c-title-center h3::before {
   content: "";
   position: absolute;
@@ -7460,6 +7781,9 @@ input, textarea {
   .p-about-pc__credo__title .c-title-center h3::after {
     left: calc(100% + 23px);
   }
+}
+.p-about-pc__credo__title .c-title-center p {
+  line-height: 22px;
 }
 @media (max-width: 599px) {
   .p-about-pc__credo__title .c-title-center p {
@@ -7554,6 +7878,19 @@ input, textarea {
   font-weight: 300;
 }
 @media (max-width: 599px) {
+  .p-about-pc__credo__value.pc {
+    display: none;
+  }
+}
+.p-about-pc__credo__value.sp {
+  display: none;
+}
+@media (max-width: 599px) {
+  .p-about-pc__credo__value.sp {
+    display: block;
+  }
+}
+@media (max-width: 599px) {
   .p-about-pc__credo__value {
     font-size: 14px;
     line-height: 20px;
@@ -7641,6 +7978,12 @@ input, textarea {
   margin-bottom: -2px;
   position: relative;
 }
+@media (max-width: 599px) {
+  .p-about-pc__company .c-title-center h3 {
+    font-size: 24px;
+    line-height: 33px;
+  }
+}
 .p-about-pc__company .c-title-center h3::before {
   content: "";
   position: absolute;
@@ -7686,7 +8029,7 @@ input, textarea {
           flex: calc(100% - 493px);
   max-width: calc(100% - 493px);
   padding-left: 50px;
-  margin-top: -2px;
+  margin-top: -3px;
 }
 @media (max-width: 959px) {
   .p-about-pc__company__info {
@@ -7724,8 +8067,8 @@ input, textarea {
       -ms-flex-align: center;
           align-items: center;
   border-bottom: 1px solid #EAEAEA;
-  margin-bottom: 13px;
-  padding-bottom: 12px;
+  margin-bottom: 16.5px;
+  padding-bottom: 17px;
 }
 @media (max-width: 599px) {
   .p-about-pc__company__info ul li {
@@ -7749,7 +8092,7 @@ input, textarea {
 }
 .p-about-pc__company__info ul li p {
   font-size: 15px;
-  line-height: 30px;
+  line-height: 20px;
   font-weight: 300;
 }
 @media (max-width: 599px) {
@@ -8000,6 +8343,12 @@ input, textarea {
 .p-about-pc__office .c-title-center p {
   line-height: 22px;
 }
+@media (max-width: 599px) {
+  .p-about-pc__office .c-title-center p {
+    font-size: 13px;
+    line-height: 14px;
+  }
+}
 .p-about-pc__office__slider::before {
   content: "";
   width: 1000%;
@@ -8234,6 +8583,9 @@ input, textarea {
           justify-content: center;
 }
 
+.p-contact {
+  border-bottom: 1px solid #f2f2f2;
+}
 .p-contact .c-breadcrumb {
   padding: 8px 0 0 99px;
 }
@@ -8342,11 +8694,12 @@ input, textarea {
   }
 }
 .p-contact__alert {
-  text-align: center;
   padding: 68px 0 30px;
+  text-align: center;
   font-size: 16px;
   line-height: 30px;
   font-weight: 500;
+  font-family: YuGothic, "Yu Gothic", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "メイリオ", Meiryo, sans-serif;
 }
 @media (max-width: 959px) {
   .p-contact__alert {
@@ -8446,7 +8799,7 @@ input, textarea {
   content: "";
   position: absolute;
   background: #1F1F1F;
-  height: 3px;
+  height: 1px;
   width: 670px;
   max-width: 100%;
   top: 0;
@@ -8455,7 +8808,7 @@ input, textarea {
   content: "";
   position: absolute;
   background: #1F1F1F;
-  height: 3px;
+  height: 1px;
   width: 670px;
   max-width: 100%;
   bottom: 0;
@@ -8467,6 +8820,7 @@ input, textarea {
   font-size: 18px;
   line-height: 33px;
   font-weight: 700;
+  font-family: "Yu Gothic";
 }
 @media (max-width: 599px) {
   .p-contact__nav ul li a {
@@ -8536,6 +8890,8 @@ input, textarea {
   width: 100%;
   position: relative;
   border-bottom: 1px solid #F2F2F2;
+  width: 1000px;
+  max-width: 100%;
   padding-bottom: 11px;
 }
 @media (max-width: 599px) {
@@ -8547,10 +8903,9 @@ input, textarea {
   content: "";
   position: absolute;
   top: -30px;
-  width: calc(100% + 40px);
+  width: 100%;
   height: 1px;
   background: #F2F2F2;
-  left: -20px;
 }
 .p-contact__form ul li + li {
   margin-top: 30px;
@@ -8617,12 +8972,13 @@ input, textarea {
       -ms-flex-align: unset;
           align-items: unset;
   margin-top: 23px;
+  padding-bottom: 14px;
 }
 .p-contact__form ul li:nth-child(8) .p-contact__form__content P {
   bottom: -2px;
 }
 .p-contact__form ul li:nth-child(9) {
-  margin-top: 12px;
+  margin-top: 30px;
 }
 .p-contact__form ul li:nth-child(9) input[type=text] {
   width: 400px;
@@ -8673,9 +9029,12 @@ input, textarea {
   line-height: 26px;
   font-weight: 700;
   position: relative;
+  padding-left: 20px;
+  font-family: YuGothic, "Yu Gothic", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "メイリオ", Meiryo, sans-serif;
 }
 @media (max-width: 599px) {
   .p-contact__form__title {
+    padding-left: 0;
     margin-bottom: 15px;
   }
 }
@@ -8717,9 +9076,11 @@ input, textarea {
   position: absolute;
   bottom: -3px;
   display: block;
+  font-family: YuGothic, "Yu Gothic", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "メイリオ", Meiryo, sans-serif;
 }
 .p-contact__form__content label {
   font-size: 16px;
+  font-family: YuGothic, "Yu Gothic", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "メイリオ", Meiryo, sans-serif;
   font-weight: 500;
   line-height: 30px;
 }
@@ -8779,58 +9140,67 @@ input, textarea {
   max-width: 100%;
   width: 670px;
   background-color: #F8F8F8;
-  padding: 15px 10px;
+  padding: 15px 20px;
   font-size: 16px;
+  font-family: YuGothic, "Yu Gothic", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "メイリオ", Meiryo, sans-serif;
   font-weight: 500;
   border-radius: 5px;
+  color: #1F1F1F;
 }
 .p-contact__form__content input[type=text]::-webkit-input-placeholder, .p-contact__form__content input[type=date]::-webkit-input-placeholder {
+  padding: 0;
   font-size: 16px;
   line-height: 26px;
   font-weight: 500;
   color: #A3A3A3;
-  padding-left: 15px;
+  font-family: YuGothic, "Yu Gothic", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "メイリオ", Meiryo, sans-serif;
 }
 .p-contact__form__content input[type=text]::-moz-placeholder, .p-contact__form__content input[type=date]::-moz-placeholder {
+  padding: 0;
   font-size: 16px;
   line-height: 26px;
   font-weight: 500;
   color: #A3A3A3;
-  padding-left: 15px;
+  font-family: YuGothic, "Yu Gothic", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "メイリオ", Meiryo, sans-serif;
 }
 .p-contact__form__content input[type=text]:-ms-input-placeholder, .p-contact__form__content input[type=date]:-ms-input-placeholder {
+  padding: 0;
   font-size: 16px;
   line-height: 26px;
   font-weight: 500;
   color: #A3A3A3;
-  padding-left: 15px;
+  font-family: YuGothic, "Yu Gothic", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "メイリオ", Meiryo, sans-serif;
 }
 .p-contact__form__content input[type=text]::-ms-input-placeholder, .p-contact__form__content input[type=date]::-ms-input-placeholder {
+  padding: 0;
   font-size: 16px;
   line-height: 26px;
   font-weight: 500;
   color: #A3A3A3;
-  padding-left: 15px;
+  font-family: YuGothic, "Yu Gothic", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "メイリオ", Meiryo, sans-serif;
 }
 .p-contact__form__content input[type=text]::placeholder,
 .p-contact__form__content input[type=date]::placeholder {
+  padding: 0;
   font-size: 16px;
   line-height: 26px;
   font-weight: 500;
   color: #A3A3A3;
-  padding-left: 15px;
+  font-family: YuGothic, "Yu Gothic", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "メイリオ", Meiryo, sans-serif;
 }
 .p-contact__form__content input[type=date] {
   width: 200px;
   height: 50px;
 }
 .p-contact__form__content select {
+  cursor: pointer;
   border: 1px solid #ADADAD;
   max-width: 100%;
   padding: 15px 0;
   font-size: 16px;
   border-radius: 5px;
   font-weight: 500;
+  color: #1F1F1F;
   width: 200px;
   background: #F8F8F8 url("../../assets/img/common/icn_select.svg") no-repeat;
   background-position-x: calc(100% - 11px);
@@ -8838,7 +9208,8 @@ input, textarea {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
-  padding-left: 15px;
+  font-family: YuGothic, "Yu Gothic", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "メイリオ", Meiryo, sans-serif;
+  padding-left: 20px;
 }
 .p-contact__form__content select:focus-visible {
   outline: none;
@@ -8850,52 +9221,49 @@ input, textarea {
   background-color: #F8F8F8;
   border-radius: 5px;
   font-size: 16px;
-  padding: 5px;
   font-weight: 500;
+  padding-top: 12px;
+  padding-left: 15px;
+  font-family: YuGothic, "Yu Gothic", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "メイリオ", Meiryo, sans-serif;
   color: #1F1F1F;
 }
 .p-contact__form__content textarea:focus-visible {
   outline: none;
 }
 .p-contact__form__content textarea::-webkit-input-placeholder {
-  padding-top: 12px;
   font-size: 16px;
   line-height: 26px;
   font-weight: 500;
   color: #A3A3A3;
-  padding-left: 15px;
+  font-family: YuGothic, "Yu Gothic", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "メイリオ", Meiryo, sans-serif;
 }
 .p-contact__form__content textarea::-moz-placeholder {
-  padding-top: 12px;
   font-size: 16px;
   line-height: 26px;
   font-weight: 500;
   color: #A3A3A3;
-  padding-left: 15px;
+  font-family: YuGothic, "Yu Gothic", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "メイリオ", Meiryo, sans-serif;
 }
 .p-contact__form__content textarea:-ms-input-placeholder {
-  padding-top: 12px;
   font-size: 16px;
   line-height: 26px;
   font-weight: 500;
   color: #A3A3A3;
-  padding-left: 15px;
+  font-family: YuGothic, "Yu Gothic", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "メイリオ", Meiryo, sans-serif;
 }
 .p-contact__form__content textarea::-ms-input-placeholder {
-  padding-top: 12px;
   font-size: 16px;
   line-height: 26px;
   font-weight: 500;
   color: #A3A3A3;
-  padding-left: 15px;
+  font-family: YuGothic, "Yu Gothic", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "メイリオ", Meiryo, sans-serif;
 }
 .p-contact__form__content textarea::placeholder {
-  padding-top: 12px;
   font-size: 16px;
   line-height: 26px;
   font-weight: 500;
   color: #A3A3A3;
-  padding-left: 15px;
+  font-family: YuGothic, "Yu Gothic", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "メイリオ", Meiryo, sans-serif;
 }
 .p-contact__form__content input:focus {
   outline: none;
@@ -8967,6 +9335,7 @@ input, textarea {
 }
 .p-contact__handling-info__content {
   padding: 12px 80px 0px;
+  border-radius: 5px;
   margin-top: 15px;
   position: relative;
   overflow-y: scroll;
@@ -8980,6 +9349,7 @@ input, textarea {
   }
 }
 .p-contact__handling-info__content p {
+  font-family: YuGothic, "Yu Gothic", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "メイリオ", Meiryo, sans-serif;
   font-size: 16px;
   line-height: 30px;
   font-weight: 500;
@@ -8995,13 +9365,26 @@ input, textarea {
 .p-contact__handling-info__content p b {
   font-weight: 700;
 }
+.p-contact__handling-info__content::-webkit-scrollbar-track {
+  background-color: #F5F5F5;
+}
+.p-contact__handling-info__content::-webkit-scrollbar {
+  width: 6px;
+  background-color: #F5F5F5;
+}
+.p-contact__handling-info__content::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background-color: #ADADAD;
+  border: 2px solid #ADADAD;
+}
 .p-contact__confirm {
   margin-top: 30px;
 }
 .p-contact__confirm p {
   font-size: 16px;
   font-weight: 700;
-  line-height: 21px;
+  line-height: 26px;
+  font-family: YuGothic, "Yu Gothic", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "メイリオ", Meiryo, sans-serif;
   text-align: center;
 }
 @media (max-width: 599px) {
@@ -9034,6 +9417,7 @@ input, textarea {
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
+  font-family: YuGothic, "Yu Gothic", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "メイリオ", Meiryo, sans-serif;
 }
 .p-contact__confirm__group-check input {
   padding: 0;
@@ -9065,6 +9449,7 @@ input, textarea {
   cursor: pointer;
   margin-right: 15px;
   border-radius: 4px;
+  margin-top: -5px;
 }
 .p-contact__confirm__group-check input:checked + label:after {
   content: "";
@@ -9081,6 +9466,7 @@ input, textarea {
 }
 .p-contact .c-btn-effect {
   margin: 50px auto 140px;
+  font-weight: 700;
 }
 @media (max-width: 959px) {
   .p-contact .c-btn-effect {
@@ -9127,7 +9513,7 @@ input, textarea {
   position: relative;
   overflow: hidden;
 }
-@media (max-width: 479px) {
+@media (max-width: 599px) {
   .c-btn-effect {
     background-color: #1F1F1F;
     color: #fff;
@@ -9136,13 +9522,27 @@ input, textarea {
     font-size: 16px;
     line-height: 22px;
   }
-  .c-btn-effect svg path {
-    stroke: #fff;
-  }
 }
 .c-btn-effect span {
+  width: 100%;
+  text-align: center;
   position: relative;
   z-index: 2;
+}
+.c-btn-effect span::before {
+  content: url("../img/common/icn_arrow-right_black.svg");
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  z-index: 2;
+}
+@media (max-width: 599px) {
+  .c-btn-effect span::before {
+    right: 13px;
+    content: url("../img/common/icn_arrow-right_white.svg");
+  }
 }
 .c-btn-effect svg {
   position: absolute;
@@ -9159,6 +9559,9 @@ input, textarea {
 }
 .c-btn-effect:hover {
   color: #fff;
+}
+.c-btn-effect:hover span::before {
+  content: url("../img/common/icn_arrow-right_white.svg");
 }
 .c-btn-effect:hover svg path {
   stroke: #fff;
@@ -9455,6 +9858,7 @@ input, textarea {
     background: #f4f4f4;
     min-width: auto;
     padding: 0;
+    border-radius: 4px;
   }
   .c-nav-link ul li:hover {
     background: #EB5C01;
@@ -9488,7 +9892,7 @@ input, textarea {
 .c-nav-link ul li a::after {
   content: "";
   background: #EB5C01;
-  width: calc(100% + 70px);
+  width: calc(100% + 40px);
   height: 1.5px;
   border-radius: 4px;
   position: absolute;
@@ -9623,6 +10027,10 @@ input, textarea {
 .c-tabs__nav ul li select:focus-visible, .c-tabs-about__nav ul li select:focus-visible {
   outline: none;
 }
+.c-tabs__nav ul li .c-select .js-fake-input, .c-tabs-about__nav ul li .c-select .js-fake-input {
+  background: transparent;
+  padding: 0;
+}
 @media (max-width: 599px) {
   .c-tabs__nav ul li .c-select, .c-tabs-about__nav ul li .c-select {
     background-color: #F4F4F4;
@@ -9689,6 +10097,18 @@ input, textarea {
 .c-pagination ul li {
   padding: 0 5px;
   margin-bottom: 10px;
+}
+.c-pagination ul li.prev a {
+  background: url("../img/common/icn_pagination-left.svg") no-repeat center;
+}
+.c-pagination ul li.prev a:hover {
+  background-image: url("../img/common/icn_pagination-left_white.svg");
+}
+.c-pagination ul li.next a {
+  background: url("../img/common/icn_pagination-right.svg") no-repeat center;
+}
+.c-pagination ul li.next a:hover {
+  background-image: url("../img/common/icn_pagination-right_white.svg");
 }
 .c-pagination ul li.active a, .c-pagination ul li:hover a {
   background-color: #000;
@@ -9788,9 +10208,11 @@ input, textarea {
   line-height: 22px;
   min-width: 250px;
   max-width: 100%;
-  text-align: center;
+  padding-left: 15px;
+  padding-right: 35px;
   border-bottom: 1.5px solid #D1D1D1;
   padding-bottom: 11px;
+  background: url("../img/common/icn_down.svg") no-repeat calc(100% - 15px) 8px;
 }
 .c-dropdown__toggle:focus-visible {
   outline: none;

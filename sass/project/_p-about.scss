@@ -82,10 +82,7 @@
                         transform: scale(1.1);
                     }
                     .p-about__member__btn-right{
-                        background-color: $textColor;
-                        path{
-                            stroke: #fff;
-                        }
+                        background: $textColor url("../img/common/icn_arrow-right_white.svg") no-repeat center;
                     }
                 }
                 img{
@@ -146,12 +143,12 @@
             align-items: center;
             justify-content: center;
             transition: .4s;
+            background: #fff url("../img/common/icn_arrow-right_black.svg") no-repeat center;
+            &:hover{
+                background: $textColor url("../img/common/icn_arrow-right_white.svg") no-repeat center;
+            }
             @include brSpLandscape{
                 top: calc(50% - 4px);
-            }
-            svg{
-                position: relative;
-                left: 1px;
             }
         }
         &__btn-down{
@@ -164,6 +161,9 @@
             align-items: center;
             margin-top: 14px;
             margin-left: -10px;
+            img{
+                width: auto;
+            }
             @include brSpLandscape{
                 display: flex;
             }

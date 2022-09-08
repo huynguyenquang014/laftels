@@ -12,6 +12,7 @@
                 margin-top: -162px;
             }
             @include brSpLandscape{
+                margin-top: -83px;
                 padding: 4px 10px 60px;
             }
         }
@@ -143,6 +144,10 @@
                 h3{
                     margin-bottom: -2px;
                     position: relative;
+                    @include brSpLandscape{
+                        font-size: 24px;
+                        line-height: 33px;
+                    }
                     &::before{
                         content: "";
                         position: absolute;
@@ -171,6 +176,7 @@
                     }
                 }
                 p{
+                    line-height: 22px;
                     @include brSpLandscape{
                         font-size: 13px;
                         line-height: 14px;
@@ -245,6 +251,17 @@
             font-size: 16px;
             line-height: 22px;
             font-weight: 300;
+            &.pc{
+                @include brSpLandscape{
+                    display: none;
+                }
+            }
+            &.sp{
+                display: none;
+                @include brSpLandscape{
+                    display: block;
+                }
+            }
             @include brSpLandscape{
                 font-size: 14px;
                 line-height: 20px;   
@@ -350,6 +367,10 @@
             h3{
                 margin-bottom: -2px;
                 position: relative;
+                @include brSpLandscape{
+                    font-size: 24px;
+                    line-height: 33px;
+                }
                 &::before{
                     content: "";
                     position: absolute;
@@ -386,7 +407,7 @@
             flex: calc(100% - 493px);
             max-width: calc(100% - 493px);
             padding-left: 50px;
-            margin-top: -2px;
+            margin-top: -3px;
             @include brTablet{
                 flex: 100%;
                 max-width: 100%;
@@ -412,8 +433,8 @@
                     display: flex;
                     align-items: center;
                     border-bottom: 1px solid #EAEAEA;
-                    margin-bottom: 13px;
-                    padding-bottom: 12px;
+                    margin-bottom: 16.5px;
+                    padding-bottom: 17px;
                     @include brSpLandscape{
                         display: block;
                     }
@@ -432,7 +453,7 @@
                     }
                     p{
                         font-size: 15px;
-                        line-height: 30px;
+                        line-height: 20px;
                         font-weight: 300;
                         @include brSpLandscape{
                             font-size: 12px;
@@ -624,6 +645,10 @@
             }
             p{
                 line-height: 22px;
+                @include brSpLandscape{
+                    font-size: 13px;
+                    line-height: 14px;
+                }
             }
         }
         &__slider{

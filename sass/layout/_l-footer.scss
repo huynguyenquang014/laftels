@@ -4,13 +4,22 @@
     overflow-x: hidden;
 	&__recruit{
         padding: 80px 0;
-        background: url("../img/common/bg_recruit.jpg") no-repeat center;
         background-size: cover;
         text-align: center;
         position: relative;
-        @include brSpLandscape{
+        &.pc{
+            background: url("../img/common/bg_recruit.jpg") no-repeat center;
+            @include brSpLandscape{
+                display: none;
+            }
+        }
+        &.sp{
+            display: none;
             padding: 100px 0 83px;
             background-image: url("../img/common/bg_recruit_sp.jpg");
+            @include brSpLandscape{
+                display: block;
+            }
         }
         &::before{
             content: "";
@@ -63,29 +72,38 @@
             color: #fff;
             font-size: 18px;
             line-height: 24px;
+            span{
+                &::before{
+                    content: url("../img/common/icn_arrow-right_white.svg");
+                }
+            }
             @include brSpLandscape{
                 font-size: 14px;
                 line-height: 19px;
                 border-color: $textColor;
                 margin-top: 25px;
             }
-            svg{
-                path{
-                    stroke: #fff;
-                }
-            }
         }
     }
 
     &__doc-request{
         padding: 115px 0 107px;
-        background: url("../img/common/bg_doc-request.jpg") no-repeat center;
         background-size: cover;
         text-align: center;
         position: relative;
-        @include brSpLandscape{
+        &.pc{
+            background: url("../img/common/bg_doc-request.jpg") no-repeat center;
+            @include brSpLandscape{
+                display: none;
+            }
+        }
+        &.sp{
+            display: none;
             padding: 98px 0 111px;
-            background-image: url("../img/common/bg_doc-request_sp.jpg");
+            background-image: url("../img/common/bg_doc-request.jpg");
+            @include brSpLandscape{
+                display: block;
+            }
         }
         &::before{
             content: "";
@@ -144,16 +162,16 @@
             color: #fff;
             font-size: 18px;
             line-height: 24px;
+            span{
+                &::before{
+                    content: url("../img/common/icn_arrow-right_white.svg");
+                }
+            }
             @include brSpLandscape{
                 font-size: 14px;
                 line-height: 19px;
                 border-color: $textColor;
                 margin-top: 25px;
-            }
-            svg{
-                path{
-                    stroke: #fff;
-                }
             }
         }
     }

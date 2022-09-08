@@ -1,5 +1,5 @@
 
-$(window).load(function() {
+jQuery(function() {
 
     /* Casestudy Slider */
 
