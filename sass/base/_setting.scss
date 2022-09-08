@@ -69,7 +69,9 @@ $linkColor_hover : #cc9999;
 	font-family: "gill-sans-regular";
 	src: url("../font/Gill-Sans.otf");
 }
-
+html{
+	overflow-x: hidden;
+}
 body{
 	font-family: $fontFamily;
 	background-color: #fff;
