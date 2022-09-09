@@ -640,7 +640,9 @@
                 }
             }
             .slick-arrow{
+                padding: 1px 0;
                 display: flex;
+                align-items: center;
                 position: absolute;
                 bottom: -39px;
                 background-color: transparent;

@@ -4551,13 +4551,9 @@ input, textarea {
 .p-news-details__box__image img {
   -webkit-transition: 0.4s all;
   transition: 0.4s all;
-}
-@media (max-width: 599px) {
-  .p-news-details__box__image img {
-    min-height: 233px;
-    -o-object-fit: cover;
-       object-fit: cover;
-  }
+  height: 233px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .p-news-details__box__image:hover img {
   -webkit-transform: scale(1.1);
@@ -8487,9 +8483,13 @@ input, textarea {
   }
 }
 .p-about-pc__office__slider .slick-arrow {
+  padding: 1px 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: absolute;
   bottom: -39px;
   background-color: transparent;
