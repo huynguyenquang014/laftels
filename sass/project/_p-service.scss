@@ -233,6 +233,12 @@
             z-index: 10;
             position: relative;
         }
+        .l-container {
+            @include brTablet {
+                padding-left: 0;
+                padding-right: 0;
+            }
+        }
         &__title {
             text-align: center;
             padding-top: 87px;
@@ -301,7 +307,7 @@
             padding: 33px 39px 50px 127px;
             position: relative;
             @include brTablet {
-                padding: 20px 0;
+                padding: 20px 15px;
             }
             @include brSpLandscape {
                 padding: 39px 27px;
@@ -444,10 +450,11 @@
             padding: 48px 39px 50px 127px;
             position: relative;
             @include brTablet {
-                padding: 20px 0;
+                padding: 20px 15px;
             }
             @include brSpLandscape {
                 padding: 39px 27px 50px;
+                box-shadow: 0 3px 20px rgba($color: $cBase, $alpha: 0.06);
             }
             &::before {
                 content: '';

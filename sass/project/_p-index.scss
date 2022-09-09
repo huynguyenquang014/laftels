@@ -751,6 +751,11 @@
                 }
                 img{
                     transition: .4s all;
+                    height: 320px;
+                    object-fit: cover;
+                    @include brSpLandscape{
+                        height: 327px;
+                    }
                 }
             }
         }
@@ -902,6 +907,11 @@
             img{
                 width: 100%;
                 transition: .4s;
+                height: 250px;
+                object-fit: cover;
+                @include brSpLandscape{
+                    height: 214px;
+                }
             }
         }
         &__info{
@@ -1003,6 +1013,9 @@
                         .p-index__column__image{
                             flex: 48.6666%;
                             max-width: 48.6666%;
+                            img{
+                                height: 350px;
+                            }
                         }
                         .p-index__column__info{
                             flex: 51.3334%;
@@ -1161,9 +1174,10 @@
             img{
                 width: 100%;
                 transition: .4s;
+                height: 250px;
+                object-fit: cover;
                 @include brSpLandscape{
                     height: 213px;
-                    object-fit: cover;
                 }
             }
         }
