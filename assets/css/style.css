@@ -6324,9 +6324,7 @@ input, textarea {
 }
 @media (max-width: 599px) {
   .p-service__method__rough {
-    padding: 39px 42px 50px;
-    -webkit-box-shadow: 0 3px 20px rgba(0, 0, 0, 0.06);
-            box-shadow: 0 3px 20px rgba(0, 0, 0, 0.06);
+    padding: 39px 42px 48px;
   }
 }
 .p-service__method__rough::before {
@@ -6416,6 +6414,12 @@ input, textarea {
     font-size: 14px;
     line-height: 22px;
   }
+}
+.p-service__method__box-shadow {
+  -webkit-box-shadow: 0 3px 20px rgba(0, 0, 0, 0.06);
+          box-shadow: 0 3px 20px rgba(0, 0, 0, 0.06);
+  height: 2px;
+  background: #fff;
 }
 .p-service__method__service h4 {
   font-size: 17px;
@@ -9327,6 +9331,11 @@ input, textarea {
 }
 .p-contact__form__content input[type=date]::-webkit-calendar-picker-indicator {
   cursor: pointer;
+}
+@media (max-width: 599px) {
+  .p-contact__form__content input[type=date] {
+    padding: 15px 17px;
+  }
 }
 .p-contact__form__content select {
   cursor: pointer;

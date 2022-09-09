@@ -454,8 +454,7 @@
                 padding: 20px 15px;
             }
             @include brSpLandscape {
-                padding: 39px 42px 50px;
-                box-shadow: 0 3px 20px rgba($color: $cBase, $alpha: 0.06);
+                padding: 39px 42px 48px;
             }
             &::before {
                 content: '';
@@ -533,6 +532,11 @@
                     line-height: 22px;
                 }
             }
+        }
+        &__box-shadow {
+            box-shadow: 0 3px 20px rgba($color: $cBase, $alpha: 0.06);
+            height: 2px;
+            background: #fff;
         }
         &__service {
             h4 {
