@@ -88,6 +88,11 @@
                 img{
                     width: 100%;
                     transition: .4s;
+                    height: 420px;
+                    object-fit: cover;
+                    @include brSpLandscape{
+                        height: 380px;
+                    }
                 }
             }
         }

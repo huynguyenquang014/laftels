@@ -319,36 +319,6 @@
         }
     }
 
-    // &__image-1{
-    //     margin-top: 79px;
-    //     margin-right: calc((100% - 1110px)/2);
-    //     &__container{
-    //         position: relative;
-    //         img{
-    //             width: 100%;
-    //         }
-    //         &::before{
-    //             content: "";
-    //             width: 315px;
-    //             height: 117px;
-    //             bottom: -1px;
-    //             background-color: #fff;
-    //             position: absolute;
-    //             left: 0;
-    //             z-index: 2;
-    //         }
-    //         &::after{
-    //             content: "";
-    //             width: 122px;
-    //             height: 136px;
-    //             background-color: #fff;
-    //             position: absolute;
-    //             top: -1px;
-    //             right: 0;
-    //         }
-    //     }
-    // }
-
     &__company{
         margin-top: 88px;
         @include brSpLandscape{
@@ -670,6 +640,7 @@
                 }
             }
             .slick-arrow{
+                display: flex;
                 position: absolute;
                 bottom: -39px;
                 background-color: transparent;
@@ -712,6 +683,11 @@
                 img{
                     width: 100%;
                     transition: .4s all;
+                    height: 260px;
+                    object-fit: cover;
+                    @include brSpLandscape{
+                        height: 224.48px;
+                    }
                 }
             }
         }

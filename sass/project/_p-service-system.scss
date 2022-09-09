@@ -428,6 +428,11 @@
                     object-fit: cover;
                     img {
                         transition: .4s all;
+                        height: 230px;
+                        object-fit: cover;
+                        @include brSpLandscape{
+                            height: 155px;
+                        }
                     }
                     &:hover {
                         img {

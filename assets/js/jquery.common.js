@@ -228,17 +228,17 @@ jQuery(function() {
         <path id="Path_49" data-name="Path 49" d="M341.6,3657.392l6.43,6.43-6.43,6.43" transform="translate(-329.761 -3648.769)" fill="none" stroke="#1f1f1f" stroke-width="1.5"/>
       </svg></button>
       `,
-      responsive: [{
-        breakpoint: 769,
-        settings: {
-            dots: false,
-            autoplaySpeed: 5000,
-            speed: 500,
-            cssEase: 'ease',
-            slidesToShow: 1,
-            arrows: true,
-        }
-      }]
+        responsive: [{
+            breakpoint: 769,
+            settings: {
+                dots: false,
+                autoplaySpeed: 5000,
+                speed: 500,
+                cssEase: 'ease',
+                slidesToShow: 1,
+                arrows: true,
+            }
+        }]
     });
 
     //p-service-system

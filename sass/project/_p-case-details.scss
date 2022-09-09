@@ -299,6 +299,8 @@
             }
             img{
                 transition: .4s;
+                height: 350px;
+                object-fit: cover;
             }
         }
         &__info{

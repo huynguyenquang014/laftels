@@ -603,10 +603,8 @@
             overflow: hidden;
             img {
                 transition: 0.4s all;
-                @include brSpLandscape {
-                    min-height: 233px;
-                    object-fit: cover;
-                }
+                height: 233px;
+                object-fit: cover;
             }
             &:hover {
                 img {

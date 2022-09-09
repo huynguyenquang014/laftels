@@ -155,6 +155,8 @@
             }
             img{
                 transition: .4s;
+                height: 233px;
+                object-fit: cover;
             }
         }
         &__info{

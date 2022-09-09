@@ -229,7 +229,7 @@
         overflow-x: hidden;
         @include brSpLandscape {
             background: rgba($color: #F5F5F5, $alpha: 0.3);
-            margin-top: -106px;
+            margin-top: -115px;
             z-index: 10;
             position: relative;
         }
@@ -243,7 +243,7 @@
             text-align: center;
             padding-top: 87px;
             @include brTablet {
-                padding-top: 40px;
+                padding-top: 49px;
             }
             h2 {
                 font-weight: 600;
@@ -310,7 +310,7 @@
                 padding: 20px 15px;
             }
             @include brSpLandscape {
-                padding: 39px 27px;
+                padding: 46px 42px;
             }
             .l-row {
                 @include brSpLandscape {
@@ -370,7 +370,7 @@
                 padding-top: 33px;
                 font-size: 19px;
                 line-height: 30px;
-                font-weight: 600;
+                font-weight: 600 !important;
                 position: relative;
                 width: 496px;
                 max-width: 100%;
@@ -399,9 +399,10 @@
                 @include brTablet {
                     font-size: 14px;
                     line-height: 22px;
+                    padding-left: 0;
                 }
                 @include brSpLandscape {
-                    padding-top: 17px;
+                    padding-top: 46px;
                 }
             }
             &__right {
@@ -453,7 +454,7 @@
                 padding: 20px 15px;
             }
             @include brSpLandscape {
-                padding: 39px 27px 50px;
+                padding: 39px 42px 50px;
                 box-shadow: 0 3px 20px rgba($color: $cBase, $alpha: 0.06);
             }
             &::before {
@@ -507,7 +508,7 @@
             &__title {
                 font-size: 19px;
                 line-height: 30px;
-                font-weight: 600;
+                font-weight: 600 !important;
                 padding: 31px 0 13px;
                 @include brTablet {
                     font-size: 15px;
@@ -798,6 +799,9 @@
                     border: 1px solid #707070;
                     padding: 16px 20.7px 20px 20.7px;
                     flex-grow: 1;
+                    &__img{
+                        margin-top: auto;
+                    }
                     &:nth-child(2) {
                         @include brSpLandscape {
                             margin-top: 35px;
@@ -847,8 +851,10 @@
                             }
                         }
                     }
-                    img {
+                    &__img {
                         margin-top: auto;
+                    }
+                    img {
                         @include brSpLandscape {
                             margin-top: 9px;
                             min-height: 153px;
@@ -976,6 +982,11 @@
                 display: block;
                 img {
                     transition: 0.4s all;
+                    height: 350px;
+                    object-fit: cover;
+                    @include brSpLandscape{
+                        height: 289px;
+                    }
                     &:hover {
                         transform: scale(1.1);
                         transition: .4s all;

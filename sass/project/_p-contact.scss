@@ -548,6 +548,7 @@
                 input[type="date"] {
                     width: 200px;
                     height: 50px;
+                    padding: 15px 19px;
                     // &::-webkit-calendar-picker-indicator{
                     //     opacity: 0;
                     // }
@@ -678,7 +679,7 @@
                 font-weight: 700;
                 margin-bottom: 15px;
             }
-            &__inner{
+            &__inner {
                 padding: 5px 80px 0px;
                 border-radius: 5px;
                 margin-top: 10px;
@@ -722,7 +723,6 @@
                         font-weight: 700;
                     }
                 }
-                
             }
         }
         &__confirm {
@@ -762,49 +762,58 @@
                     transform: translateX(-50%);
                     font-family: YuGothic, "Yu Gothic", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "メイリオ", Meiryo, sans-serif;
                 }
-                input {
-                    padding: 0;
-                    height: initial;
-                    width: initial;
-                    margin-bottom: 0;
-                    display: none;
-                    position: relative;
-                    cursor: pointer;
-                }
                 label {
-                    position: relative;
-                    cursor: pointer;
                     font-size: 16px;
-                    line-height: 22px;
                     font-weight: 600;
-                }
-                label:before {
-                    content: '';
-                    -webkit-appearance: none;
-                    background-color: transparent;
-                    border: 1px solid #707070;
-                    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05);
-                    padding: 9px;
-                    display: inline-block;
-                    position: relative;
-                    vertical-align: middle;
+                    line-height: 22px;
                     cursor: pointer;
-                    margin-right: 15px;
-                    border-radius: 4px;
-                    margin-top: -5px;
+                    @include brTablet {
+                        cursor: none;
+                    }
                 }
-                input:checked+label:after {
-                    content: "";
-                    display: block;
-                    position: absolute;
-                    top: 4px;
-                    left: 7px;
-                    width: 6px;
-                    height: 11px;
+                input[type=checkbox] {
+                    position: relative;
                     border: 1px solid #707070;
+                    border-radius: 4px;
+                    background: none;
+                    cursor: pointer;
+                    line-height: 0;
+                    margin: 0 .6em 0 0;
+                    outline: 0;
+                    padding: 0 !important;
+                    vertical-align: text-top;
+                    height: 20px;
+                    width: 20px;
+                    -webkit-appearance: none;
+                    margin-top: 1px;
+                    cursor: pointer;
+                    @include brTablet {
+                        cursor: none;
+                    }
+                }
+                input[type=checkbox]:hover {
+                    opacity: 1;
+                }
+                input[type=checkbox]:checked {
+                    background-color: transparent;
+                    opacity: 1;
+                    &::before {
+                        opacity: 1;
+                    }
+                }
+                input[type=checkbox]:before {
+                    content: '';
+                    position: absolute;
+                    right: 50%;
+                    top: 50%;
+                    width: 4px;
+                    height: 10px;
+                    border: solid #000;
                     border-width: 0 2px 2px 0;
-                    -webkit-transform: rotate(45deg);
-                    transform: rotate(45deg);
+                    margin: -1px -1px 0 -1px;
+                    transform: rotate(45deg) translate(-50%, -50%);
+                    z-index: 2;
+                    opacity: 0;
                 }
             }
         }
@@ -819,3 +828,4 @@
             }
         }
     }
+    
