@@ -803,7 +803,7 @@
                     border: 1px solid #707070;
                     padding: 16px 20.7px 20px 20.7px;
                     flex-grow: 1;
-                    &__img{
+                    &__img {
                         margin-top: auto;
                     }
                     &:nth-child(2) {
@@ -988,7 +988,7 @@
                     transition: 0.4s all;
                     height: 350px;
                     object-fit: cover;
-                    @include brSpLandscape{
+                    @include brSpLandscape {
                         height: 289px;
                     }
                     &:hover {

@@ -483,11 +483,13 @@
                 [type="radio"]:not(:checked)+label {
                     position: relative;
                     padding-left: 28px;
-                    cursor: pointer;
                     line-height: 30px;
                     display: inline-block;
                     color: $textColor;
                     margin-bottom: 16px;
+                    @include brTablet {
+                        cursor: none;
+                    }
                 }
                 [type="radio"]:checked+label:before,
                 [type="radio"]:not(:checked)+label:before {
@@ -549,9 +551,6 @@
                     width: 200px;
                     height: 50px;
                     padding: 15px 19px;
-                    &::-webkit-calendar-picker-indicator {
-                        cursor: pointer;
-                    }
                     @include brSpLandscape {
                         padding: 15px 17px;
                     }
@@ -577,9 +576,14 @@
                     }
                     option {
                         cursor: pointer;
+                        @include brTablet {
+                            cursor: none;
+                        }
                     }
                 }
                 textarea {
+                    -webkit-appearance: none;
+                    -moz-appearance: none;
                     border: 1px solid #ADADAD;
                     max-width: 100%;
                     width: 670px;
@@ -587,8 +591,7 @@
                     border-radius: 5px;
                     font-size: 16px;
                     font-weight: 500;
-                    padding-top: 12px;
-                    padding-left: 15px;
+                    padding: 12px 20px;
                     font-family: YuGothic, "Yu Gothic", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "メイリオ", Meiryo, sans-serif;
                     color: $textColor;
                     &:focus-visible {
@@ -601,67 +604,6 @@
                         color: #A3A3A3;
                         font-family: YuGothic, "Yu Gothic", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "メイリオ", Meiryo, sans-serif;
                     }
-                }
-                input:focus {
-                    outline: none;
-                }
-                .form-control {
-                    max-width: 300px;
-                    margin: 0 auto;
-                }
-                .datepicker {
-                    font-family: 'Exo 2', sans-serif;
-                }
-                .datepicker--cell.-range-to- {
-                    background: rgba(248, 206, 236, 0.4);
-                    border-color: rgba(248, 206, 236, 1);
-                }
-                .datepicker--cell.-current- {}
-                .datepicker--cell.-selected-,
-                .datepicker--cell.-selected-.-focus- {
-                    background-color: #f8ceec;
-                    color: #000000;
-                }
-                .datepicker--cell.-in-range- {
-                    background: rgba(248, 206, 236, 0.2);
-                }
-                .datepicker--cell-day {
-                    font-weight: 500;
-                    color: #000000;
-                }
-                .form-control {
-                    height: 50px;
-                    font-size: 16px;
-                    color: #414D64;
-                    background: #ffffff;
-                    padding: 0 15px;
-                    border: 2px solid #DADEEA;
-                    -webkit-border-radius: 5px;
-                    -moz-border-radius: 5px;
-                    border-radius: 5px;
-                    -webkit-transition: all 0.3s ease-in-out;
-                    -moz-transition: all 0.3s ease-in-out;
-                    -o-transition: all 0.3s ease-in-out;
-                    transition: all 0.3s ease-in-out;
-                    text-align: center;
-                }
-                textarea.form-control {
-                    height: 120px;
-                    padding-top: 15px;
-                }
-                .form-control-plaintext {
-                    font-size: 18px;
-                    color: #434343;
-                }
-                button.form-control {
-                    text-overflow: ellipsis;
-                    overflow: hidden;
-                }
-                .form-control:focus {
-                    border-color: #37B448;
-                    -webkit-box-shadow: 0px 2px 6px rgba(55, 180, 72, .15);
-                    -moz-box-shadow: 0px 2px 6px rgba(55, 180, 72, .15);
-                    box-shadow: 0px 2px 6px rgba(55, 180, 72, .15);
                 }
             }
         }
@@ -776,7 +718,6 @@
                     border: 1px solid #707070;
                     border-radius: 4px;
                     background: none;
-                    cursor: pointer;
                     line-height: 0;
                     margin: 0 .6em 0 0;
                     outline: 0;
@@ -786,7 +727,6 @@
                     width: 20px;
                     -webkit-appearance: none;
                     margin-top: 1px;
-                    cursor: pointer;
                     @include brTablet {
                         cursor: none;
                     }
@@ -828,4 +768,3 @@
             }
         }
     }
-    
